@@ -150,7 +150,7 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|quote|strong|ul">
+    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|quote|strong|ul|img">
        <xsl:copy>
            <xsl:apply-templates select="@*" /> 
            <xsl:apply-templates />
