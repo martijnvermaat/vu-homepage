@@ -13,3 +13,11 @@ Absolute path to 404 error document.
 
 * /etc/www/404
 Absolute paths to stylesheets and other website pages.
+
+
+Prerequisites for building the project:
+
+* Implementation of EXSLT date and time functions.
+
+* Deploy target needs scp and sshexec tasks, which in
+  turn need the jsch.jar library.
