@@ -1,0 +1,136 @@
+Opgave 3. SortUniq commando
+
+WAT TE MAKEN
+
+Maak een programma dat het UNIX-commando 
+
+	sort [opties] <files> | uniq
+
+implementeert voor alleen de identifiers in de meegegeven files.
+
+Het te schrijven programma moet in de meegegeven files alle identifiers vinden,
+deze sorteren en, na verwijdering van de dubbelen, op de standaarduitvoer 
+(het scherm) afdrukken.
+Standaard moet het programma de identifiers monotoon niet-dalend sorteren, 
+waarbij onderscheid gemaakt wordt tussen hoofdletters en kleine letters. Het
+programma moet dus standaard "case sensitive" zijn.
+
+
+HOE AAN TE ROEPEN
+
+Via command-line arguments (te vinden in de "String[] argv" parameter van de 
+methode "public static void main()") komt het programma te weten welke file(s) 
+gelezen moeten worden. Bij de aanroep van het programma moet er via de 
+command-line arguments minimaal 1 file meegegeven worden.
+
+Via  opties moet het gedrag van het programma beinvloed kunnen worden. 
+  - Indien de optie "-i" (case insensitive) wordt meegegeven moet het programma 
+    geen verschil maken tussen hoofdletters en kleine letters. De uitvoer van 
+    het programma wordt in dit geval in kleine letters gegeven. 
+  - Indien de optie "-d" (descending) wordt meegegeven moet het programma de in 
+    de files gevonden identifier in monotoon niet-stijgende volgorde sorteren. 
+
+De syntax van de command-line arguments is als volgt:
+
+commandLineArguments = [ commandLineOptions ] files .
+	Er worden eventueel geen command line options meegegeven.
+	Er worden altijd files meegegeven.
+
+commandLineOptions   = option { option } .
+	De command line options bestaan uit 1 of meer options.
+
+option                = '-i' | '-d' .
+	Een option is of '-i' of '-d'
+
+files		     = <file name> { <file name> } .
+	Er moet minimaal 1 file meegegeven worden. 
+	Files worden meegegeven via de filenaam.
+
+Stel dat je programma klaar is, vertaald is en SortUniq heet. En het de 
+bedoeling is om met dit programma de identifiers uit de files SortUniq.java en
+/usr/prac/ip/lib/Input.java te halen en deze monotoon niet-stijgend te sorteren.
+Het commando waarmee in UNIX het resultaat, met weglating van de dubbelen, kan 
+worden afgedrukt is:
+
+	ipi SortUniq -d /usr/prac/ip/lib/Input.java SortUniq.java
+
+
+HET LEZEN VAN 1 FILE
+
+De tekst in een file bestaat uit woorden en scheiders van woorden. Een woord 
+is een identifier of een non-identifier.
+Een identifier is iedere rij karakters bestaande uit letters en cijfers,
+mits beginnend met een letter. Een rij karakters bestaande uit letters en
+cijfers, maar beginnend met een cijfer, is een non-identifier en dient in 
+zijn geheel overgeslagen te worden. 
+Alle niet-alfanumerieke karakters (dus ook de <eoln>) dienen als scheiders van 
+woorden. 
+De text "N.B. let op: 8 identifiers in deze zin.", bevat daarom negen woorden
+waarvan acht identifiers (Het woord "8" is een non-identifier).
+
+Het inlezen en verwerken van een tekst (d.w.z. het vinden van de identifiers 
+tussen de scheiders en de non-identifiers in die tekst) is moeilijker dan het 
+lijkt. Het is daarom handig om voor je aan het ontwerp begint, syntax-regels 
+op te stellen voor de begrippen "tekst", "identifier", "non-identifier" en 
+"scheiders". Deze syntax-regels voor het parseren van de inhoud van een file
+zullen bij de ontwerpbespreking doorgenomen worden voordat het ontwerp zelf
+besproken wordt. Het is de bedoeling dat het ontwerp overeenstemt met de opge-
+stelde syntax-regels.
+Eenmaal in het bezit van correcte syntax-regels is het inlezen en verwerken 
+van een tekst makkelijk te programmeren door van iedere zelf gemaakte 
+syntax-regel een methode te maken.
+
+
+HET AFDRUKKEN VAN DE UITVOER
+
+De af te drukken identifiers moeten op standaard uitvoer (het scherm) worden
+afgedrukt. Iedere identifier komt op een aparte regel. Voor iedere identifier
+wordt niets afgedrukt. Achter iedere identifier komt direct een end-of-line.
+
+Geef geen andere uitvoer dan de regels met de identifiers i.v.m. de 
+automatische test.
+
+Indien de optie "-i" is meegegeven bij de aanroep van het programma worden
+alle identifiers in kleine letters afgedrukt.
+
+							Z.O.Z.
+
+
+IMPLEMENTATIE
+
+Gebruik als datastructuur voor het opslaan van de identifiers een binaire 
+zoekboom (binary searchtree). Maak hiervoor een interface welke je laat zien
+bij de ontwerpbespreking.
+
+Zet in deze interface de abstracte methodes
+
+	/**
+	 @postconditie
+	   De in de binaire zoekboom opgeslagen data zijn in monotoon 
+	   niet-dalende volgorde doorlopen en in deze volgorde in een
+	   object van het type Iterator gezet.
+	   Dit object van het type Iterator is daarna geretourneerd.
+	**/
+	Iterator ascendingIterator () 
+
+en
+
+	/**
+	 @postconditie
+	   De in de binaire zoekboom opgeslagen data zijn in monotoon 
+	   niet-stijgende volgorde doorlopen en in deze volgorde in een
+	   object van het type Iterator gezet.
+	   Dit object van het type Iterator is daarna geretourneerd.
+	**/
+	Iterator descendingIterator ()
+
+Uitleg over de Iterator interface is in het boek te vinden in hoofdstuk 5,
+paragraaf 5.5, vanaf blz. 276.
+
+Gebruik javadoc (zie appendix H boek blz. 782) voor het specificeren van 
+Elementen, Structuur en Domein van ieder ADT en het beschrijven van de  Pre- 
+en POST-conditie van iedere methode. Bij methodes die een DSException gooien
+is het de bedoeling om met "@throws DSException" te beschrijven in welk geval 
+een DSException gegooid wordt. Het geval indien er geen  DSException gegooid 
+wordt, wordt beschreven bij de postconditie.
+

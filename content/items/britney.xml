@@ -8,7 +8,7 @@
     <content>
 
 
-<h1 id="about">About</h1>
+<h1>Introduction</h1>
 
 
 <p>
@@ -36,7 +36,7 @@ that's ok.
 </p>
 
 
-<h1 id="usage">Usage examples</h1>
+<h1>Usage examples</h1>
 
 
 <p>
@@ -103,7 +103,7 @@ storing that in advance and matching the actual result might help.
 </p>
 
 
-<h1 id="limitations">Limitations</h1>
+<h1>Limitations</h1>
 
 
 <p>
@@ -143,7 +143,7 @@ Britney has a number of limitations, most notably:
 </ul>
 
 
-<h1 id="download">Downloading Britney</h1>
+<h1>Downloading Britney</h1>
 
 <p>
 Britney is Open Source and licensed under the new <a
@@ -164,13 +164,13 @@ Ant Task.
     <li>
         <p>
         <a href="files/britney/britney-0.3.1.tar.gz">Britney 0.3.1 binary
-        package</a>
+        package</a> (tar.gz 40Kb)
         </p>
     </li>
     <li>
         <p>
         <a href="files/britney/britney-0.3.1-src.tar.gz">Britney 0.3.1 project
-        source</a>
+        source</a> (tar.gz 25Kb)
         </p>
     </li>
 </ul>
@@ -193,7 +193,7 @@ $ svn export http://kjew.xs4all.nl/repository/britney/trunk britney
 </pre>
 
 
-<h1 id="run">Running Britney</h1>
+<h1>Running Britney</h1>
 
 
 <p>

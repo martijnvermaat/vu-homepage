@@ -49,13 +49,11 @@ of an output XML document:
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;collection&gt;
    &lt;album&gt;
-
       &lt;artist&gt;Ciccone Youth&lt;/artist&gt;
       &lt;title&gt;The Whitey Album&lt;/title&gt;
    &lt;/album&gt;
    &lt;album&gt;
       &lt;artist&gt;Steve Miller Band&lt;/artist&gt;
-
       &lt;title&gt;The Joker&lt;/title&gt;
    &lt;/album&gt;
 &lt;/collection&gt;
@@ -66,8 +64,7 @@ of an output XML document:
 <p>
 Once you have this XML file you are really free to transform it to whatever
 format you like. I wrote another XSLT stylesheet to transform this XML to an
-XHTML representation. You can <a href="music/music.xhtml">view that XHTML
-document here</a>, the XSL script I used is shown below:
+XHTML representation.
 </p>
 
 <pre>
@@ -86,54 +83,14 @@ document here</a>, the XSL script I used is shown below:
    &lt;html&gt;
 
    &lt;head&gt;
-      &lt;title&gt;Martijn Vermaat / My music list&lt;/title&gt;
-      &lt;link href="../css/style.css" type="text/css"
-                                    rel="stylesheet" /&gt;
-
+      &lt;title&gt;Music list&lt;/title&gt;
    &lt;/head&gt;
 
    &lt;body&gt;
 
-   &lt;ul class="navigation"&gt;
-      &lt;li&gt;&lt;a href="../index.xhtml"&gt;Home&lt;/a&gt;&lt;/li&gt;
-
-      &lt;li&gt;&lt;a href="../things.xhtml"&gt;Back&lt;/a&gt;&lt;/li&gt;
-   &lt;/ul&gt;
-
-   &lt;h1&gt;My music list&lt;/h1&gt;
-
-   &lt;p&gt;
-   Here's a complete or incomplete list of my audio collection. I
-   think it includes most of my audio CD's, and a selection of my
-   MP3 archive.
-   &lt;/p&gt;
-
-   &lt;p&gt;
-   Most of the CD's in the list are extracted from my local Winamp
-   CDDB Database, so it didn't take me much time to build this list.
-   &lt;a href="winamp.xhtml"&gt;Go here&lt;/a&gt; if you would like
-   to know more about generating such a view from your Winamp
-   database.
-   &lt;/p&gt;
+   &lt;h1&gt;Music list&lt;/h1&gt;
 
    &lt;xsl:apply-templates select="collection"/&gt;
-
-   &lt;p&gt;
-   Send me an e-mail if you'd like to have this list in plain text,
-   or some other pre-historic format.
-   &lt;/p&gt;
-
-   &lt;h2 id="footnote"&gt;Footnote&lt;/h2&gt;
-
-   &lt;p&gt;
-   Page last changed January 26th, 2003
-   &lt;/p&gt;
-
-   &lt;p&gt;
-   All content copyright &amp;#169; 2002, 2003
-   &lt;a href="../personal#contact"&gt;Martijn Vermaat&lt;/a&gt;
-
-   &lt;/p&gt;
 
    &lt;/body&gt;
 
@@ -149,8 +106,6 @@ document here</a>, the XSL script I used is shown below:
          &lt;tr&gt;
             &lt;td&gt;Artist&lt;/td&gt;
             &lt;td&gt;Album&lt;/td&gt;
-
-            &lt;td&gt;&lt;/td&gt;
          &lt;/tr&gt;
       &lt;/thead&gt;
       &lt;tbody&gt;
@@ -172,10 +127,6 @@ document here</a>, the XSL script I used is shown below:
    &lt;tr&gt;
       &lt;td&gt;&lt;xsl:value-of select="artist"/&gt;&lt;/td&gt;
       &lt;td&gt;&lt;xsl:value-of select="title"/&gt;&lt;/td&gt;
-      &lt;td&gt;
-
-         &lt;xsl:if test="media='MP3'"&gt;MP3&lt;/xsl:if&gt;
-      &lt;/td&gt;
    &lt;/tr&gt;
 
 &lt;/xsl:template&gt;

@@ -2,10 +2,33 @@
 
 <item>
     <id>site:vu:tbr-2003</id>
-    <title>Tekst, Beeld en Reprsentatie</title>
+    <title>Tekst, Beeld en Representatie 2003</title>
     <language>nl</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2003-04-27</last-change>
     <content>
-        <p>Dit was een minder leuk vak.</p>
+
+<p>
+Opdracht voor Tekst Beeld &amp; Representatie 2003, door <a
+href="http://www.cs.vu.nl/~tveerman/" external="true">Thomas Veerman</a>, <a
+href="http://www.cs.vu.nl/~mvermaat/" external="true">Martijn Vermaat</a> en
+<a href="http://www.cs.vu.nl/~jvoortm/" external="true">Bram Voortman</a>
+(groep 20).
+</p>
+
+<p>
+Doel van de opdracht was het ontwerpen van een representatie van een
+bewegwijzering voor een multifunctioneel gebouw ('Electronic Scout'). Wij
+hebben hiervoor de RAI in Amsterdam gekozen.
+</p>
+
+<p>
+<a href="files/vu/tbr.pdf">Ons eindverslag</a> (pdf 300Kb)
+</p>
+
+<p>
+<a href="http://www.cs.vu.nl/~mmc/tbr" external="true">Homepage van het
+vak</a>
+</p>
+
     </content>
 </item>

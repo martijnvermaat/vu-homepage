@@ -1,0 +1,71 @@
+Package sableds;
+
+
+Helpers
+
+cr              = 13;
+lf              = 10;
+letter          = [ ['a'..'z'] + ['A'..'Z'] ];
+digit           = [ '0'..'9' ];
+not_cr_lf       = [ [32..127] - [cr + lf] ];
+
+
+Tokens
+
+union           = '+';
+difference      = '-';
+intersection    = '*';
+symdifference   = '|';
+comma           = ',';
+assign          = '=';
+print           = '?';
+lparen          = '(';
+rparen          = ')';
+lbrace          = '{';
+rbrace          = '}';
+identifier      = letter ( letter|digit )*;
+comment         = '/' not_cr_lf*;
+number          = digit+;
+newline         = cr | lf | cr lf;
+blank           = ' '*;
+
+
+Ignored Tokens
+
+blank;
+
+
+Productions
+
+program         = {statements}  statement program
+                | {empty};
+
+statement       = {assign}      assignment
+                | {print}       pstatement
+                | {comment}     commentline;
+
+assignment      = identifier assign expression newline;
+
+pstatement      = print expression newline;
+
+commentline     = comment newline;
+
+expression      = {union}       term union          expression
+                | {diff}        term difference     expression
+                | {symdiff}     term symdifference  expression
+                | {term}        term;
+
+term            = {isection}    factor intersection term
+                | {factor}      factor;
+
+factor          = {identifier}  identifier
+                | {grouping}    complexfactor
+                | {set}         set;
+
+complexfactor   = lparen expression rparen;
+
+set             = {filled}      lbrace numbers rbrace
+                | {empty}       lbrace rbrace;
+
+numbers         = {number}      number
+                | {numbers}     number comma numbers;

@@ -207,10 +207,10 @@ Two parameters are expected:
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
-                        <strong><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a></strong>
+                        <strong><a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
                     </xsl:when>
                     <xsl:otherwise>
-                        <a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+                        <a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
                     </xsl:otherwise>
                 </xsl:choose>
             </li>

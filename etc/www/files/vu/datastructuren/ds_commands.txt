@@ -1,0 +1,30 @@
+/ Some sample commands for DSInterpret
+/
+/
+/ First some assignments
+a = {1, 2, 3, 4, 5}
+b = {4, 5, 6, 7, 8}
+/
+/ Show them
+? a
+? b
+/
+/ Some arithmetic
+union         = a + b
+crosssection  = a * b
+difference    = a - b
+symdifference = a | b
+/
+/ Show them
+? union
+? crosssection
+? difference
+? symdifference
+/
+/ Some more sets
+c = {8, 9, 10}
+d = {10, 11, 12}
+/
+/ Some operations
+? a - b * c + d
+? (a - (b * c)) + d

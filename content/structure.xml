@@ -20,7 +20,7 @@
     </item>
     <dir>
         <location>vu</location>
-        <title>VU stuff</title>
+        <title>All things VU</title>
         <item>
             <id>site:vu:index</id>
             <location>index</location>

@@ -125,3 +125,11 @@ dt {
 dd {
    margin-bottom        :   0.2em;
 }
+
+
+a[hreflang='nl']:after {
+  content               :   " (Dutch)";
+  font-size             :   0.6em;
+  vertical-align        :   top;
+  color                 :   #000;
+}
