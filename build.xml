@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 
 
-/*
+<!--
     When using the 'deploy' command, a 'password' parameter is expected.
     See below for additional configuration of deployment and other things.
-*/
+-->
 
 
 <project name="vu-website" default="dist" basedir=".">
