@@ -60,7 +60,8 @@ external="true">Uitwerking van opgave 6.4 uit het dictaat</a> (ps)
 (uitgedeeld op het werkcollege)
 </li>
 <li>
-Meer volgt...
+<a href="files/vu/iti/el/voorbeeld-uitwerkingen-2005.pdf">Voorbeeld
+uitwerkingen bij opgaven uit het dictaat</a> (pdf)
 </li>
 </ul>
 
@@ -76,7 +77,6 @@ vermoedelijk van Roel de Vrijer of Yde Venema.)
 <p>
 Meer info volgt. (<a href="asfsdf-lambda-calculus">Lambda calculus in
 het ASF+SDF Meta Environment</a>)
-
 </p>
 
 
@@ -84,7 +84,13 @@ het ASF+SDF Meta Environment</a>)
 
 
 <p>
-Handige info volgt.
+Bij het practicum functioneel programmeren zullen we de taal <a
+href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
+Caml</a> gebruiken. Ik kwam laatst deze <a
+href="http://merjis.com/developers/ocaml_tutorial/"
+external="true">OCaml Tutorial</a> voor C(++), Perl en Java programmeurs
+tegen die een aardige introductie in de taal geeft voor iedereen die
+geen eerdere ervaring heeft met functionele programmeertalen.
 </p>
 
 
