@@ -145,3 +145,28 @@ Deploy Target
 
 
 </project>
+
+
+<!--
+=====================================
+Deploy Local Target
+=====================================
+-->
+
+
+<target
+    name="deploy-local"
+    depends="dist"
+    description="copies validated build to www dir">
+
+    <copy todir="${deploy.dir}">
+        <fileset dir="${build.dir}" />
+    </copy>
+
+    <chmod file="${deploy.dir}" perm="a+rx" type="dir" />
+    <chmod dir="${deploy.dir}" perm="a+r" type="both" />
+
+</target>
+
+
+</project>
