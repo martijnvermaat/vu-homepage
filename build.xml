@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="vu-website" default="clean-build" basedir=".">
+<project name="vu-website" default="dist" basedir=".">
 
 
 <property name="content.dir" value="content" />
@@ -52,8 +52,8 @@ Validate build target
 
 <target
     name="validate"
-    description="validate all xhtml files of build"
-    unless="dont-validate">
+    depends="build"
+    description="validate all xhtml files of build">
 
     <!-- copy to validate.dir and add .xhtml extensions -->
     <copy todir="${validate.dir}" includeemptydirs="false">
@@ -95,14 +95,14 @@ Clean Target
 
 <!--
 =====================================
-Clean-build Target
+Distribute Target
 =====================================
 -->
 
 <target
-    name="clean-build"
-    depends="clean,build"
-    description="build website after cleaning build" />
+    name="dist"
+    depends="clean,build,validate"
+    description="clean, build, and validate" />
 
 
 </project>
