@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<site>
+    <item>
+        <location>index</location>
+    </item>
+    <item>
+        <location>britney</location>
+    </item>
+    <item>
+        <location>hanoi</location>
+    </item>
+    <item>
+        <location>cddb</location>
+    </item>
+    <item>
+        <location>vu</location>
+        <item>
+            <location>tbr-2003</location>
+        </item>
+        <item>
+            <location>encyclopedie-2003</location>
+        </item>
+        <item>
+            <location>datastructuren-2003</location>
+        </item>
+        <item>
+            <location>feevdt-2004</location>
+        </item>
+        <item>
+            <location>iti-2004</location>
+        </item>
+    </item>
+    <item>
+        <location>links</location>
+    </item>
+</site>

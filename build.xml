@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<project name="vu-website" default="build" basedir=".">
+
+
+<property name="content.dir" value="content" />
+<property name="build.dir" value="build" />
+<property name="transformations.dir" value="transformations" />
+
+<property name="from-items-to-basedir.dir" value="../.." />
+
+<property name="site.items" value="${content.dir}/items" />
+<property name="site.structure" value="${content.dir}/structure.xml" />
+<property name="site.transformation" value="${transformations.dir}/site.xsl" />
+
+
+<target
+    name="build"
+    description="build website from source files">
+
+    <mkdir dir="${build.dir}" />
+
+    <xslt
+        basedir="${site.items}"
+        destdir="${build.dir}"
+        style="${basedir}/${site.transformation}"
+        extension=".html"
+        includes="*.xml">
+        <param name="structure" expression="${basedir}/${site.structure}" />
+    </xslt>
+
+</target>
+
+
+</project>
