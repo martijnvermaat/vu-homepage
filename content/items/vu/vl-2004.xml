@@ -4,7 +4,7 @@
     <id>site:vu:vl-2004</id>
     <title>Voortgezette Logica 2004</title>
     <language>nl</language>
-    <last-change>2004-12-14</last-change>
+    <last-change>2004-12-20</last-change>
     <content>
 
 
@@ -45,6 +45,15 @@ Ik ben er niet zeker van dat het bewijs tegen de omkering in de laatste
 opgave juist is.
 </dd>
 </dl>
+
+<p>
+De geïnteresseerde lezer heeft bovendien de mogelijkheid de LaTeX sources
+van deze uitwerkingen uit mijn Subversion repository te halen:
+</p>
+
+<pre>
+$ svn export <a href="http://kjew.xs4all.nl/repository/documents/vu/advanced-logic" external="true">http://kjew.xs4all.nl/repository/documents/vu/advanced-logic</a> uitwerkingen
+</pre>
 
 
     </content>

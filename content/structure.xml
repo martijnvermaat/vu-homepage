@@ -47,6 +47,10 @@
             <location>iti-2004</location>
         </item>
         <item>
+            <id>site:vu:ft-2004</id>
+            <location>ft-2004</location>
+        </item>
+        <item>
             <id>site:vu:vl-2004</id>
             <location>vl-2004</location>
         </item>
