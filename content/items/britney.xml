@@ -29,7 +29,7 @@ This makes writing a parser very easy.
 <p>
 To reduce Lambda terms, Britney uses the normal order (leftmost-outermost)
 reduction strategy. This is done simply by transforming the AST at each
-reduction step. The implementation tries to follow mathematical definitions
+reduction step. The implementation tries to follow formal definitions
 for Beta reduction as close as possible in order to have very clean and
 understandable source code. Undoubtly, performance suffers from this, but
 that's ok.
@@ -134,16 +134,17 @@ Britney has a number of limitations, most notably:
     </li>
     <li>
         <p>
-        The implementation of Beta reduction is kept close to the
-        mathematical definition of Beta reduction in order to keep the code
-        as clean as possible. therefore, should you care about that,
-        performance is really bad.
+        The implementation of Beta reduction is kept as close to the formal
+        as possible in order to keep the code clean and understandable.
+        Performance was not a goal in this implementation and therefore,
+        should you care about that, performance is really bad.
         </p>
     </li>
 </ul>
 
 
 <h1>Downloading Britney</h1>
+
 
 <p>
 Britney is Open Source and licensed under the new <a
