@@ -1,0 +1,28 @@
+/* White on black CSS2 document for vu-website */
+
+
+html {
+    background          :   #000;
+    color               :   #fff;
+}
+
+
+a {
+    color               :   #fff;
+}
+
+
+#page-content {
+    border-top          :   solid 2px #fff;
+    border-bottom       :   solid 2px #fff;
+}
+
+
+pre, code {
+    background          :   #222;
+}
+
+
+pre {
+    border              :   solid 1px #fff;
+}

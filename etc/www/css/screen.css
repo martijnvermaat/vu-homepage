@@ -4,8 +4,6 @@
 html {
     margin              :   0;
     padding             :   0;
-    background          :   #01014f;
-    color               :   #fff;
     font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
 }
 
@@ -27,16 +25,6 @@ body {
 }
 
 
-#breadcrumbs a {
-    color               :   #ff360f;
-}
-
-
-#breadcrumbs a:hover {
-    color               :   #fff;
-}
-
-
 h1 {
     margin              :   0;
     padding             :   0;
@@ -45,8 +33,6 @@ h1 {
 
 #page-content {
     padding             :   1em 20% 2em 3em;
-    background          :   #d9bb7a;
-    color               :   #01014f;
     font-family         :   Georgia, Palatino, Times, serif;
 }
 
@@ -59,14 +45,12 @@ h2, h3, h4, h5 {
 
 .content-date {
     margin-left         :   -1em;
-    font-size           :   0.8em;
+    font-size           :   0.9em;
     font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
 }
 
 
 pre, code {
-    background          :   #fff;
-    color               :   #01014f;
     font-family         :   monospace;
 }
 
@@ -74,8 +58,6 @@ pre, code {
 pre {
     padding             :   1em;
     overflow            :   auto;
-    border-top          :   solid 1px #ff360f;
-    border-bottom       :   solid 2px #ff360f;
 }
 
 
@@ -95,31 +77,10 @@ pre {
 }
 
 
-#navigation a {
-    color               :   #ff360f;
-}
-
-
-#navigation a:hover {
-    color               :   #fff;
-}
-
-
-a {
-    color               :   #ff360f;
-}
-
-
 a.external:after {
     content             :   " (!)";
     font-size           :   0.6em;
     vertical-align      :   top;
-    color               :   #fff;
-}
-
-
-a:hover {
-    color               :   #fe9122;
 }
 
 
@@ -137,7 +98,6 @@ a[hreflang='nl']:after {
     content             :   " (Dutch)";
     font-size           :   0.6em;
     vertical-align      :   top;
-    color               :   #fff;
 }
 
 

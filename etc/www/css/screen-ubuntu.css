@@ -1,0 +1,50 @@
+/* Ubuntu colors CSS2 document for vu-website */
+
+
+html {
+    background          :   #01014f;
+}
+
+
+pre, code {
+    background          :   #fff;
+}
+
+
+#page-content {
+    background          :   #d9bb7a;
+}
+
+
+html,
+#breadcrumbs a:hover,
+#navigation a:hover,
+a.external:after,
+a[hreflang='nl']:after {
+    color               :   #fff;
+}
+
+
+pre,
+code,
+#page-content {
+    color               :   #01014f;
+}
+
+
+#breadcrumbs a,
+#navigation a,
+a {
+    color               :   #ff360f;
+}
+
+
+a:hover {
+    color               :   #fe9122;
+}
+
+
+pre {
+    border-top          :   solid 1px #ff360f;
+    border-bottom       :   solid 2px #ff360f;
+}

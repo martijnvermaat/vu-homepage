@@ -63,8 +63,12 @@ Two parameters are expected:
 
             <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
 
-            <style type="text/css" media="screen">@import "<xsl:value-of select="$base-path" />css/screen.css";</style>
-            <style type="text/css" media="print">@import "<xsl:value-of select="$base-path" />css/print.css";</style>
+            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
+            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-ubuntu.css" title="Ubuntu colors" />
+            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-bow.css" title="Black on white" />
+            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-wob.css" title="White on black" />
+
+            <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
 
             <link rel="home" href="{$base-path}" title="Homepage" />
 
