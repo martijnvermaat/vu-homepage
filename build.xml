@@ -31,7 +31,7 @@ Build Target
         basedir="${site.items}"
         destdir="${build.dir}"
         style="${basedir}/${site.transformation}"
-        extension=""
+        extension=".xhtml"
         includes="**/*.xml">
         <param name="site-structure" expression="${basedir}/${site.structure}" />
         <param name="items-dir" expression="${basedir}/${site.items}" />
@@ -40,6 +40,36 @@ Build Target
     <copy todir="${build.dir}">
         <fileset dir="${www-files.dir}" />
     </copy>
+
+</target>
+
+
+<!--
+=====================================
+Validate build target
+=====================================
+-->
+
+<target
+    name="validate"
+    description="validate all xhtml files of build"
+    unless="dont-validate">
+
+    <!-- add .xhtml extensions -->
+    <move todir="${build.dir}" includeemptydirs="false">
+        <fileset dir="${build.dir}" />
+        <mapper type="regexp" from="^([^\.]+)$$" to="\1.xhtml" />
+    </move>
+
+    <xmlvalidate lenient="no" warn="yes">
+        <fileset dir="${build.dir}" includes="**/*.xhtml"/>
+    </xmlvalidate>
+
+    <!-- remove .xhtml extensions -->
+    <move todir="${build.dir}" includeemptydirs="false">
+        <fileset dir="${build.dir}" />
+        <mapper type="regexp" from="^([^\.]+)\.xhtml$$" to="\1" />
+    </move>
 
 </target>
 
@@ -57,7 +87,6 @@ Clean Target
     <delete dir="${build.dir}" />
 
 </target>
-
 
 
 <!--

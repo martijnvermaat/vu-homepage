@@ -2,10 +2,34 @@
 
 <item>
     <id>site:index</id>
-    <title>Index</title>
+    <title>Home</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2004-08-22</last-change>
     <content>
-        <p>Hey, this is the index!</p>
+
+<p>
+Welcome to my personal homepage at the Vrije Universiteit Amsterdam, where
+I'm a third year's student Computer Science.
+</p>
+
+<p>
+What you can find on this website is the following:
+</p>
+
+<dl>
+    <dt><a href="britney">Britney</a></dt>
+    <dd>Britney is a simple interpreter for pure untyped Lambda Calculus,
+    written in Java.</dd>
+    <dt><a href="hanoi">Towers of Hanoi in Lambda Calculus</a></dt>
+    <dd>A solution of the Towers of Hanoi problem in Lambda Calculus.</dd>
+    <dt><a href="cddb">Exporting the Winamp CDDB database</a></dt>
+    <dd>Short explanation on how to extract information from your local
+    Winamp CDDB database.</dd>
+    <dt><a href="vu/">VU documents</a></dt>
+    <dd>All things related to my study.</dd>
+    <dt><a href="links">Links</a></dt>
+    <dd>Some links you might think interresting.</dd>
+</dl>
+
     </content>
 </item>

@@ -20,7 +20,8 @@ Two parameters are expected:
 <xsl:transform version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:date="http://exslt.org/dates-and-times"
-    xmlns="http://www.w3.org/1999/xhtml">
+    xmlns="http://www.w3.org/1999/xhtml"
+    exclude-result-prefixes="date">
 
     <xsl:output method="xml" indent="yes" encoding="UTF-8"
         doctype-public="-//W3C//DTD XHTML 1.1//EN"
@@ -136,7 +137,7 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="code|em|hr|li|ol|p|pre|quote|strong|ul">
+    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|quote|strong|ul">
        <xsl:copy>
            <xsl:apply-templates select="@*" /> 
            <xsl:apply-templates />
@@ -156,7 +157,6 @@ Two parameters are expected:
 
     <xsl:template match="a[not(@external='true')]">
        <xsl:copy>
-           <xsl:attribute name="class" />
            <xsl:attribute name="href"><xsl:value-of select="concat($base-path, @href)" /></xsl:attribute>
            <xsl:apply-templates select="@*[name()!='href']" /> 
            <xsl:apply-templates />
@@ -227,10 +227,10 @@ Two parameters are expected:
         <li>
             <xsl:choose>
                 <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
-                    <strong><a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a></strong>
+                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
                 </xsl:otherwise>
             </xsl:choose>
             <ul>
@@ -251,7 +251,7 @@ Two parameters are expected:
 
         <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
-            <xsl:text> → </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
             <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="breadcrumbs">
                 <xsl:with-param name="current-id" select="$current-id" />
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
@@ -269,7 +269,7 @@ Two parameters are expected:
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
         <xsl:if test="(not(no-link)) and (id=$current-id)">
-            <xsl:text> → </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
         </xsl:if>
 
     </xsl:template>

@@ -115,3 +115,13 @@ a.external:after {
 a:hover {
     color               :   #000;
 }
+
+
+dt {
+   font-weight          :   bold;
+}
+
+
+dd {
+   margin-bottom        :   0.2em;
+}
