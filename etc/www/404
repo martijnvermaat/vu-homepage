@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+    <title>Martijn Vermaat - 404 Not Found</title>
+
+    <link href="/~mvermaat/css/screen.css" media="screen" type="text/css"
+          rel="stylesheet" />
+    <link title="Ubuntu colors" href="/~mvermaat/css/screen-ubuntu.css" media="screen"
+          type="text/css" rel="stylesheet" />
+    <link title="Black on white" href="/~mvermaat/css/screen-bow.css" media="screen"
+          type="text/css" rel="alternate stylesheet" />
+    <link title="White on black" href="/~mvermaat/css/screen-wob.css" media="screen"
+          type="text/css" rel="alternate stylesheet" />
+    <link href="/~mvermaat/css/print.css" media="print" type="text/css"
+          rel="stylesheet" />
+
+    <link title="Homepage" href="/~mvermaat/" rel="home" />
+
+</head>
+
+<body id="cs-vu-nl-mvermaat">
+
+<div id="page-header">
+    <h1>Home</h1>
+    <p id="breadcrumbs">
+        <a accesskey="1" href="/~mvermaat/">Home</a> » 404 Not Found
+    </p>
+</div>
+
+<div id="page-content">
+
+<h2>What has happened?</h2>
+
+<p>
+This page is here to inform you that the document you requested could not
+be found. Sad, but true.
+</p>
+
+<h2>But why?</h2>
+
+<p>
+In a recent cleanup of my website, some content was removed, but other
+content changed location. I'm sorry I was/am too lazy to make some redirects
+for these changed locations.
+</p>
+
+<h2>And what now?</h2>
+
+<p>
+Please, start from my <a href="/~mvermaat/">homepage</a> to see if what you are
+looking for is still here.
+</p>
+
+<h2>Easy for you to say, but...</h2>
+
+<p>
+If you think this is an error (you came here with a link on my own website,
+or you really think there should be a document at this location), please
+<a href="/~mvermaat/colofon">contact me</a> and I will try to correct things (but never
+during weekends :-)).
+</p>
+
+</div>
+
+</body>
+
+</html>

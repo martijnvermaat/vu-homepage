@@ -22,7 +22,7 @@
 <property name="site.transformation" value="${transformations.dir}/site.xsl" />
 
 <property name="deploy.host" value="galjas.cs.vu.nl" />
-<property name="deploy.dir" value="/home/mvermaat/www/test" />
+<property name="deploy.dir" value="/home/mvermaat/www" />
 <property name="deploy.login" value="mvermaat" />
 <property name="deploy.password" value="${password}" />
 
@@ -139,7 +139,7 @@ Deploy Target
         host="${deploy.host}"
         username="${deploy.login}"
         password="${deploy.password}"
-        command="chmod a+rx ${deploy.dir}; chmod -R a+r ${deploy.dir}/*;" />
+        command="chmod a+rx ${deploy.dir}; chmod -R a+r ${deploy.dir};" />
 
 </target>
 

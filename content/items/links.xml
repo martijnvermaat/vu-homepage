@@ -4,8 +4,78 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2004-09-19</last-change>
     <content>
-        <p>Some nice links.</p>
+
+
+<h1>Tools</h1>
+
+
+<dl>
+
+<dt><a href="http://www.sablecc.org/" external="true">SableCC</a></dt>
+<dd>
+Nice parser generator for Java with automatic CST→AST transformation.
+</dd>
+
+<dt><a href="http://www.mozilla.org/" external="true">Mozilla</a></dt>
+<dd>
+If you are still using the crippled Internet Explorer: please, do yourself
+and the web a favor and ban it. Use a descent browser, like Mozilla or
+Mozilla Firefox.
+</dd>
+
+</dl>
+
+
+<h1>Reading</h1>
+
+
+<dl>
+
+<dt><a href="http://lambda-the-ultimate.org/" external="true">Lambda the
+Ultimate</a></dt>
+<dd>
+The programming languages weblog, hosts loads of interesting discussions and
+links.
+</dd>
+
+<dt><a href="http://www.cs.uu.nl/~franka/ref" external="true">PLT
+Online</a></dt>
+<dd>
+Collection of programming language theory texts and resources, all of which
+are freely available over the Internet, maintained by Frank Atanassow.
+</dd>
+
+<dt><a href="http://www.cs.man.ac.uk/~pt/stable/Proofs+Types.html"
+external="true">Proofs and Types</a></dt>
+<dd>
+The book by Jean-Yves Girard, translated and with appendices by Paul Taylor
+and Yves Lafont.
+</dd>
+
+</dl>
+
+
+<h1>Listening</h1>
+
+
+<dl>
+
+<dt><a href="http://www.alizarin.nl/" hreflang="nl">Alizarin</a></dt>
+<dd>
+Alizarin is a band of friends of mine which you really should check out.
+</dd>
+
+<dt><a href="http://www.luxuriamusic.com/"
+external="true">LuxuriaMusic.com</a></dt>
+<dd>
+The only internet radio station I listen to.
+</dd>
+
+</dl>
+
+
+
     </content>
 </item>

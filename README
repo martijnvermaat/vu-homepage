@@ -1,0 +1,15 @@
+Martijn Vermaat - Personal homepage at cs.vu.nl
+
+This file should contain more information.
+
+
+Deployment specific content is present in:
+
+* /build.xml:
+Deployment server and path.
+
+* /etc/www/.htaccess:
+Absolute path to 404 error document.
+
+* /etc/www/404
+Absolute paths to stylesheets and other website pages.
