@@ -109,3 +109,8 @@ a[hreflang='nl']:after {
 .xnav {
     display             :   none;
 }
+
+
+img {
+    border              :   solid 1px black;
+}
