@@ -4,7 +4,7 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2005-03-29</last-change>
+    <last-change>2005-03-30</last-change>
     <content>
 
 
@@ -68,6 +68,20 @@ Chicago Manual of Style</a></dt>
 <dd>
 Another well-known style guide for American English writing, focussing
 more on presentational style and less on usage.
+</dd>
+
+<dt>Finally, one inline advice (taken from the excellent <a
+href="http://www.haskell.org/hawiki/QuotesPage" external="true">hawiki
+QuotesPage</a>):</dt>
+<dd>
+<pre>
+&lt;shapr&gt; how will you know when you've written enough?
+&lt;kosmikus&gt; I don't really know yet, but one of the following:
+(a) if my supervisor tells me I have,
+(b) if every chapter heading has content following it,
+(c) if the deadline is there
+&lt;shapr&gt; that's an excellent heuristic
+</pre>
 </dd>
 
 </dl>
