@@ -14,6 +14,11 @@
 <property name="site.structure" value="${content.dir}/structure.xml" />
 <property name="site.transformation" value="${transformations.dir}/site.xsl" />
 
+<property name="deploy.host" value="galjas.cs.vu.nl" />
+<property name="deploy.dir" value="/home/mvermaat/www/test" />
+<property name="deploy.login" value="mvermaat" />
+<property name="deploy.password" value="${password}" />
+
 
 <!--
 =====================================
@@ -103,6 +108,33 @@ Distribute Target
     name="dist"
     depends="clean,build,validate"
     description="clean, build, and validate" />
+
+
+<!--
+=====================================
+Deploy Target
+=====================================
+-->
+
+
+<target
+    name="deploy"
+    depends="dist"
+    description="uploads validated build to webserver">
+
+    <scp
+        todir="${deploy.login}@${deploy.host}:${deploy.dir}"
+        password="${deploy.password}">
+        <fileset dir="${build.dir}" />
+    </scp>
+
+    <sshexec
+        host="${deploy.host}"
+        username="${deploy.login}"
+        password="${deploy.password}"
+        command="chmod a+rx ${deploy.dir}; chmod -R a+r ${deploy.dir}/*;" />
+
+</target>
 
 
 </project>

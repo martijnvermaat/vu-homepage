@@ -60,19 +60,30 @@ Two parameters are expected:
         <html xml:lang="{language}">
 
         <head>
+
             <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
+
             <style type="text/css" media="screen">@import "<xsl:value-of select="$base-path" />css/screen.css";</style>
+            <style type="text/css" media="print">@import "<xsl:value-of select="$base-path" />css/print.css";</style>
+
+            <link rel="home" href="{$base-path}" title="Homepage" />
+
         </head>
 
-        <body>
+        <body id="cs-vu-nl-mvermaat">
+
+        <ul class="xnav">
+            <li><a href="#page-content" title="Jump to the content of this page" accesskey="2">Page content</a></li>
+            <li><a href="#navigation" title="Jump to the site navigation">Site navigation</a></li>
+        </ul>
 
         <div id="page-header">
 
-            <h1>Martijn Vermaat</h1>
+            <h1><xsl:value-of select="title" /></h1>
 
             <p id="breadcrumbs">
                 <xsl:text>You are here: </xsl:text>
-                <a href="{$base-path}">Home</a>
+                <a href="{$base-path}" accesskey="1">Home</a>
                 <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs">
                     <xsl:with-param name="current-id" select="id" />
                 </xsl:apply-templates>
@@ -81,8 +92,6 @@ Two parameters are expected:
         </div>
 
         <div id="page-content">
-
-            <h2><xsl:value-of select="title" /></h2>
 
             <xsl:apply-templates select="content" />
 
@@ -121,6 +130,7 @@ Two parameters are expected:
             <xsl:apply-templates select="$site-structure-file/site" mode="navigation">
                 <xsl:with-param name="current-id" select="id" />
             </xsl:apply-templates>
+            <p><a href="#page-header" title="Jump to the top of this page">Top of page</a></p>
             </div>
 
         </div>
@@ -167,13 +177,13 @@ Two parameters are expected:
     <xsl:template match="h1|h2|h3">
         <xsl:choose>
             <xsl:when test="name(.)='h1'">
-                <h3><xsl:apply-templates select="@*" /><xsl:apply-templates /></h3>
+                <h2><xsl:apply-templates select="@*" /><xsl:apply-templates /></h2>
             </xsl:when>
             <xsl:when test="name(.)='h2'">
-                <h4><xsl:apply-templates select="@*" /><xsl:apply-templates /></h4>
+                <h3><xsl:apply-templates select="@*" /><xsl:apply-templates /></h3>
             </xsl:when>
             <xsl:when test="name(.)='h3'">
-                <h5><xsl:apply-templates select="@*" /><xsl:apply-templates /></h5>
+                <h4><xsl:apply-templates select="@*" /><xsl:apply-templates /></h4>
             </xsl:when>
         </xsl:choose>
     </xsl:template>

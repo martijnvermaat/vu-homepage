@@ -50,64 +50,38 @@ What you can find on this website is the following:
 <h1>Q&amp;A</h1>
 
 
-<h2>Q: What kind of person are you?</h2>
+<dl>
 
-<p>
-A: Hmm, I dunno... you should ask me about my favourites I think.
-</p>
+<dt>Q: Are the colors on this webpage stolen?</dt>
+<dd>
+A: Yes, they are. From the <a href="http://www.ubuntulinux.org/"
+external="true">Ubuntu Linux</a> distribution.
+</dd>
 
-<h2>Q: Ok, what's your favourite music?</h2>
+<dt>Q: Gnome/KDE, Emacs/ViM?</dt>
+<dd>
+A: Gnome, Emacs.
+</dd>
 
-<p>
-A: Sonic Youth, Tom Waits, Neil Young, The Velvet Underground, and of
-course random noise. My free tip of the day: <a
-href="http://www.alizarin.nl/" external="true">Alizarin</a> (this would be
-the only good music from The Netherlands I have to admit).
-</p>
+<dt>Q: What's your favourite dinner?</dt>
+<dd>
+A: That must be Tandoori Chicken.
+</dd>
 
-<h2>Q: Do you have any favourite movies?</h2>
+<dt>Q: Why does this website suck so much?</dt>
+<dd>
+A: Use a <a href="http://www.apple.com/safari/"
+external="true">descent</a> <a href="http://www.mozilla.org/"
+external="true">browser</a>. This website will still suck but your
+online life will not.
+</dd>
 
-<p>
-A: Yes, but I forget them. I know American Beauty is one of them though.
-</p>
-
-<h2>Q: What's your favourite dinner?</h2>
-
-<p>
-A: That must be Tandoori Chicken. In fact, I think I'm gonna prepare some
-after this interview.
-</p>
-
-<h2>Q: What's your favourite language?</h2>
-
-<p>
-A: Portuguese. 
-</p>
-
-<h2>Q: Do you speak Portuguese?</h2>
-
-<p>
-A: No.
-</p>
-
-<h2>Q: Are you on serieus medication?</h2>
-
-<p>
-A: Not that I am aware of.
-</p>
-
-<h2>Q: But don't you think it's a bit schizophrenic asking yourself these
-questions?</h2>
-
-<p>
-A: No.
-</p>
-
-<h2>Q: Thank you for your time.</h2>
-
-<p>
+<dt>Q: Thank you for your time.</dt>
+<dd>
 A: That's not a question.
-</p>
+</dd>
+
+</dl>
 
 
     </content>

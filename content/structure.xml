@@ -51,4 +51,8 @@
         <id>site:links</id>
         <location>links</location>
     </item>
+    <item>
+        <id>site:colofon</id>
+        <location>colofon</location>
+    </item>
 </site>
