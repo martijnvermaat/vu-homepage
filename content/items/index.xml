@@ -3,9 +3,9 @@
 <item>
     <id>site:index</id>
     <title>Index</title>
-    <language>nl</language>
+    <language>en</language>
     <last-change>2004-08-18</last-change>
     <content>
-        <p>Hoi, dit is de index!</p>
+        <p>Hey, this is the index!</p>
     </content>
 </item>

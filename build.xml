@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 
-<project name="vu-website" default="build" basedir=".">
+<project name="vu-website" default="clean-build" basedir=".">
 
 
 <property name="content.dir" value="content" />
 <property name="build.dir" value="build" />
 <property name="transformations.dir" value="transformations" />
+<property name="www-files.dir" value="etc/www" />
 
 <property name="from-items-to-basedir.dir" value="../.." />
 
@@ -13,6 +14,12 @@
 <property name="site.structure" value="${content.dir}/structure.xml" />
 <property name="site.transformation" value="${transformations.dir}/site.xsl" />
 
+
+<!--
+=====================================
+Build Target
+=====================================
+-->
 
 <target
     name="build"
@@ -24,12 +31,45 @@
         basedir="${site.items}"
         destdir="${build.dir}"
         style="${basedir}/${site.transformation}"
-        extension=".html"
-        includes="*.xml">
-        <param name="structure" expression="${basedir}/${site.structure}" />
+        extension=""
+        includes="**/*.xml">
+        <param name="site-structure" expression="${basedir}/${site.structure}" />
+        <param name="items-dir" expression="${basedir}/${site.items}" />
     </xslt>
 
+    <copy todir="${build.dir}">
+        <fileset dir="${www-files.dir}" />
+    </copy>
+
 </target>
+
+
+<!--
+=====================================
+Clean Target
+=====================================
+-->
+
+<target
+    name="clean"
+    description="remove all build files">
+
+    <delete dir="${build.dir}" />
+
+</target>
+
+
+
+<!--
+=====================================
+Clean-build Target
+=====================================
+-->
+
+<target
+    name="clean-build"
+    depends="clean,build"
+    description="build website after cleaning build" />
 
 
 </project>

@@ -17,9 +17,14 @@
         <id>site:cddb</id>
         <location>cddb</location>
     </item>
-    <item>
-        <id>site:vu</id>
+    <dir>
         <location>vu</location>
+        <title>VU stuff</title>
+        <item>
+            <id>site:vu:index</id>
+            <location>index</location>
+            <no-link />
+        </item>
         <item>
             <id>site:vu:tbr-2003</id>
             <location>tbr-2003</location>
@@ -36,11 +41,24 @@
             <id>site:vu:feevdt-2004</id>
             <location>feevdt-2004</location>
         </item>
+        <dir>
+            <location>diep</location>
+            <title>Diepste content</title>
+            <item>
+                <id>site:vu:diep:index</id>
+                <location>index</location>
+                <no-link />
+            </item>
+            <item>
+                <id>site:vu:diep:grappig</id>
+                <location>grappig</location>
+            </item>
+        </dir>
         <item>
             <id>site:vu:iti-2004</id>
             <location>iti-2004</location>
         </item>
-    </item>
+    </dir>
     <item>
         <id>site:links</id>
         <location>links</location>
