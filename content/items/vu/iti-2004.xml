@@ -2,10 +2,75 @@
 
 <item>
     <id>site:vu:iti-2004</id>
-    <title>ITI</title>
+    <title>Inleiding Theoretische Informatica 2004</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2004-02-29</last-change>
     <content>
-        <p>This was Inleiding Theoretische Informatica.</p>
+
+
+<h1>Lambda Calculus</h1>
+
+
+<p>
+The course <a href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding
+Theoretische Informatica</a> I took in Februari-April 2004 was divided into
+two parts. First of the two parts was an introductory course in <a
+href="http://www.cs.vu.nl/~tcs/iti/03-04/lc.html" external="true">Lambda
+Calculus</a>.
+</p>
+
+
+<h1>Britney</h1>
+
+
+<p>
+After <a href="vu/datastructuren-2003">playing a bit</a> with <a
+href="http://www.sablecc.org/" external="true">SableCC</a>, I was looking
+for another test-case in which I could experiment with SableCC's automatic
+transformation of the Concrete Syntax Tree to an Abstract Syntax Tree. This
+intoductory course in Lambda Calculus seemed like a good candidate, and I
+decided to write a simple Lambda term evaluator using SableCC. I called it
+Britney.
+</p>
+
+<p>
+Britney uses the normal order (also leftmost-outermost or call-by-need)
+reduction strategy to reduce terms of pure, untyped Lambda Calculus to
+normal form. Lambda terms can be reduced one at a time, or directly reduced
+to normal form. Because terms can be stored and referenced by name in other
+terms, a primitive form of programming is possible in Britney.
+</p>
+
+<p>
+The aim was not to write a well-performing reducer, but rather a working one
+with a clean and simple implementation. You don't want to work with very
+complex terms directly in Lambda Calculus anyway. Therefore, I tried to
+implement Beta reduction close to its mathematical definition.
+</p>
+
+<p>
+More information on Britney, its source code, and some usage examples can be
+found on <a href="britney">my Britney page</a>.
+</p>
+
+
+<h1>Towers of Hanoi</h1>
+
+
+<p>
+So what were people thinking all this time that Lambda Calculus was studied
+without trying to solve the <a
+href="http://en.wikipedia.org/wiki/Tower_of_Hanoi" external="true">Towers of
+Hanoi</a> problem in it? <a href="http://www.kernelthread.com/hanoi/"
+external="true">Almost every self-respecting system</a> is by now known to
+be able to solve the Towers of Hanoi. Except for the fact that I haven't
+been able to find a solution in Lambda Calculus.
+</p>
+
+<p>
+They let me no choice; I decided to <a href="hanoi">give it a go</a>.
+</p>
+
+
     </content>
 </item>
