@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-01-25</last-change>
+    <last-change>2005-02-22</last-change>
     <content>
 
 
@@ -72,6 +72,12 @@ focussing on Python and XSLT).
         <a href="http://www.cis.ksu.edu/~schmidt/text/densem.html"
         external="true">Denotational Semantics: A Methodology for Language
         Development</a> by David Schmidt.
+    </li>
+    <li>
+        <a href="http://catamaran.labs.cs.uu.nl/twiki/pt/bin/view/Stratego/ProgramTransformationWithScopedDynamicRewriteRules"
+        external="true">Program Transformation With Scoped Dynamic Rewrite
+        Rules</a> by Martin Bravenboer, Arthur van Dam, Karina Olmos and Eelco
+        Visser.
     </li>
 </ul>
 

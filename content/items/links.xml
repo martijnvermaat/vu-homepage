@@ -4,35 +4,8 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2004-11-15</last-change>
+    <last-change>2005-02-22</last-change>
     <content>
-
-
-<h1>Tools</h1>
-
-
-<dl>
-
-<dt><a href="http://www.sablecc.org/" external="true">SableCC</a></dt>
-<dd>
-Nice parser generator for Java with automatic CST→AST transformation.
-</dd>
-
-<dt><a href="http://www.mozilla.org/" external="true">Mozilla</a></dt>
-<dd>
-If you are still using the crippled Internet Explorer: please, do yourself
-and the web a favor and ban it. Use a decent browser, like Mozilla or
-Mozilla Firefox.
-</dd>
-
-<dt><a href="http://www.phil.cam.ac.uk/teaching_staff/Smith/LaTeX/"
-external="true">LaTeX for Logicians</a></dt>
-<dd>
-An extensive resource on the use of LaTeX for typesetting documents aimed
-at logicians, but equally usefull for mathematicians and others.
-</dd>
-
-</dl>
 
 
 <h1>Reading</h1>
@@ -71,6 +44,27 @@ Gödel's incompleteness theorems and the philosophical implications.
 </dl>
 
 
+<h1>Writing</h1>
+
+
+<dl>
+
+<dt><a href="http://www.phil.cam.ac.uk/teaching_staff/Smith/LaTeX/"
+external="true">LaTeX for Logicians</a></dt>
+<dd>
+An extensive resource on the use of LaTeX for typesetting documents aimed
+at logicians, but equally usefull for mathematicians and others.
+</dd>
+
+<dt><a href="http://www.bartleby.com/141/" external="true">The Elements
+of Style</a></dt>
+<dd>
+The classic American English writing style guide by William Strunk, Jr.
+</dd>
+
+</dl>
+
+
 <h1>Listening</h1>
 
 
@@ -79,7 +73,7 @@ Gödel's incompleteness theorems and the philosophical implications.
 <dt><a href="http://www.alizarin.nl/" external="true"
 hreflang="nl">Alizarin</a></dt>
 <dd>
-Alizarin is a band of friends of mine which you really should check out.
+Alizarin is a band of friends of mine that you really should check out.
 </dd>
 
 <dt><a href="http://www.luxuriamusic.com/"
