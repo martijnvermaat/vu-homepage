@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:vl-2004</id>
+    <title>Voortgezette Logica 2004</title>
+    <language>nl</language>
+    <last-change>2004-12-14</last-change>
+    <content>
+
+
+<p>
+Tijdens mijn derde studiejaar volgde ik als invulling van de vrije keuze
+het mastervak <a href="http://www.cs.vu.nl/~tcs/vl/"
+external="true">Voortgezette Logica</a>. In het eerste deel werd de modale
+logica behandeld (met als voorbeelden epistemische en temporele logica) en
+in het tweede deel de non-monotone logica met predikaatcircumscriptie.
+</p>
+
+<p>
+Hier volgen mijn uitwerkingen van de drie huiswerkopdrachten:
+</p>
+
+<dl>
+<dt>
+<a href="files/vu/vl/huiswerk-1.pdf">Uitwerkingen eerste opdracht</a>
+(pdf 80Kb)
+</dt>
+<dd>
+Hierin heb ik zeer consistent het symbool van semantische implicatie weten
+te misbruiken.
+</dd>
+<dt>
+<a href="files/vu/vl/huiswerk-2.pdf">Uitwerkingen tweede opdracht</a>
+(pdf 75Kb)
+</dt>
+<dd>
+De uitwerking van opgave 3 is niet erg duidelijk.
+</dd>
+<dt>
+<a href="files/vu/vl/huiswerk-3.pdf">Uitwerkingen derde opdracht</a>
+(pdf 85Kb)
+</dt>
+<dd>
+Ik ben er niet zeker van dat het bewijs tegen de omkering in de laatste
+opgave juist is.
+</dd>
+</dl>
+
+
+    </content>
+</item>

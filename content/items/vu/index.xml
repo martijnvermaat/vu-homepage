@@ -4,7 +4,7 @@
     <id>site:vu:index</id>
     <title>All things VU</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2004-12-14</last-change>
     <content>
 
 
@@ -28,6 +28,9 @@ Techniek 2004</a>
 <li>
 <a hreflang="en" href="vu/iti-2004">Inleiding Theoretische Informatica
 2004</a>
+</li>
+<li>
+<a hreflang="nl" href="vu/vl-2004">Voortgezette Logica 2004</a>
 </li>
 </ul>
 
