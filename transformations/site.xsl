@@ -52,7 +52,7 @@ Two parameters are expected:
 
     <xsl:template match="/item">
 
-        <html>
+        <html xml:lang="{language}">
 
         <head>
         <title><xsl:value-of select="title" /></title>

@@ -2,10 +2,202 @@
 
 <item>
     <id>site:cddb</id>
-    <title>Winamp CDDB article</title>
+    <title>Exporting the Winamp CDDB Database</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2003-03-15</last-change>
     <content>
-        <p>How to read the CDDB database.</p>
+
+<h2>Introduction</h2>
+
+<p>
+You can let Winamp download album information from <a
+href="http://www.cddb.com" class="ext" title="http://www.cddb.com">CDDB</a>
+automatically for each audio CD you play. It is only a matter of time for
+the local Winamp CDDB database you build by playing your CD's with Winamp to
+contain information of almost all of your albums. Of course you'd like to do
+something with this database, but unfortunatily Winamp doesn't store is as
+plain text (the Windows CD player, for example, does).
+</p>
+
+<h2>Play List Converter</h2>
+
+<p>
+So you'll need something to extract your album information from the local
+Winamp CDDB database. After some searching I found a tool to do this for
+you, <a href="http://thesoftpro.tripod.com/downloads/plcvt/index.htm"
+class="ext" title="http://thesoftpro.tripod.com/downloads/plcvt/index.htm">
+Play List Converter</a> by <a href="mailto:alex__yakovlev@hotmail.com"
+class="ext" title="mailto:alex__yakovlev@hotmail.com">Alex Yakovlev</a>
+(it's Freeware).
+</p>
+
+<p>
+With this tool you can generate an HTML report of your album database. From
+there, the steps to create different representations of this data are quite
+trivial.
+</p>
+
+<h2>From HTML to XML ...</h2>
+
+<p>
+I wrote a simple XSL script to transform the HTML report to an XML format (I
+was lucky, because the HTML report was well-formed XML). This is an example
+of an output XML document:
+</p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;collection&gt;
+   &lt;album&gt;
+
+      &lt;artist&gt;Ciccone Youth&lt;/artist&gt;
+      &lt;title&gt;The Whitey Album&lt;/title&gt;
+   &lt;/album&gt;
+   &lt;album&gt;
+      &lt;artist&gt;Steve Miller Band&lt;/artist&gt;
+
+      &lt;title&gt;The Joker&lt;/title&gt;
+   &lt;/album&gt;
+&lt;/collection&gt;
+</pre>
+
+<h2>... to HTML again</h2>
+
+<p>
+Once you have this XML file you are really free to transform it to whatever
+format you like. I wrote another XSLT stylesheet to transform this XML to an
+XHTML representation. You can <a href="music/music.xhtml">view that XHTML
+document here</a>, the XSL script I used is shown below:
+</p>
+
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;xsl:transform version="1.0"
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+     xmlns="http://www.w3.org/1999/xhtml"&gt;
+
+&lt;xsl:output method="xml" indent="yes" encoding="UTF-8"
+     doctype-public="-//W3C//DTD XHTML 1.1//EN"
+     doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"/&gt;
+
+&lt;xsl:template match="/"&gt;
+
+   &lt;html&gt;
+
+   &lt;head&gt;
+      &lt;title&gt;Martijn Vermaat / My music list&lt;/title&gt;
+      &lt;link href="../css/style.css" type="text/css"
+                                    rel="stylesheet" /&gt;
+
+   &lt;/head&gt;
+
+   &lt;body&gt;
+
+   &lt;ul class="navigation"&gt;
+      &lt;li&gt;&lt;a href="../index.xhtml"&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+      &lt;li&gt;&lt;a href="../things.xhtml"&gt;Back&lt;/a&gt;&lt;/li&gt;
+   &lt;/ul&gt;
+
+   &lt;h1&gt;My music list&lt;/h1&gt;
+
+   &lt;p&gt;
+   Here's a complete or incomplete list of my audio collection. I
+   think it includes most of my audio CD's, and a selection of my
+   MP3 archive.
+   &lt;/p&gt;
+
+   &lt;p&gt;
+   Most of the CD's in the list are extracted from my local Winamp
+   CDDB Database, so it didn't take me much time to build this list.
+   &lt;a href="winamp.xhtml"&gt;Go here&lt;/a&gt; if you would like
+   to know more about generating such a view from your Winamp
+   database.
+   &lt;/p&gt;
+
+   &lt;xsl:apply-templates select="collection"/&gt;
+
+   &lt;p&gt;
+   Send me an e-mail if you'd like to have this list in plain text,
+   or some other pre-historic format.
+   &lt;/p&gt;
+
+   &lt;h2 id="footnote"&gt;Footnote&lt;/h2&gt;
+
+   &lt;p&gt;
+   Page last changed January 26th, 2003
+   &lt;/p&gt;
+
+   &lt;p&gt;
+   All content copyright &amp;#169; 2002, 2003
+   &lt;a href="../personal#contact"&gt;Martijn Vermaat&lt;/a&gt;
+
+   &lt;/p&gt;
+
+   &lt;/body&gt;
+
+   &lt;/html&gt;
+
+&lt;/xsl:template&gt;
+
+
+&lt;xsl:template match="collection"&gt;
+
+   &lt;table&gt;
+      &lt;thead&gt;
+         &lt;tr&gt;
+            &lt;td&gt;Artist&lt;/td&gt;
+            &lt;td&gt;Album&lt;/td&gt;
+
+            &lt;td&gt;&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+         &lt;xsl:apply-templates select="album"&gt;
+            &lt;xsl:sort data-type="text" order="ascending"
+                                       select="artist"/&gt;
+
+            &lt;xsl:sort data-type="text" order="ascending"
+                                       select="title"/&gt;
+         &lt;/xsl:apply-templates&gt;
+      &lt;/tbody&gt;
+   &lt;/table&gt;
+
+&lt;/xsl:template&gt;
+
+
+&lt;xsl:template match="album"&gt;
+
+   &lt;tr&gt;
+      &lt;td&gt;&lt;xsl:value-of select="artist"/&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;xsl:value-of select="title"/&gt;&lt;/td&gt;
+      &lt;td&gt;
+
+         &lt;xsl:if test="media='MP3'"&gt;MP3&lt;/xsl:if&gt;
+      &lt;/td&gt;
+   &lt;/tr&gt;
+
+&lt;/xsl:template&gt;
+
+
+&lt;/xsl:transform&gt;
+
+</pre>
+
+<h2>Write your own tool</h2>
+
+<p>
+Because using the Play List Converter is far from ideal, I'm about to write
+a simple Perl program to extract the album information from the local Winamp
+CDDB database (and, of course, prints it as XML data). This database is
+stored in the file 'in_cdda.cdb' in your Winamp Plugins directory.
+</p>
+
+<p>
+(Update: don't expect anything from me this decade, as I have other things
+to do...)
+</p>
+
     </content>
 </item>
