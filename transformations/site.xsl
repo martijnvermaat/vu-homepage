@@ -34,9 +34,9 @@ Two parameters are expected:
     <xsl:variable name="site-structure-file" select="document($site-structure)" />
 
     <!-- This relative path takes you to the base directory
-         (can be empty if already there). -->
+         (can be ./ if already there). -->
     <xsl:variable name="base-path">
-        <xsl:for-each select="$site-structure-file/site//item[id=current()/item/id]/ancestor::dir">../</xsl:for-each>
+        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file/site//item[id=current()/item/id]/ancestor::dir">../</xsl:for-each>
     </xsl:variable>
 
     <!-- This is the path to the current document, relative
@@ -60,16 +60,18 @@ Two parameters are expected:
 
         <body>
 
+        <p><a href="{$base-path}">Home</a></p>
         <xsl:apply-templates select="$site-structure-file/site" mode="navigation">
             <xsl:with-param name="current-id" select="id" />
         </xsl:apply-templates>
 
         <p>
             You are here:
-            <xsl:apply-templates select="$site-structure-file/site/dir" mode="breadcrumbs">
+            <a href="{$base-path}">Home</a>
+            <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs">
                 <xsl:with-param name="current-id" select="id" />
             </xsl:apply-templates>
-            <a href="{$current-path}"><xsl:value-of select="title" /></a>
+            <!-- <a href="{$current-path}"><xsl:value-of select="title" /></a> -->
         </p>
 
         <h1><xsl:value-of select="title" /></h1>
@@ -115,12 +117,25 @@ Two parameters are expected:
 
         <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
-            <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
-            <xsl:apply-templates select="dir" mode="breadcrumbs">
+            - <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+            <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="breadcrumbs">
                 <xsl:with-param name="current-id" select="$current-id" />
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
             </xsl:apply-templates>
 
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="item" mode="breadcrumbs">
+
+        <xsl:param name="current-id" />
+        <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
+
+        <xsl:if test="(not(no-link)) and (id=$current-id)">
+            - <a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
         </xsl:if>
 
     </xsl:template>
@@ -131,7 +146,7 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:param name="current-id" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
-
+ 
         <xsl:if test="not(no-link)">
             <li>
                 <xsl:choose>
