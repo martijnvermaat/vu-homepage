@@ -54,6 +54,10 @@
             <id>site:vu:vl-2004</id>
             <location>vl-2004</location>
         </item>
+        <item>
+            <id>site:vu:iti-2005</id>
+            <location>iti-2005</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:iti-2005</id>
+    <title>Inleiding Theoretische Informatica 2005</title>
+    <language>nl</language>
+    <last-change>2005-03-05</last-change>
+    <content>
+
+
+<p>
+Samen met <a href="http://www.cs.vu.nl/~jrnederp/" external="true">Joris
+Nederpelt Lazarom</a> ben ik dit jaar practicum assistent bij het vak <a
+href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
+Informatica</a> voor tweedejaars studenten Informatica.
+</p>
+
+<p>
+Het vak bestaat uit drie onderdelen: equationele logica (4 weken), Lambda
+calculus (5 weken) en functioneel programmeren (2 weken).
+</p>
+
+
+<h1>Equationele logica</h1>
+
+
+<p>
+Omdat dit onderdeel in 2005 voor het eerst gegeven wordt is er besloten
+enkele voorbeeld tentamenopgaven met antwoorden en enkele instructieve
+uitwerkingen van opgaven uit het dictaat online te zetten.
+</p>
+
+<p>
+Deze zullen waarschijnlijk binnenkort (al dan niet in gewijzigde vorm)
+verschijnen op de <a href="http://www.cs.vu.nl/~tcs/iti/"
+external="true">homepage van ITI</a>. Tot die tijd is dit onofficieel en
+is het mogelijk dat er zich fouten of onvolkomenheden in de uitwerkingen
+bevinden ;).
+</p>
+
+<ul>
+<li>
+<a href="files/vu/iti/el/voorbeeld-tentamen-2005.pdf">Voorbeeld
+tentamenopgaven</a> (pdf)
+</li>
+<li>
+<a href="files/vu/iti/el/voorbeeld-antwoorden-2005.pdf">Antwoorden bij
+voorbeeld tentamenopgaven</a> (pdf)
+</li>
+</ul>
+
+<ul>
+<li>
+<a href="files/vu/iti/el/opgave5.5.pdf">Uitwerking van opgave 5.5 uit het
+dictaat</a> (pdf) (uitgedeeld op het werkcollege)
+</li>
+<li>
+<a href="http://www.cs.vu.nl/~tcs/iti/avi-opg66.ps"
+external="true">Uitwerking van opgave 6.4 uit het dictaat</a> (ps)
+(uitgedeeld op het werkcollege)
+</li>
+<li>
+Meer volgt...
+</li>
+</ul>
+
+<p>
+(Bovenstaande uitwerking bij opgave 6.4 komt niet van mij, maar
+vermoedelijk van Roel de Vrijer of Yde Venema.)
+</p>
+
+
+<h1>Lambda calculus</h1>
+
+
+<p>
+Meer info volgt. (<a href="asfsdf-lambda-calculus">Lambda calculus in
+het ASF+SDF Meta Environment</a>)
+
+</p>
+
+
+<h1>Functioneel programmeren</h1>
+
+
+<p>
+Handige info volgt.
+</p>
+
+
+    </content>
+</item>
