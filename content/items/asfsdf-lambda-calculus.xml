@@ -15,8 +15,8 @@
 In 1994, Arie van Deursen published
 <a href="ftp://ftp.cwi.nl/pub/gipe/reports/Deu92.ps.Z"
 external="true">Introducing ASF+SDF Using the Lambda-calculus as
-Example</a> (Postscript file) in which he presented a specification of the
-lambda calculus for the <a href="http://www.cwi.nl/projects/MetaEnv/"
+Example</a> (gzipped Postscript file) in which he presented a specification
+of the lambda calculus for the <a href="http://www.cwi.nl/projects/MetaEnv/"
 external="true">ASF+SDF Meta Environment</a> with substitutions, beta
 conversion, and left-most reductions.
 </p>
