@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:asfsdf-lambda-calculus</id>
+    <title>Lambda Calculus in the ASF+SDF Meta Environment</title>
+    <language>en</language>
+    <last-change>2005-01-23</last-change>
+    <content>
+
+
+<h1>Overview</h1>
+
+
+<p>
+In 1994, Arie van Deursen published
+<a href="ftp://ftp.cwi.nl/pub/gipe/reports/Deu92.ps.Z"
+external="true">Introducing ASF+SDF Using the Lambda-calculus as
+Example</a> (Postscript file) in which he presented a specification of the
+lambda calculus for the <a href="http://www.cwi.nl/projects/MetaEnv/"
+external="true">ASF+SDF Meta Environment</a> with substitutions, beta
+conversion, and left-most reductions.
+</p>
+
+<p>
+Recently, I tried to use <a href="ftp://ftp.cwi.nl/pub/gipe/spec/lambda.tar.Z"
+external="true">his definitions</a> (gzipped tar file), but they seemed not
+suitable for the current version of the Meta Environment. Therefore, I revised
+the definitions so I could use them in version 1.5.3 of the Meta Environment.
+</p>
+
+
+<h1>Download</h1>
+
+
+<p>
+Please note that my changes are ad-hoc and not well-tested. In particular, the
+<code>Let</code> module is not working yet.
+</p>
+
+<p>
+Download the definitions in an archive:
+<a href="files/asfsdf-lambda-calculus/lambda-calculus.tar.gz">lambda-calculus.tar.gz</a>
+</p>
+
+<p>
+Or be sure to get the latest revision by exporting it from my Subversion repository:
+</p>
+
+<pre>
+$ svn export <a href="http://kjew.xs4all.nl/repository/asfsdf/lambda-calculus" external="true">http://kjew.xs4all.nl/repository/asfsdf/lambda-calculus</a> lambda-calculus
+</pre>
+
+<p>
+Read the <a href="files/asfsdf-lambda-calculus/README.txt">README</a> file for usage
+instructions.
+</p>
+
+
+    </content>
+</item>

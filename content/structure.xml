@@ -63,4 +63,9 @@
         <id>site:colofon</id>
         <location>colofon</location>
     </item>
+    <item>
+        <id>site:asfsdf-lambda-calculus</id>
+        <location>asfsdf-lambda-calculus</location>
+        <hidden />
+    </item>
 </site>

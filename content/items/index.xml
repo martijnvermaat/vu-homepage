@@ -4,23 +4,85 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2004-12-20</last-change>
+    <last-change>2005-01-23</last-change>
     <content>
 
 
-<h1>Hi</h1>
+<h1>Martijn Vermaat</h1>
 
 
 <p>
-My name is Martijn Vermaat and you're looking at my personal homepage at the
-Vrije Universiteit Amsterdam.
+This is my personal homepage at the Vrije Universiteit Amsterdam where I'm
+currently a third year's student Computer Science where my main interests
+are theoretical computer science and software technology.
+</p>
+
+
+<h2>Teaching</h2>
+
+
+<p>
+In spring 2005, I'm practicum assistant for the course <a
+href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
+Informatica</a>. For practicing Lambda Calculus, students may find the
+<a href="asfsdf-lambda-calculus">revised definitions</a> for the <a
+href="http://www.cwi.nl/projects/MetaEnv/" external="true">ASF+SDF Meta
+Environment</a> useful. Although a much more limited environment, <a
+href="britney">Britney</a> might also be worth a look (for one thing, it's
+much easier to get up and running).
+</p>
+
+
+<h2>Interests</h2>
+
+
+<p>
+Currently I'm mostly interested in logics in computer science (inspired by the
+course <a href="vu/vl-2004">Advanced Logic</a>, <a
+href="http://www.godelbook.net/" external="true">this book on Gödel's work</a>,
+and <a href="http://www.few.vu.nl/~hhhansen/papers/scriptie_pic.pdf"
+external="true">Helle Hansen's thesis</a>, among others) and the theory and
+practice of programming languages (e.g. paradigms, compilers, semantics).
 </p>
 
 <p>
-Currently, I'm a third year's student Computer Science where my main
-interests are theoretical computer science and software technology. Some
-additional personal information can be extracted from the Q&amp;A section
-below.
+On a less theoretical note, I'm amusing myself playing with LaTeX (the <a
+href="http://www.latex-project.org/" external="true">typesetting one</a> that
+is), the <a href="http://www.debian.org/" external="true">Debian operating
+system</a>, and small “never-to-finish” programming projects (at the moment
+focussing on Python and XSLT).
+</p>
+
+
+<h2>Currently reading</h2>
+
+
+<ul>
+    <li>
+        <a href="http://www.info.ucl.ac.be/~pvr/" external="true">Concepts,
+        Techniques, and Models of Computer Programming</a> by Peter van Roy
+        and Seif Haridi.
+    </li>
+    <li>
+        <a href="http://www.cis.ksu.edu/~schmidt/text/densem.html"
+        external="true">Denotational Semantics: A Methodology for Language
+        Development</a> by David Schmidt.
+    </li>
+</ul>
+
+
+<h2>Personal</h2>
+
+
+<p>
+Whenever there's still time left in my day, I try to spend it with my
+girlfriend Loes, family, or friends. When I'm alone, I try to play some
+guitar (although Loes is still unimpressed by my playing skills), and listen
+to music. My alltime favourite band is <a href="http://www.sonicyouth.com/"
+external="true">Sonic Youth</a>. Naming other good artists
+after them would result in a infinite list, and since I'm <a
+href="http://c2.com/cgi/wiki?LazyEvaluation" external="true">lazy</a>, I
+won't do so until you ask me.
 </p>
 
 
@@ -28,72 +90,35 @@ below.
 
 
 <p>
-What you can find on this website is the following:
+The main contents of my homepage are accessible through the navigation at
+the bottom of every page. All pages related to my study at university are
+located in the <a href="vu/">vu</a> subdirectory.
 </p>
-
-<dl>
-    <dt><a href="britney">Britney</a></dt>
-    <dd>Britney is a simple interpreter for pure untyped Lambda Calculus,
-    written in Java.</dd>
-    <dt><a href="hanoi">Towers of Hanoi in Lambda Calculus</a></dt>
-    <dd>A solution of the Towers of Hanoi problem in Lambda Calculus.</dd>
-    <dt><a href="cddb">Exporting the Winamp CDDB database</a></dt>
-    <dd>Short explanation on how to extract information from your local
-    Winamp CDDB database.</dd>
-    <dt><a href="vu/">VU documents</a></dt>
-    <dd>All things related to my study.</dd>
-    <dt><a href="links">Links</a></dt>
-    <dd>Some links you might think interresting.</dd>
-</dl>
 
 <p>
 More info about this website, including the source code, can be found on
 the <a href="colofon">colofon page</a>.
 </p>
 
+<p>
+If you experience problems reading these pages, please try a <a
+href="http://www.apple.com/safari/" external="true">decent</a> <a
+href="http://www.mozilla.org/" external="true">browser</a>.
+</p>
 
-<h1>Q&amp;A</h1>
+
+<h1>Q &amp; A</h1>
 
 
-<dl>
+<p>
+<strong>Q:</strong> What's you favourite paradox that came as quite an
+unpleasant surprise to Frege when he was just about to bring the second
+volume of his Grundlagen der Arithmetik to the presses?</p>
 
-<dt>Q: Are the colors on this webpage stolen?</dt>
-<dd>
-A: Yes, they are. From the <a href="http://www.ubuntulinux.org/"
-external="true">Ubuntu Linux</a> distribution.
-</dd>
-
-<dt>Q: Gnome/KDE, Emacs/ViM?</dt>
-<dd>
-A: Gnome, Emacs.
-</dd>
-
-<dt>Q: What's your favourite dinner?</dt>
-<dd>
-A: That must be Tandoori Chicken.
-</dd>
-
-<dt>Q: What's you favourite paradox that came as quite an unpleasant
-surprise to Frege when he was just about to bring the second volume
-of his Grundlagen der Arithmetik to the presses?</dt>
-<dd>
-A: Russell's Paradox.
-</dd>
-
-<dt>Q: Why does this website suck so much?</dt>
-<dd>
-A: Use a <a href="http://www.apple.com/safari/"
-external="true">decent</a> <a href="http://www.mozilla.org/"
-external="true">browser</a>. This website will still suck but your
-online life will not.
-</dd>
-
-<dt>Q: Thank you for your time.</dt>
-<dd>
-A: That's not a question.
-</dd>
-
-</dl>
+<p>
+<strong>A:</strong> <a href="http://en.wikipedia.org/wiki/Russell's_paradox"
+external="true">Russell's Paradox</a>.
+</p>
 
 
     </content>
