@@ -7,11 +7,11 @@
     <last-change>2003-03-15</last-change>
     <content>
 
-<h2>Introduction</h2>
+<h1>Introduction</h1>
 
 <p>
 You can let Winamp download album information from <a
-href="http://www.cddb.com" class="ext" title="http://www.cddb.com">CDDB</a>
+href="http://www.cddb.com" external="true">CDDB</a>
 automatically for each audio CD you play. It is only a matter of time for
 the local Winamp CDDB database you build by playing your CD's with Winamp to
 contain information of almost all of your albums. Of course you'd like to do
@@ -19,15 +19,15 @@ something with this database, but unfortunatily Winamp doesn't store is as
 plain text (the Windows CD player, for example, does).
 </p>
 
-<h2>Play List Converter</h2>
+<h1>Play List Converter</h1>
 
 <p>
 So you'll need something to extract your album information from the local
 Winamp CDDB database. After some searching I found a tool to do this for
 you, <a href="http://thesoftpro.tripod.com/downloads/plcvt/index.htm"
-class="ext" title="http://thesoftpro.tripod.com/downloads/plcvt/index.htm">
+external="true">
 Play List Converter</a> by <a href="mailto:alex__yakovlev@hotmail.com"
-class="ext" title="mailto:alex__yakovlev@hotmail.com">Alex Yakovlev</a>
+external="true">Alex Yakovlev</a>
 (it's Freeware).
 </p>
 
@@ -37,7 +37,7 @@ there, the steps to create different representations of this data are quite
 trivial.
 </p>
 
-<h2>From HTML to XML ...</h2>
+<h1>From HTML to XML ...</h1>
 
 <p>
 I wrote a simple XSL script to transform the HTML report to an XML format (I
@@ -61,7 +61,7 @@ of an output XML document:
 &lt;/collection&gt;
 </pre>
 
-<h2>... to HTML again</h2>
+<h1>... to HTML again</h1>
 
 <p>
 Once you have this XML file you are really free to transform it to whatever
@@ -182,10 +182,9 @@ document here</a>, the XSL script I used is shown below:
 
 
 &lt;/xsl:transform&gt;
-
 </pre>
 
-<h2>Write your own tool</h2>
+<h1>Write your own tool</h1>
 
 <p>
 Because using the Play List Converter is far from ideal, I'm about to write

@@ -2,10 +2,27 @@
 
 <item>
     <id>site:hanoi</id>
-    <title>Towers of Hanoi</title>
+    <title>Towers of Hanoi in Lambda Calculus</title>
     <language>en</language>
-    <last-change>2004-08-18</last-change>
+    <last-change>2004-04-01</last-change>
     <content>
-        <p>Towers of Hanoi in Lambda Calculus.</p>
+
+<p>
+The Towers of Hanoi is a well-known problem that is widely used as an
+example when explaining the concept of recursion. Solutions to the problem
+have been constructed in numerous systems (mostly programming languages).
+Try <code>M-x hanoi</code> in Emacs for a nice example.
+</p>
+
+<p>
+However, I haven't been able to find a solution to the Towers of Hanoi in
+Lambda Calculus. So I constructed one and wrote a short explanation on how
+one would do such a thing.
+</p>
+
+<p>
+<a href="files/lambda-hanoi.pdf">Towers of Hanoi in Lambda Calculus</a> (pdf 92,172 bytes)
+</p>
+
     </content>
 </item>
