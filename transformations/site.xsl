@@ -40,7 +40,7 @@ Two parameters are expected:
     <!-- This relative path takes you to the base directory
          (can be ./ if already there). -->
     <xsl:variable name="base-path">
-        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file/site//item[id=current()/item/id]/ancestor::dir">../</xsl:for-each>
+        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file/site//item[id=/item/id]/ancestor::dir">../</xsl:for-each>
     </xsl:variable>
 
     <!-- This is the path to the current document, relative
@@ -48,7 +48,7 @@ Two parameters are expected:
     <xsl:variable name="current-path">
         <xsl:value-of select="$base-path" />
         <xsl:for-each
-            select="$site-structure-file/site//item[id=current()/item/id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
+            select="$site-structure-file/site//item[id=/item/id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
             <xsl:value-of select="concat(location,'/')" />
         </xsl:for-each>
     </xsl:variable>
@@ -122,7 +122,7 @@ Two parameters are expected:
             <div id="navigation">
             <p>
                 <xsl:choose>
-                    <xsl:when test="count($site-structure-file/site/item[id=current()/id]/no-link) > 0">
+                    <xsl:when test="count($site-structure-file/site/item[id=/item/id]/no-link) > 0">
                         <strong><a href="{$base-path}">Home</a></strong>
                     </xsl:when>
                     <xsl:otherwise>
