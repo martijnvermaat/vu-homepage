@@ -60,13 +60,14 @@ Two parameters are expected:
 
         <body>
 
-        <xsl:apply-templates select="$site-structure-file/site" />
+        <xsl:apply-templates select="$site-structure-file/site" mode="navigation">
+            <xsl:with-param name="current-id" select="id" />
+        </xsl:apply-templates>
 
         <p>
             You are here:
-            <xsl:apply-templates select="$site-structure-file/site/dir"
-                mode="breadcrumbs">
-                <xsl:with-param name="current" select="id" />
+            <xsl:apply-templates select="$site-structure-file/site/dir" mode="breadcrumbs">
+                <xsl:with-param name="current-id" select="id" />
             </xsl:apply-templates>
             <a href="{$current-path}"><xsl:value-of select="title" /></a>
         </p>
@@ -94,10 +95,14 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="site">
+    <xsl:template match="site" mode="navigation">
+
+        <xsl:param name="current-id" />
 
         <ul>
-            <xsl:apply-templates select="item|dir" mode="navigation" />
+            <xsl:apply-templates select="item|dir" mode="navigation">
+                <xsl:with-param name="current-id" select="$current-id" />
+            </xsl:apply-templates>
         </ul>
 
     </xsl:template>
@@ -105,14 +110,14 @@ Two parameters are expected:
 
     <xsl:template match="dir" mode="breadcrumbs">
 
-        <xsl:param name="current" />
+        <xsl:param name="current-id" />
         <xsl:param name="dir" />
 
-        <xsl:if test="count(descendant::item[id=$current]) > 0">
+        <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
             <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
             <xsl:apply-templates select="dir" mode="breadcrumbs">
-                <xsl:with-param name="current" select="$current" />
+                <xsl:with-param name="current-id" select="$current-id" />
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
             </xsl:apply-templates>
 
@@ -124,11 +129,19 @@ Two parameters are expected:
     <xsl:template match="item" mode="navigation">
 
         <xsl:param name="dir" />
+        <xsl:param name="current-id" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
         <xsl:if test="not(no-link)">
             <li>
-                <a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+                <xsl:choose>
+                    <xsl:when test="id=$current-id">
+                        <strong><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a></strong>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+                    </xsl:otherwise>
+                </xsl:choose>
             </li>
         </xsl:if>
 
@@ -138,12 +151,21 @@ Two parameters are expected:
     <xsl:template match="dir" mode="navigation">
     
         <xsl:param name="dir" />
+        <xsl:param name="current-id" />
 
         <li>
-            <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+            <xsl:choose>
+                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
+                    <strong><a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a></strong>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+                </xsl:otherwise>
+            </xsl:choose>
             <ul>
                 <xsl:apply-templates select="item|dir" mode="navigation">
-                    <xsl:with-param name="dir"><xsl:value-of select="$dir" /><xsl:value-of select="location" />/</xsl:with-param>
+                    <xsl:with-param name="dir" select="concat($dir,location,'/')" />
+                    <xsl:with-param name="current-id" select="$current-id" />
                 </xsl:apply-templates>
             </ul>
         </li>
