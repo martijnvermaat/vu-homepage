@@ -3,8 +3,8 @@ AddType application/x-javascript .js
 AddType "application/xhtml+xml; charset=utf-8" .xhtml
 
 <FilesMatch "^[^\.]+$">
-    ForceType "application/xhtml+xml; charset=utf-8"
-    #ForceType "text/html; charset=utf-8"
+    #ForceType "application/xhtml+xml; charset=utf-8"
+    ForceType "text/html; charset=utf-8"
 </FilesMatch>
 
 DirectoryIndex index
