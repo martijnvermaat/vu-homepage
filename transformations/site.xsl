@@ -90,13 +90,13 @@ Two parameters are expected:
             <xsl:value-of select="concat('Last changed: ',
                           date:year(last-change),
                           '/',
-                          date:month-in-year(last-change),
+                          date:month-in-year(last-change)+1,
                           '/',
                           date:day-in-month(last-change))" />
             <xsl:value-of select="concat('; generated: ',
                           date:year($now),
                           '/',
-                          date:month-in-year($now),
+                          date:month-in-year($now)+1,
                           '/',
                           date:day-in-month($now))" />
             </p>

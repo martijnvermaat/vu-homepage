@@ -6,6 +6,248 @@
     <language>en</language>
     <last-change>2004-08-18</last-change>
     <content>
-        <p>This is a page about <strong>Britney</strong>.</p>
+
+
+<h1 id="about">About</h1>
+
+
+<p>
+Britney is a simple interpreter for terms of pure, untyped Lambda Calculus.
+To be short, terms can be stored, called, reduced, and normalized. Most
+obvious use of Britney is as a tool of help when first studying Lambda
+Calculus.
+</p>
+
+<p>
+The parser Britney uses is generated using <a href="http://www.sablecc.org/"
+external="true">SableCC</a>. SableCC 3 can
+automatically transform the Concrete Syntax Tree (CST) to an Abstract Syntax
+Tree (AST) following transformation guidelines in the grammar definition.
+This makes writing a parser very easy.
+</p>
+
+<p>
+To reduce Lambda terms, Britney uses the normal order (leftmost-outermost)
+reduction strategy. This is done simply by transforming the AST at each
+reduction step. The implementation tries to follow mathematical definitions
+for Beta reduction as close as possible in order to have very clean and
+understandable source code. Undoubtly, performance suffers from this, but
+that's ok.
+</p>
+
+
+<h1 id="usage">Usage examples</h1>
+
+
+<p>
+All command line arguments passed to Britney will be interpreted as
+definition file names. The commands in these files will be executed at
+startup. This lets you define commonly used Lambda terms in definition
+files.
+</p>
+
+<p>
+I will not explain all available commands, please use the <code>help</code>
+command in Britney instead. The most important command is the
+<code>use</code> command. This command will ask you for a Lambda term that
+will be set as 'current term'. The 'current term' is important in Britney,
+because nearly all other commands operate on the current term.
+</p>
+
+<p>
+Other useful commands are the <code>reduce</code> command to do one Beta
+reduction step on the current term, the <code>normalize</code> command to
+perform multiple reductions until the term is in normal form, and the
+<code>store</code> command to store the current term at some name that you
+will be asked for. Stored terms can be referenced in other terms by name
+(the name reference will be replaced by a copy of the referenced term).
+</p>
+
+<p>
+Here is a simple usage example for Britney:
+</p>
+
+
+<pre>
+$ britney prelude.britney
+Welcome to Britney version 0.3 (2004/08/09).
+Start with '-info' for more information.
+File loaded: prelude.britney
+> use
+Term: \x.x
+Current term: \x.x
+> store
+Name: I
+> use
+Term: (\y.y y) I
+Current term: (\y.y y) \x.x
+> normalize
+Number of reductions: 2
+Current term: \x.x
+> match
+Match: I
+> ^D
+Bye
+
+$
+</pre>
+
+
+<p>
+Note the use of the <code>match</code> command. It tries to match all stored
+terms to the current term (modulo alpha conversion). This can be of help
+when analyzing the result of a reduction. Because we are talking about
+untyped Lambda Calculus here, it is quite difficult to say something
+sensible about a complex resulting term. If you expect a certain result,
+storing that in advance and matching the actual result might help.
+</p>
+
+
+<h1 id="limitations">Limitations</h1>
+
+
+<p>
+Britney has a number of limitations, most notably:
+</p>
+
+<ul>
+    <li>
+        <p>
+        Reducing large terms can result in a <code>StackOverflowError</code>
+        exception because descending the tree is done using heavy recursion.
+        </p>
+    </li>
+    <li>
+        <p>
+        Terms of the form '<code>A \x.B</code>' have to be entered as
+        '<code>A (\x.B)</code>', even though they are unambiguous following
+        general conventions. This is because of a grammar limitation that
+        might be fixed in a future version of Britney. If there ever will be
+        one, that is.
+        </p>
+    </li>
+    <li>
+        <p>
+        When printing terms, there is no check on the size, so large terms
+        may take several screens full. This is not really such a bad thing.
+        </p>
+    </li>
+    <li>
+        <p>
+        The implementation of Beta reduction is kept close to the
+        mathematical definition of Beta reduction in order to keep the code
+        as clean as possible. therefore, should you care about that,
+        performance is really bad.
+        </p>
+    </li>
+</ul>
+
+
+<h1 id="download">Downloading Britney</h1>
+
+<p>
+Britney is Open Source and licensed under the new <a
+href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>.
+</p>
+
+<p>
+The easiest way to use Britney is to download the binary package which
+contains an executable JAR file. You can also download the complete source
+code. In order to compile Britney from source, you need the Apache Ant
+build tool. SableCC is not required, as the generated source code for the
+parser is included, but for regenerating the build file uses the SableCC
+Ant Task.
+</p>
+
+<ul>
+    <li>
+        <p>
+        <a href="files/britney/britney-0.3.1.tar.gz">Britney 0.3.1 binary
+        package</a>
+        </p>
+    </li>
+    <li>
+        <p>
+        <a href="files/britney/britney-0.3.1-src.tar.gz">Britney 0.3.1 project
+        source</a>
+        </p>
+    </li>
+</ul>
+
+<p>
+Included in the binary package are two Lambda Calculus definition files,
+<code>prelude.hanoi</code> and <code>hanoi.britney</code>. The latter
+contains a solution for <a href="hanoi">Towers of Hanoi in
+Lambda Calculus</a> suitable for use in Britney.
+</p>
+
+<p>
+Those of you who only want real bleeding edge software should checkout the
+latest revision from the Subversion repository. Anonymous access is provided
+via HTTP:
+</p>
+
+<pre>
+$ svn export http://kjew.xs4all.nl/repository/britney/trunk britney
+</pre>
+
+
+<h1 id="run">Running Britney</h1>
+
+
+<p>
+I tested Britney with SUN Java 1.4.1/Solaris, SUN Java 1.4.2/Linux, and SUN
+Java 1.4.2/Windows2000. I guess you will be fine with any recent Java VM. In
+the following examples, running <code>britney</code> means running the shell
+script in the <code>bin/</code> directory. Make sure to set the absolute
+path to britney.jar in that file and make it executable.
+</p>
+
+<p>
+Running britney is easy:
+</p>
+
+<pre>
+$ britney
+Welcome to Britney version 0.3 (2004/08/09).
+Start with '-info' for more information.
+>
+</pre>
+
+<p>
+Or run Britney with some function definition files as arguments:
+</p>
+
+<pre>
+$ britney prelude.britney hanoi.britney
+Welcome to Britney version 0.3 (2004/08/09).
+Start with '-info' for more information.
+File loaded: prelude.britney
+File loaded: hanoi.britney
+>
+</pre>
+
+<p>
+If you have shell access to the cs.vu.nl network, you can run Britney
+directly from my userdir (without having to download it first) like this:
+</p>
+
+<pre>
+$ /home/mvermaat/public/bin/britney
+</pre>
+
+<p>
+The <code>prelude.britney</code> and <code>hanoi.britney</code> definition
+files can be found in <code>/home/mvermaat/public/britney</code>. For more
+information, you can use the <code>-info</code> option:
+</p>
+
+<pre>
+$ britney -info
+...
+</pre>
+
+
     </content>
 </item>
