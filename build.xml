@@ -5,10 +5,10 @@
 
 <property name="content.dir" value="content" />
 <property name="build.dir" value="build" />
+<property name="validate.dir" value="validate" />
 <property name="transformations.dir" value="transformations" />
+<property name="dtd.dir" value="etc/dtd" />
 <property name="www-files.dir" value="etc/www" />
-
-<property name="from-items-to-basedir.dir" value="../.." />
 
 <property name="site.items" value="${content.dir}/items" />
 <property name="site.structure" value="${content.dir}/structure.xml" />
@@ -31,7 +31,7 @@ Build Target
         basedir="${site.items}"
         destdir="${build.dir}"
         style="${basedir}/${site.transformation}"
-        extension=".xhtml"
+        extension=""
         includes="**/*.xml">
         <param name="site-structure" expression="${basedir}/${site.structure}" />
         <param name="items-dir" expression="${basedir}/${site.items}" />
@@ -55,21 +55,22 @@ Validate build target
     description="validate all xhtml files of build"
     unless="dont-validate">
 
-    <!-- add .xhtml extensions -->
-    <move todir="${build.dir}" includeemptydirs="false">
+    <!-- copy to validate.dir and add .xhtml extensions -->
+    <copy todir="${validate.dir}" includeemptydirs="false">
         <fileset dir="${build.dir}" />
         <mapper type="regexp" from="^([^\.]+)$$" to="\1.xhtml" />
-    </move>
+    </copy>
 
     <xmlvalidate lenient="no" warn="yes">
-        <fileset dir="${build.dir}" includes="**/*.xhtml"/>
+        <fileset dir="${validate.dir}" includes="**/*.xhtml"/>
+        <xmlcatalog>
+            <dtd
+                publicId="-//W3C//DTD XHTML 1.1//EN"
+                location="${dtd.dir}/xhtml11-flat.dtd" />
+        </xmlcatalog>
     </xmlvalidate>
 
-    <!-- remove .xhtml extensions -->
-    <move todir="${build.dir}" includeemptydirs="false">
-        <fileset dir="${build.dir}" />
-        <mapper type="regexp" from="^([^\.]+)\.xhtml$$" to="\1" />
-    </move>
+    <delete dir="${validate.dir}" />
 
 </target>
 
@@ -85,6 +86,9 @@ Clean Target
     description="remove all build files">
 
     <delete dir="${build.dir}" />
+
+    <!-- just to be sure -->
+    <delete dir="${validate.dir}" />
 
 </target>
 
