@@ -216,7 +216,7 @@ Two parameters are expected:
         <xsl:param name="current-id" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
  
-        <xsl:if test="not(no-link)">
+        <xsl:if test="(not(no-link)) and (not(hidden))">
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
