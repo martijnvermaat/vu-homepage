@@ -4,7 +4,7 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2004-09-19</last-change>
+    <last-change>2004-11-15</last-change>
     <content>
 
 
@@ -23,6 +23,13 @@ Nice parser generator for Java with automatic CST→AST transformation.
 If you are still using the crippled Internet Explorer: please, do yourself
 and the web a favor and ban it. Use a decent browser, like Mozilla or
 Mozilla Firefox.
+</dd>
+
+<dt><a href="http://www.phil.cam.ac.uk/teaching_staff/Smith/LaTeX/"
+external="true">LaTeX for Logicians</a></dt>
+<dd>
+An extensive resource on the use of LaTeX for typesetting documents aimed
+at logicians, but equally usefull for mathematicians and others.
 </dd>
 
 </dl>
@@ -52,6 +59,13 @@ external="true">Proofs and Types</a></dt>
 <dd>
 The book by Jean-Yves Girard, translated and with appendices by Paul Taylor
 and Yves Lafont.
+</dd>
+
+<dt><a href="http://www.godelbook.net/" external="true">Gödel's Theorems:
+an Introduction</a></dt>
+<dd>
+This is a work in progress by Peter Smith that will become a book discussing
+Gödel's incompleteness theorems and the philosophical implications.
 </dd>
 
 </dl>
