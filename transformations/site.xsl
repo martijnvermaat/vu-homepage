@@ -60,13 +60,22 @@ Two parameters are expected:
 
         <body>
 
-        <p><a href="{$base-path}">Home</a></p>
+        <p>
+            <xsl:choose>
+                <xsl:when test="count($site-structure-file/site/item[id=current()/id]/no-link) > 0">
+                    <strong><a href="{$base-path}">Home</a></strong>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{$base-path}">Home</a>
+                </xsl:otherwise>
+            </xsl:choose>
+        </p>
         <xsl:apply-templates select="$site-structure-file/site" mode="navigation">
             <xsl:with-param name="current-id" select="id" />
         </xsl:apply-templates>
 
         <p>
-            You are here:
+            <xsl:text>You are here:</xsl:text>
             <a href="{$base-path}">Home</a>
             <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs">
                 <xsl:with-param name="current-id" select="id" />
@@ -117,7 +126,7 @@ Two parameters are expected:
 
         <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
-            - <a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
+            <xsl:text>- </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="title" /></a>
             <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="breadcrumbs">
                 <xsl:with-param name="current-id" select="$current-id" />
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
@@ -135,7 +144,7 @@ Two parameters are expected:
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
         <xsl:if test="(not(no-link)) and (id=$current-id)">
-            - <a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+            <xsl:text>- </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
         </xsl:if>
 
     </xsl:template>
