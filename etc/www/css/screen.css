@@ -84,6 +84,11 @@ a.external:after {
 }
 
 
+pre a.external:after {
+    display             :   none;
+}
+
+
 dt {
     font-weight         :   bold;
 }

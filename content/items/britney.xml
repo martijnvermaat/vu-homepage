@@ -189,7 +189,7 @@ via HTTP (more information on my <a href="colofon">colofon page</a>):
 </p>
 
 <pre>
-$ svn export http://kjew.xs4all.nl/repository/britney/trunk britney
+$ svn export <a href="http://kjew.xs4all.nl/repository/britney/trunk" external="true">http://kjew.xs4all.nl/repository/britney/trunk</a> britney
 </pre>
 
 

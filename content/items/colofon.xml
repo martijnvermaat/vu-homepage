@@ -54,7 +54,7 @@ the command:
 </p>
 
 <pre>
-$ svn export http://kjew.xs4all.nl/repository/vu-website/trunk vu-website
+$ svn export <a href="http://kjew.xs4all.nl/repository/vu-website/trunk" external="true">http://kjew.xs4all.nl/repository/vu-website/trunk</a> vu-website
 </pre>
 
 <p>
