@@ -65,7 +65,14 @@
 
      <xsl:template match="item" mode="navigation">
 
-         <li><xsl:value-of select="location" /></li>
+         <li>
+             <a href="{location}.html"><xsl:value-of select="id" /></a>
+             <xsl:if test="count(child::item) > 0">
+                 <ul>
+                     <xsl:apply-templates select="item" mode="navigation" />
+                 </ul>
+             </xsl:if>
+         </li>
 
      </xsl:template>
 
