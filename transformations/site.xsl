@@ -24,9 +24,8 @@ Two parameters are expected:
     exclude-result-prefixes="date">
 
     <xsl:output method="xml" indent="yes" encoding="UTF-8"
-        doctype-public="-//W3C//DTD XHTML 1.1//EN"
-        doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"/>
-
+        doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
     <xsl:param name="site-structure"></xsl:param>
     <xsl:param name="items-dir"></xsl:param>

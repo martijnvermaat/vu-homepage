@@ -77,8 +77,8 @@ Validate build target
         <fileset dir="${validate.dir}" includes="**/*.xhtml"/>
         <xmlcatalog>
             <dtd
-                publicId="-//W3C//DTD XHTML 1.1//EN"
-                location="${dtd.dir}/xhtml11-flat.dtd" />
+                publicId="-//W3C//DTD XHTML 1.0 Strict//EN"
+                location="${dtd.dir}/xhtml1/xhtml1-strict.dtd" />
         </xmlcatalog>
     </xmlvalidate>
 
