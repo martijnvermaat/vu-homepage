@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:links</id>
+    <title>Links</title>
+    <language>en</language>
+    <last-change>2004-08-18</last-change>
+    <content>
+        <p>Some nice links.</p>
+    </content>
+</item>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:hanoi</id>
+    <title>Towers of Hanoi</title>
+    <language>en</language>
+    <last-change>2004-08-18</last-change>
+    <content>
+        <p>Towers of Hanoi in Lambda Calculus.</p>
+    </content>
+</item>

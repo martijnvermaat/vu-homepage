@@ -1,0 +1,8 @@
+AddType text/css .css
+AddType application/x-javascript .js
+
+<FilesMatch "^[^\.]+$">
+    ForceType "application/xhtml+xml; charset=utf-8"
+</FilesMatch>
+
+DirectoryIndex index
