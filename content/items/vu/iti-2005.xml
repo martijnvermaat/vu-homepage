@@ -4,7 +4,7 @@
     <id>site:vu:iti-2005</id>
     <title>Inleiding Theoretische Informatica 2005</title>
     <language>nl</language>
-    <last-change>2005-03-05</last-change>
+    <last-change>2005-03-28</last-change>
     <content>
 
 
@@ -74,9 +74,39 @@ vermoedelijk van Roel de Vrijer of Yde Venema.)
 <h1>Lambda calculus</h1>
 
 
+<h2>ASF+SDF Meta Environment</h2>
+
+
 <p>
-Meer info volgt. (<a href="asfsdf-lambda-calculus">Lambda calculus in
-het ASF+SDF Meta Environment</a>)
+Het <a href="http://www.cwi.nl/htbin/sen1/twiki/bin/view/SEN1/MetaEnvironment"
+external="true">ASF+SDF Meta Environment</a> is een uitgebreid systeem
+waarin je onder andere op basis van algebraische specificaties (dus de
+specificaties die we in het eerste deel van ITI behandeld hebben) termen
+kunt laten herschrijven.
+</p>
+
+<p>
+Op mijn website kun je een <a href="asfsdf-lambda-calculus">specificatie van
+Lambda calculus</a> voor het ASF+SDF Meta Environment vinden. Daarmee kun je
+de structuur van Lambda termen analyseren en ze doormiddel van herschrijven
+naar normaalvorm laten reduceren.
+</p>
+
+<p>
+Het ASF+SDF Meta Environment is op dit moment niet beschikbaar op de
+systemen in de computerzalen. Onder Linux en Solaris is het echter vrij
+gemakkelijk te installeren. Voor vragen kun je altijd bij mij terecht.
+</p>
+
+
+<h2>Britney</h2>
+
+
+<p>
+Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
+<a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
+afdrukken, termen reduceren en termen vergelijken modulo alpha
+conversie.
 </p>
 
 
@@ -86,11 +116,10 @@ het ASF+SDF Meta Environment</a>)
 <p>
 Bij het practicum functioneel programmeren zullen we de taal <a
 href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
-Caml</a> gebruiken. Ik kwam laatst deze <a
+Caml</a> gebruiken. Voor iedereen met een Java achtergrond is deze<a
 href="http://merjis.com/developers/ocaml_tutorial/"
 external="true">OCaml Tutorial</a> voor C(++), Perl en Java programmeurs
-tegen die een aardige introductie in de taal geeft voor iedereen die
-geen eerdere ervaring heeft met functionele programmeertalen.
+een aardige introductie in de taal.
 </p>
 
 

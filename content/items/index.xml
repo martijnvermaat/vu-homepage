@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-03-05</last-change>
+    <last-change>2005-03-28</last-change>
     <content>
 
 
@@ -12,13 +12,19 @@
 
 
 <p>
-<img src="img/martijn.png" width="100" height="106" alt="A picture of Martijn" />
-</p>
-
-<p>
 This is my personal homepage at the Vrije Universiteit Amsterdam where I'm
 currently a third year's student Computer Science. My main interests there
 are theoretical computer science and software technology.
+</p>
+
+<p>
+<img src="img/martijn-loes.png" width="140" height="114"
+alt="A picture of Loes and Martijn" />
+</p>
+
+<p>
+You can see what I look like on the picture above. I'm the one on the right,
+my girlfriend Loes is on the left.
 </p>
 
 
@@ -28,18 +34,8 @@ are theoretical computer science and software technology.
 <p>
 In spring 2005, I'm practicum assistant for the course <a
 href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
-Informatica</a>. For practicing Lambda Calculus, students may find the
-<a href="asfsdf-lambda-calculus">revised definitions</a> for the <a
-href="http://www.cwi.nl/projects/MetaEnv/" external="true">ASF+SDF Meta
-Environment</a> useful. Although a much more limited environment, <a
-href="britney">Britney</a> might also be worth a look (for one thing, it's
-much easier to get up and running). Maybe more on this course will appear
-here later.
-</p>
-
-<p>
-<strong>Update:</strong> I have set up a <a href="vu/iti-2005">separate
-page</a> for this course.
+Informatica</a>. More information can be found on a <a
+href="vu/iti-2005" hreflang="nl">separate page</a> for this course.
 </p>
 
 
@@ -79,10 +75,9 @@ focussing on Python and XSLT).
         Development</a> by David Schmidt.
     </li>
     <li>
-        <a href="http://catamaran.labs.cs.uu.nl/twiki/pt/bin/view/Stratego/ProgramTransformationWithScopedDynamicRewriteRules"
-        external="true">Program Transformation With Scoped Dynamic Rewrite
-        Rules</a> by Martin Bravenboer, Arthur van Dam, Karina Olmos and Eelco
-        Visser.
+        <a href="http://citeseer.ist.psu.edu/cardelli85understanding.html"
+        external="true">On Understanding Types, Data Abstraction, and
+        Polymorphism</a> by Luca Cardelli and Peter Wegner.
     </li>
 </ul>
 
