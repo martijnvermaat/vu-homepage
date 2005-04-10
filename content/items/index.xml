@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-03-28</last-change>
+    <last-change>2005-04-11</last-change>
     <content>
 
 
@@ -75,9 +75,9 @@ focussing on Python and XSLT).
         Development</a> by David Schmidt.
     </li>
     <li>
-        <a href="http://citeseer.ist.psu.edu/cardelli85understanding.html"
-        external="true">On Understanding Types, Data Abstraction, and
-        Polymorphism</a> by Luca Cardelli and Peter Wegner.
+        <a href="http://www.cs.vu.nl/~jketema/publ/icrs.pdf"
+        external="true">Infinitary Combinatory Reduction Systems</a> (pdf)
+        by Jeroen Ketema and Grue Simonsen.
     </li>
 </ul>
 

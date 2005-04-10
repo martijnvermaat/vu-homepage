@@ -122,6 +122,33 @@ external="true">OCaml Tutorial</a> voor C(++), Perl en Java programmeurs
 een aardige introductie in de taal.
 </p>
 
+<p>
+Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb
+ik een OCaml mode voor Emacs gezet, <a
+href="http://www-rocq.inria.fr/~acohen/tuareg/" external="true">Tuareg
+Mode</a>, die ik iets fijner vind werken dan de OCaml mode die standaard
+bij de OCaml distributie zit.
+</p>
+
+<p>
+Je kunt Tuareg Mode automatisch laten activeren bij het openen van OCaml
+files door het toevoegen van de volgende regels aan je
+<code>~/.emacs</code> file:
+</p>
+
+<pre>
+;; Where do we look for tuareg?
+(setq load-path (cons "~mvermaat/public/tuareg_mode/" load-path))
+
+;; OCaml tuareg mode
+(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+
+;; Look in ~mvermaat/public/tuareg_mode/custom-tuareg.el for some ideas on
+;; customization options.
+</pre>
+
 
     </content>
 </item>
