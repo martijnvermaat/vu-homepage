@@ -78,7 +78,7 @@ pre {
 
 
 a.external:after {
-    content             :   " (!)";
+    content             :   " !"; /*" (!)";*/
     font-size           :   0.6em;
     vertical-align      :   top;
 }
@@ -100,7 +100,7 @@ dd {
 
 
 a[hreflang='nl']:after {
-    content             :   " (Dutch)";
+    content             :   " NL"; /*" (Dutch)";*/
     font-size           :   0.6em;
     vertical-align      :   top;
 }
