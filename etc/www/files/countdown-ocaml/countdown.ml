@@ -393,9 +393,17 @@ let rec expression_to_string e =
     match e with
         Val n        -> string_of_int n
       | App(o, l, r) ->
-          "(" ^ (expression_to_string l)
-          ^ (operator_to_string o)
-          ^ (expression_to_string r) ^ ")"
+          begin
+            match l with
+                Val _ -> expression_to_string l
+              | _     -> "(" ^ (expression_to_string l) ^ ")"
+          end
+          ^ " " ^ (operator_to_string o) ^ " " ^
+          begin
+            match r with
+                Val _ -> expression_to_string r
+              | _     -> "(" ^ (expression_to_string r) ^ ")"
+          end
 
 
 (*
