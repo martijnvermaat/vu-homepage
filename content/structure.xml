@@ -11,12 +11,12 @@
         <location>britney</location>
     </item>
     <item>
-        <id>site:hanoi</id>
-        <location>hanoi</location>
+        <id>site:countdown-ocaml</id>
+        <location>countdown-ocaml</location>
     </item>
     <item>
-        <id>site:cddb</id>
-        <location>cddb</location>
+        <id>site:hanoi</id>
+        <location>hanoi</location>
     </item>
     <dir>
         <location>vu</location>
@@ -70,6 +70,11 @@
     <item>
         <id>site:asfsdf-lambda-calculus</id>
         <location>asfsdf-lambda-calculus</location>
+        <hidden />
+    </item>
+    <item>
+        <id>site:cddb</id>
+        <location>cddb</location>
         <hidden />
     </item>
 </site>

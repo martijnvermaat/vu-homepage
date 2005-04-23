@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-04-11</last-change>
+    <last-change>2005-04-24</last-change>
     <content>
 
 
@@ -70,14 +70,9 @@ focussing on Python and XSLT).
         and Seif Haridi.
     </li>
     <li>
-        <a href="http://www.cis.ksu.edu/~schmidt/text/densem.html"
-        external="true">Denotational Semantics: A Methodology for Language
-        Development</a> by David Schmidt.
-    </li>
-    <li>
-        <a href="http://www.cs.vu.nl/~jketema/publ/icrs.pdf"
-        external="true">Infinitary Combinatory Reduction Systems</a> (pdf)
-        by Jeroen Ketema and Grue Simonsen.
+        <a href="http://www.cs.vu.nl/~tcs/as/04-05/index.html" external="true">
+        An Application of Coinductive Stream Calculus to Signal Flow Graphs</a>
+        by J.J.M.M. Rutten.
     </li>
 </ul>
 

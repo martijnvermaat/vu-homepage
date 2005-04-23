@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:countdown-ocaml</id>
+    <title>The Countdown Problem in OCaml</title>
+    <language>en</language>
+    <last-change>2005-04-23</last-change>
+    <content>
+
+
+<h1>The game</h1>
+
+
+<p>
+The countdown problem is a number game from the populair quiz program
+Countdown on British television.
+</p>
+
+<p>
+<img src="files/countdown-ocaml/countdown.jpg" width="200" height="157"
+alt="Countdown on British television" />
+</p>
+
+<p>
+The essence of the problem: given a sequence of source numbers and a
+single target number, construct an arithmetic expression using each
+of the source numbers at most once, such that the expression evaluates
+to the target number. Both the source numbers and intermediate results
+must be non-zero natural numbers. The operators that can be used are
+addition, subtraction, multiplication and division.
+</p>
+
+<p>
+In the television version of the game, contestants do not get to use
+a computer and have only 30 seconds to come up with a solution.
+</p>
+
+
+<h1>Functional Pearls</h1>
+
+
+<p>
+In an issue of the Journal of Functional Programming, Graham Hutton
+published a <a href="http://www.cs.nott.ac.uk/~gmh/countdown.pdf"
+external="true">Functional Pearls column on this problem</a> (pdf).
+In his column, Hutton constructs a solution to the countdown problem
+in Haskell, together with two simple but effective optimizations.
+</p>
+
+
+<h1>On the OCaml translation</h1>
+
+
+<p>
+A translation of Hutton's Haskell solution to OCaml is pretty straight
+forward for the most part. Just like Haskell, OCaml knows pattern
+matching, algebraic data types, and higher-order functions.
+</p>
+
+<p>
+The main difference between the two for this problem is the lack of
+list comprehensions in OCaml. This made the code more verbose and hard
+to read at some places. Instead of the intuitive syntax of a list
+comprehension, a lot of <code>map</code>s, <code>concat</code>s, and
+<code>filter</code>s were necessary.
+</p>
+
+
+<h1>Download</h1>
+
+
+<p>
+This code is based on the work by Graham Hutton in the paper mentioned
+above and available as Open Source under the new <a
+href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>.
+</p>
+
+<p>
+(In other words: do with it whatever you like.)
+</p>
+
+<p>
+Download <a href="files/countdown-ocaml/countdown.ml">The Countdown
+Problem in OCaml</a>.
+</p>
+
+
+    </content>
+</item>
