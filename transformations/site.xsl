@@ -63,7 +63,9 @@ Two parameters are expected:
             <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
 
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-ubuntu.css" title="Ubuntu colors" />
+            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-why.css" title="whytheluckystiff" />
+            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-ubuntu.css" title="Ubuntu colors" />
+
             <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-bow.css" title="Black on white" />
             <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-wob.css" title="White on black" />
 

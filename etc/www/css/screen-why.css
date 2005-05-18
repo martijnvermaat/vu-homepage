@@ -1,0 +1,73 @@
+/* Ubuntu colors CSS2 document for vu-website */
+
+
+html {
+    background          :   #6383ab;
+}
+
+
+pre, code {
+    background          :   #f9f9ff;
+}
+
+
+#page-content {
+    background          :   #fffef9;
+}
+
+
+html,
+#breadcrumbs a:hover,
+#navigation a:hover {
+    color               :   #fff;
+}
+
+
+/*
+   This one and the previous rule cannot be
+   combined, because IE won't recognize the
+   last two selectors and discard the entire
+   rule.
+*/
+a.external:after,
+a[hreflang='nl']:after {
+    color               :   #334465;
+}
+
+
+pre,
+code,
+#page-content {
+    color               :   #334465;
+}
+
+
+a {
+    color               :   #936;
+    text-decoration     :   none;
+    border-bottom       :   solid 1px #936;
+}
+
+
+#breadcrumbs a,
+#navigation a {
+    color               :   #334465;
+}
+
+
+a:hover {
+    background-color    :   #e6edf3;
+}
+
+
+#breadcrumbs a:hover,
+#navigation a:hover {
+    background-color    :   transparent;
+    border-bottom       :   solid 1px #fff;
+}
+
+
+pre {
+    border-top          :   solid 1px #334465;
+    border-bottom       :   solid 2px #334465;
+}
