@@ -10,8 +10,10 @@
 
     <link href="/~mvermaat/css/screen.css" media="screen" type="text/css"
           rel="stylesheet" />
-    <link title="Ubuntu colors" href="/~mvermaat/css/screen-ubuntu.css" media="screen"
+    <link title="whytheluckystiff" href="/~mvermaat/css/screen-why.css" media="screen"
           type="text/css" rel="stylesheet" />
+    <link title="Ubuntu colors" href="/~mvermaat/css/screen-ubuntu.css" media="screen"
+          type="text/css" rel="alternate stylesheet" />
     <link title="Black on white" href="/~mvermaat/css/screen-bow.css" media="screen"
           type="text/css" rel="alternate stylesheet" />
     <link title="White on black" href="/~mvermaat/css/screen-wob.css" media="screen"
