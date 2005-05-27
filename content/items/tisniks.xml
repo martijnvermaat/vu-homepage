@@ -15,8 +15,9 @@
 TisNiks is a small collection of Javascript functions for querying
 the <a href="http://tisvu.vu.nl/" external="true">TisVU</a>
 application. TisVU is an on-line interface for course
-registration and listing exam results. An example application
-using TisNiks is <a href="tisniks#bbtis">BBTis</a>.
+registration and listing exam results used at the Vrije Universiteit.
+An example application using TisNiks is <a
+href="tisniks#bbtis">BBTis</a>.
 </p>
 
 <p>
