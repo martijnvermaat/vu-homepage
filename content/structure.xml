@@ -11,6 +11,10 @@
         <location>britney</location>
     </item>
     <item>
+        <id>site:tisniks</id>
+        <location>tisniks</location>
+    </item>
+    <item>
         <id>site:countdown-ocaml</id>
         <location>countdown-ocaml</location>
     </item>

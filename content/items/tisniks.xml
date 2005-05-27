@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:tisniks</id>
+    <title>TisNiks</title>
+    <language>en</language>
+    <last-change>2005-05-27</last-change>
+    <content>
+
+
+<h1>TisNiks</h1>
+
+
+<p>
+TisNiks is a small collection of Javascript functions for querying
+the <a href="http://tisvu.vu.nl/" external="true">TisVU</a>
+application. TisVU is an on-line interface for course
+registration and listing exam results. An example application
+using TisNiks is <a href="tisniks#bbtis">BBTis</a>.
+</p>
+
+<p>
+TisNiks is meant to be used in <a href="http://greasemonkey.mozdev.org/"
+external="true">Greasemonkey</a> user scripts. It makes
+use of functionality specific to Greasemonkey, therefore TisNiks
+is not suitable for use outside of Greasemonkey without some
+modifications.
+</p>
+
+
+<h2>Using TisNiks</h2>
+
+
+<p>
+Currently, the way to use TisNiks in your Greasemonkey user
+script is by downloading the code below and copying it to your
+user script. It has only been tested with Greasemonkey 0.3.3 on
+Linux.
+</p>
+
+<p>
+TisNiks is Open Source and licensed under the new <a
+href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>. This means you can pretty much do
+with it whatever you like.
+</p>
+
+<p>
+<a href="files/tisniks/tisniks-0.1.js">Download TisNiks 0.1</a>
+</p>
+
+
+<h2>Development</h2>
+
+
+<p>
+Current features of TisNiks are just logging in and out and
+querying exam results. But TisVU contains more, so TisNiks could
+be extended. If you have cool ideas for TisNiks, you're welcome
+to contact me and possibly get write access to the Subversion
+repository containing TisNiks.
+</p>
+
+<p>
+Of course, because TisNiks is free (in every sense), you can also
+just take the source and extend it on your own.
+</p>
+
+
+<h1 id="bbtis">BBTis</h1>
+
+
+<p>
+As a proof-of-concept application of TisNiks, I created the BBTis
+user script for Greasemonkey. It adds a section to your <a
+href="http://bb.vu.nl/" external="true">VU Blackboard homepage</a>
+listing your latest results from TisVU.
+</p>
+
+<p>
+With BBTis installed, your Blackboard will look like this (except
+for the striped-out grades of course):
+</p>
+
+<p>
+<img src="files/tisniks/bbtis.png" width="548" height="420"
+alt="VU Blackboard with BBTis installed" />
+</p>
+
+
+<h2>Installation</h2>
+
+
+<p>
+To install BBTis, you need Greasemonkey (and for Greasemonkey,
+you need <a href="http://getfirefox.com/"
+external="true">Firefox</a>). After that, follow the
+following link to the latest version of BBTis, examine the source
+to convince yourself I'm not stealing your passwords or anything,
+and select 'Install User Script' from the 'Tools' menu in Firefox.
+Accept the default configuration and go to Blackboard.
+</p>
+
+<p>
+<a href="files/tisniks/bbtis-1.0.user.js">Download BBTis 1.0</a>
+</p>
+
+
+<h2>Auto-login</h2>
+
+
+<p>
+BBTis can be configured to automatically log in to TisVU (if
+you're not already). To enable this option, locate the BBTis user
+script after installation. It will be located in your Firefox
+profile directory, somewhere deep down like this:
+</p>
+
+<pre>
+extensions/{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/chrome/greasemonkey/content/scripts/
+</pre>
+
+<p>
+Open the bbtis.user.js file in an editor and adjust the
+configuration section to your needs.
+</p>
+
+
+    </content>
+</item>
