@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:greasemonkey</id>
+    <title>Greasemonkey User Scripts</title>
+    <language>en</language>
+    <last-change>2005-05-29</last-change>
+    <content>
+
+
+<h1>Greasemonkey User Scripts</h1>
+
+
+<p>
+Below are some <a href="http://greasemonkey.mozdev.org/"
+external="true">Greasemonkey</a> user scripts I wrote. Greasemonkey
+is an extension for <a href="http://getfirefox.com/"
+external="true">Firefox</a> which allows users to alter the content
+and behavior of any website through user scripts which work inside
+the browser.
+</p>
+
+<p>
+For a large collection of other Greasemonkey user scripts, visit
+the <a
+href="http://dunck.us/collab/GreaseMonkeyUserScripts"
+external="true">Greasemonkey Wiki</a>.
+</p>
+
+
+<h2>TisNiks &amp; BBTis</h2>
+
+
+<p>
+TisNiks is a small collection of Javascript functions for querying
+the TisVU application of the Vrije Universiteit. As a proof-of-concept
+application of TisNiks, I created the BBTis user script that shows
+your latest grades on the VU Blackboard homepage.
+</p>
+
+<p>
+<a href="tisniks">More about TisNiks and BBTis</a>
+</p>
+
+
+<h2>Lambda Skipper</h2>
+
+
+<p>
+Tracking down and reading unread posts on <a
+href="http://lambda-the-ultimate.org/" external="true">Lambda the
+Ultimate</a> started to annoy me quite a bit. Lambda Skipper adds
+a direct jump to the top-most unread post for each node to the
+<a href="http://lambda-the-ultimate.org/tracker"
+external="true">Recent posts overview</a>. It also adds links to
+skip to the next unread post in the node view (in top-to-bottom
+order rather than chronological order).
+</p>
+
+
+<p>
+<a href="files/greasemonkey/lambdaskipper-1.0.user.js">Download
+Lambda Skipper 1.0</a>
+</p>
+
+
+    </content>
+</item>

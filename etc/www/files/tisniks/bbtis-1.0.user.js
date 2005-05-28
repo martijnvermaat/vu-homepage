@@ -15,6 +15,8 @@
     This is just a quick hack to see what's possible with
     some Greasemonkey magic and TisVU.
 
+    http://www.cs.vu.nl/~mvermaat/tisniks
+
     Martijn Vermaat, mvermaat@cs.vu.nl
 
 
@@ -341,7 +343,7 @@ function bbTis() {
                             "//td[@width='50%']",
                             document,
                             null,
-                            XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
+                            XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
                             null);
 
     if (tds.snapshotLength > 0) {

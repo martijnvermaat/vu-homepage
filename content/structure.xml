@@ -11,8 +11,8 @@
         <location>britney</location>
     </item>
     <item>
-        <id>site:tisniks</id>
-        <location>tisniks</location>
+        <id>site:greasemonkey</id>
+        <location>greasemonkey</location>
     </item>
     <item>
         <id>site:countdown-ocaml</id>
@@ -70,6 +70,11 @@
     <item>
         <id>site:colofon</id>
         <location>colofon</location>
+    </item>
+    <item>
+        <id>site:tisniks</id>
+        <location>tisniks</location>
+        <hidden />
     </item>
     <item>
         <id>site:asfsdf-lambda-calculus</id>
