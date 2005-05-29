@@ -49,6 +49,23 @@ your latest grades on the VU Blackboard homepage.
 </p>
 
 
+<h2>Nu Compact</h2>
+
+
+<p>
+Nu Compact rewrites the four 'main' stories with pictures on the
+<a href="http://www.nu.nl/" external="true">nu.nl</a> frontpage
+to regular links. The images have nothing to do with the story
+anyway, and this allows us to have the entire frontpage in one
+screen.
+</p>
+
+<p>
+<a href="files/greasemonkey/nucompact-0.1.user.js">Download
+Nu Compact 0.1</a>
+</p>
+
+
 <h2>Lambda Skipper</h2>
 
 
