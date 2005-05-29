@@ -21,6 +21,12 @@ the browser.
 </p>
 
 <p>
+To install a user script you first need Greasemonkey installed. After
+that, open the user script in Firefox and select 'Install User Script'
+from the 'Tools' menu.
+</p>
+
+<p>
 For a large collection of other Greasemonkey user scripts, visit
 the <a
 href="http://dunck.us/collab/GreaseMonkeyUserScripts"
@@ -56,7 +62,6 @@ external="true">Recent posts overview</a>. It also adds links to
 skip to the next unread post in the node view (in top-to-bottom
 order rather than chronological order).
 </p>
-
 
 <p>
 <a href="files/greasemonkey/lambdaskipper-1.0.user.js">Download
