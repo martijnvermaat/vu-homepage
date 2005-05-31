@@ -8,7 +8,7 @@
     <content>
 
 
-<h1>TisNiks</h1>
+<h1>About TisNiks</h1>
 
 
 <p>
@@ -28,8 +28,15 @@ is not suitable for use outside of Greasemonkey without some
 modifications.
 </p>
 
+<p>
+As a proof-of-concept application of TisNiks, I created the
+<a href="greasemonkey">BBTis</a> user script for Greasemonkey. It
+adds a section to your <a href="http://bb.vu.nl/" external="true">VU
+Blackboard homepage</a> listing your latest results from TisVU.
+</p>
 
-<h2>Using TisNiks</h2>
+
+<h1>Using TisNiks</h1>
 
 
 <p>
@@ -51,7 +58,7 @@ with it whatever you like.
 </p>
 
 
-<h2>Development</h2>
+<h1>Development</h1>
 
 
 <p>
@@ -65,65 +72,6 @@ repository containing TisNiks.
 <p>
 Of course, because TisNiks is free (in every sense), you can also
 just take the source and extend it on your own.
-</p>
-
-
-<h1 id="bbtis">BBTis</h1>
-
-
-<p>
-As a proof-of-concept application of TisNiks, I created the BBTis
-user script for Greasemonkey. It adds a section to your <a
-href="http://bb.vu.nl/" external="true">VU Blackboard homepage</a>
-listing your latest results from TisVU.
-</p>
-
-<p>
-With BBTis installed, your Blackboard will look like this (except
-for the striped-out grades of course):
-</p>
-
-<p>
-<img src="files/tisniks/bbtis.png" width="548" height="420"
-alt="VU Blackboard with BBTis installed" />
-</p>
-
-
-<h2>Installation</h2>
-
-
-<p>
-To install BBTis, you need Greasemonkey (and for Greasemonkey,
-you need <a href="http://getfirefox.com/"
-external="true">Firefox</a>). After that, follow the
-following link to the latest version of BBTis, examine the source
-to convince yourself I'm not stealing your passwords or anything,
-and select 'Install User Script' from the 'Tools' menu in Firefox.
-Accept the default configuration and go to Blackboard.
-</p>
-
-<p>
-<a href="files/tisniks/bbtis-1.0.user.js">Download BBTis 1.0</a>
-</p>
-
-
-<h2>Auto-login</h2>
-
-
-<p>
-BBTis can be configured to automatically log in to TisVU (if
-you're not already). To enable this option, locate the BBTis user
-script after installation. It will be located in your Firefox
-profile directory, somewhere deep down like this:
-</p>
-
-<pre>
-extensions/{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/chrome/greasemonkey/content/scripts/
-</pre>
-
-<p>
-Open the bbtis.user.js file in an editor and adjust the
-configuration section to your needs.
 </p>
 
 

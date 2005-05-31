@@ -21,12 +21,6 @@ the browser.
 </p>
 
 <p>
-To install a user script you first need Greasemonkey installed. After
-that, open the user script in Firefox and select 'Install User Script'
-from the 'Tools' menu.
-</p>
-
-<p>
 For a large collection of other Greasemonkey user scripts, visit
 the <a
 href="http://dunck.us/collab/GreaseMonkeyUserScripts"
@@ -34,7 +28,58 @@ external="true">Greasemonkey Wiki</a>.
 </p>
 
 
-<h2>Lambda Skipper</h2>
+<h2>Installation</h2>
+
+
+<p>
+To install a user script, you need Greasemonkey (and for Greasemonkey,
+you need <a href="http://getfirefox.com/"
+external="true">Firefox</a>). After that, open the user script in
+your browser, examine the source to convince yourself I'm not
+stealing your passwords or anything, and select 'Install User Script'
+from the 'Tools' menu in Firefox. Accept the default configuration
+and go to the website the user script is written for.
+</p>
+
+<p>
+After Greasemonkey is installed, a small monkey icon will appear in
+the lower-right corner of Firefox. You can click on it to temporarily
+disable or enable all Greasemonkey user scripts.
+</p>
+
+
+<h2>Editing installed scripts</h2>
+
+
+<p>
+To edit a user script after installation (e.g. to change some
+configuration settings), locate the <code>*.user.js</code> files in
+your Firefox profile directory, somewhere deep down like this:
+</p>
+
+<pre>
+extensions/{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/chrome/greasemonkey/content/scripts/
+</pre>
+
+<p>
+Open the user script file in an editor and save it after you made
+your changes. Refreshing the webpage is enough for the changes to
+take effect.
+</p>
+
+
+<h2>License</h2>
+
+
+<p>
+All user scripts on this page are Open Source and licensed under the
+new <a href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>. This means you can pretty much do
+with them whatever you like.
+</p>
+
+
+<h1>Lambda Skipper</h1>
 
 
 <p>
@@ -49,20 +94,38 @@ order rather than chronological order).
 </p>
 
 <p>
+<img src="files/greasemonkey/lambdaskipper.png" width="505" height="164"
+alt="Skip to next unread post link of Lambda Skipper" />
+</p>
+
+<p>
+I read Lambda The Ultimate by going to the <a
+href="http://lambda-the-ultimate.org/tracker" external="true">Recent
+posts overview</a> and loading all 'top-most unread post' links in
+background tabs. For each tab, I go through all unread posts using
+the 'next unread post' links.
+</p>
+
+<p>
 <a href="files/greasemonkey/lambdaskipper-1.1.user.js">Download
 Lambda Skipper 1.1</a>
 </p>
 
 
-<h2>Nu Compact</h2>
+<h1>Nu Compact</h1>
 
 
 <p>
 Nu Compact rewrites the four 'main' stories with pictures on the
 <a href="http://www.nu.nl/" external="true">nu.nl</a> frontpage
-to regular links. The images have nothing to do with the story
-anyway, and this allows us to have the entire frontpage in one
-screen.
+to regular links. Most of the time the picture has nothing to do
+with the story anyway, and this allows us to have the entire
+frontpage in one screen.
+</p>
+
+<p>
+<img src="files/greasemonkey/nucompact.png" width="350" height="306"
+alt="Frontpage of nu.nl with Nu Compact installed" />
 </p>
 
 <p>
@@ -71,18 +134,44 @@ Nu Compact 0.1</a>
 </p>
 
 
-<h2>TisNiks &amp; BBTis</h2>
+<h1>BBTis</h1>
+
+
+<p>
+BBTis adds a section to your <a href="http://bb.vu.nl/"
+external="true">VU Blackboard homepage</a> listing your latest
+results from TisVU, so it looks something like this (except
+for the striped-out grades of course):
+</p>
+
+<p>
+<img src="files/greasemonkey/bbtis.png" width="548" height="420"
+alt="VU Blackboard with BBTis installed" />
+</p>
+
+<p>
+BBTis can be configured to automatically log in to TisVU (if
+you're not already). To enable this option, locate the BBTis user
+script after installation and adjust the configuration section to
+your needs (as explained above).
+</p>
+
+<p>
+<a href="files/greasemonkey/bbtis-1.0.user.js">Download BBTis 1.0</a>
+</p>
+
+
+<h1>TisNiks</h1>
 
 
 <p>
 TisNiks is a small collection of Javascript functions for querying
-the TisVU application of the Vrije Universiteit. As a proof-of-concept
-application of TisNiks, I created the BBTis user script that shows
-your latest grades on the VU Blackboard homepage.
+the TisVU application of the Vrije Universiteit. It is not a user
+script itself, but meant to be used in user scripts.
 </p>
 
 <p>
-<a href="tisniks">More about TisNiks and BBTis</a>
+<a href="tisniks">More about TisNiks</a>
 </p>
 
 
