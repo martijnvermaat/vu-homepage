@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2005-06-01</last-change>
+    <last-change>2005-06-04</last-change>
     <content>
 
 
@@ -94,7 +94,7 @@ order rather than chronological order).
 </p>
 
 <p>
-<img src="files/greasemonkey/lambdaskipper.png" width="505" height="164"
+<img src="files/greasemonkey/lambdaskipper.png" width="535" height="194"
 alt="Skip to next unread post link of Lambda Skipper" />
 </p>
 
@@ -124,7 +124,7 @@ frontpage in one screen.
 </p>
 
 <p>
-<img src="files/greasemonkey/nucompact.png" width="350" height="306"
+<img src="files/greasemonkey/nucompact.png" width="380" height="320"
 alt="Frontpage of nu.nl with Nu Compact installed" />
 </p>
 
@@ -145,7 +145,7 @@ for the striped-out grades of course):
 </p>
 
 <p>
-<img src="files/greasemonkey/bbtis.png" width="548" height="420"
+<img src="files/greasemonkey/bbtis.png" width="444" height="356"
 alt="VU Blackboard with BBTis installed" />
 </p>
 
@@ -157,7 +157,7 @@ your needs (as explained above).
 </p>
 
 <p>
-<a href="files/greasemonkey/bbtis-1.0.user.js">Download BBTis 1.0</a>
+<a href="files/greasemonkey/bbtis-1.1.user.js">Download BBTis 1.1</a>
 </p>
 
 
