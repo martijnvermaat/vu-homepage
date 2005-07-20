@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-05-18</last-change>
+    <last-change>2005-07-20</last-change>
     <content>
 
 
@@ -13,18 +13,14 @@
 
 <p>
 This is my personal homepage at the Vrije Universiteit Amsterdam where I'm
-currently a third year's student Computer Science. My main interests there
-are theoretical computer science and software technology.
+a student Computer Science. My main interests there are theoretical computer
+science and software technology.
 </p>
 
 <p>
-<img src="img/martijn-loes.png" width="150" height="126"
-alt="A picture of Loes and Martijn" />
-</p>
-
-<p>
-You can see what I look like on the picture above. I'm the one on the right,
-my girlfriend Loes is on the left.
+As of september 2005, I'm following the master's program <a
+href="http://www.cs.vu.nl/~tcs/" external="true">Formal Methods and Software
+Verification</a>.
 </p>
 
 
@@ -50,23 +46,6 @@ in particular scientific research. For some online pointers, consult my
 </p>
 
 
-<h2>Currently reading</h2>
-
-
-<ul>
-    <li>
-        <a href="http://www.info.ucl.ac.be/~pvr/" external="true">Concepts,
-        Techniques, and Models of Computer Programming</a> by Peter van Roy
-        and Seif Haridi.
-    </li>
-    <li>
-        <a href="http://www.cs.vu.nl/~tcs/as/04-05/index.html" external="true">
-        An Application of Coinductive Stream Calculus to Signal Flow Graphs</a>
-        by J.J.M.M. Rutten.
-    </li>
-</ul>
-
-
 <h2>Personal</h2>
 
 
@@ -74,11 +53,10 @@ in particular scientific research. For some online pointers, consult my
 Whenever there's still time left in my day, I try to spend it with my
 girlfriend Loes, family, or friends. When I'm alone, I try to play some
 guitar (although Loes is still unimpressed by my playing skills), and listen
-to music. My alltime favourite band is <a href="http://www.sonicyouth.com/"
-external="true">Sonic Youth</a>. Naming other good artists
-after them would result in a infinite list, and since I'm <a
-href="http://c2.com/cgi/wiki?LazyEvaluation" external="true">lazy</a>, I
-won't do so until you ask me.
+to music. Some of my favourite bands are <a href="http://www.sonicyouth.com/"
+external="true">Sonic Youth</a>, <a href="http://www.mogwai.co.uk/"
+external="true">Mogwai</a>, and my friends <a href="http://www.alizarin.nl/"
+external="true">Alizarin</a> (best band of The Netherlands).
 </p>
 
 
