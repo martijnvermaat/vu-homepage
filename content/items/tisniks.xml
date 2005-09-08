@@ -4,7 +4,7 @@
     <id>site:tisniks</id>
     <title>TisNiks</title>
     <language>en</language>
-    <last-change>2005-06-04</last-change>
+    <last-change>2005-09-08</last-change>
     <content>
 
 
@@ -13,7 +13,7 @@
 
 <p>
 TisNiks is a small collection of Javascript functions for querying
-the <a href="http://tisvu.vu.nl/" external="true">TisVU</a>
+the <a href="http://tis.vu.nl/" external="true">TisVU</a>
 application. TisVU is an on-line interface for course
 registration and listing exam results used at the Vrije Universiteit.
 An example application using TisNiks is <a
@@ -42,8 +42,8 @@ Blackboard homepage</a> listing your latest results from TisVU.
 <p>
 Currently, the way to use TisNiks in your Greasemonkey user
 script is by downloading the code below and copying it to your
-user script. It has only been tested with Greasemonkey 0.3.3 on
-Linux.
+user script. It has been tested with Greasemonkey 0.3.3, 0.5 and 0.5.1,
+all on Linux.
 </p>
 
 <p>
@@ -54,7 +54,7 @@ with it whatever you like.
 </p>
 
 <p>
-<a href="files/tisniks/tisniks-0.2.js">Download TisNiks 0.2</a>
+<a href="files/tisniks/tisniks-0.2.1.js">Download TisNiks 0.2.1</a>
 </p>
 
 

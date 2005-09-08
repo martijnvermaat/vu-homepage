@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2005-06-22</last-change>
+    <last-change>2005-09-08</last-change>
     <content>
 
 
@@ -54,12 +54,8 @@ disable or enable all Greasemonkey user scripts.
 <p>
 To edit a user script after installation (e.g. to change some
 configuration settings), locate the <code>*.user.js</code> files in
-your Firefox profile directory, somewhere deep down like this:
+the <code>gm_scripts</code> directory of your Firefox profile.
 </p>
-
-<pre>
-extensions/{e4a8a97b-f2ed-450b-b12d-ee082ba24781}/chrome/greasemonkey/content/scripts/
-</pre>
 
 <p>
 Open the user script file in an editor and save it after you made
@@ -157,7 +153,7 @@ your needs (as explained above).
 </p>
 
 <p>
-<a href="files/greasemonkey/bbtis-1.2.user.js">Download BBTis 1.2</a>
+<a href="files/greasemonkey/bbtis-1.2.1.user.js">Download BBTis 1.2.1</a>
 </p>
 
 
