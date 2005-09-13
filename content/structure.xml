@@ -62,6 +62,10 @@
             <id>site:vu:iti-2005</id>
             <location>iti-2005</location>
         </item>
+        <item>
+            <id>site:vu:il-2005</id>
+            <location>il-2005</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>
