@@ -16,11 +16,29 @@ href="http://www.cs.vu.nl/~tcs/il/" external="true">Inleiding Logica</a>.
 </p>
 
 <p>
-Tijdens het tweede werkcollege stond ik wat te knoeien bij de afleiding
-voor som 3f bij paragraaf 1.2 uit het boek. Daarom hier een <a
-href="files/vu/il/uitwerking-1.2-3f.pdf">uitwerking van som 3f</a>. (Denk
-voor de vertical strepen hele boxen zoals we gewend zijn.)
+Als je een vraag hebt over het vak, <a href="mailto:mvermaat@cs.vu.nl" external="true">mail</a>
+me dan. Als je een opgave gemaakt hebt maar niet zeker weet of je antwoord
+goed is kijk ik het graag even na.
 </p>
+
+
+<h1>Uitwerkingen</h1>
+
+
+<p>
+Wanneer we tijdens het werkcollege niet aan alle sommen toe komen, probeer
+ik hier soms nog enkele uitwerkingen neer te zetten.
+</p>
+
+
+<h2>Propositielogica</h2>
+
+
+<ul>
+    <li>Natuurlijke deductie: <a href="files/vu/il/uitwerking-1.2-3f.pdf">1.2 3f</a>
+    en <a href="files/vu/il/uitwerking-1.2-5ad">1.2 5a,d</a></li>
+    <li>Semantische equivalentie: <a href="files/vu/il/uitwerking-1.5-2.pdf">1.5 2</a></li>
+</ul>
 
 
     </content>
