@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2005-09-22</last-change>
+    <last-change>2005-10-01</last-change>
     <content>
 
 
@@ -154,6 +154,21 @@ your needs (as explained above).
 
 <p>
 <a href="files/greasemonkey/bbtis-1.2.2.user.js">Download BBTis 1.2.2</a>
+</p>
+
+
+<h1>Ejercicios Reparados</h1>
+
+
+<p>
+This user script fixes the <a href="http://www.let.uu.nl/~Kristi.JauregiOndarra/personal/Tv1/ejervoc.htm"
+external="true">Ejercicios de vocabulario</a> so that they work
+in Firefox.
+</p>
+
+<p>
+<a href="files/greasemonkey/ejercicios-reparados-0.1.user.js">Download
+Ejercicios Reparados 0.1</a>
 </p>
 
 
