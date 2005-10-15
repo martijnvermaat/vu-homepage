@@ -33,8 +33,8 @@ h1 {
 
 #page-content {
     padding             :   1em 20% 2em 3em;
-/*  font-family         :   Georgia, Palatino, Times, serif; */
-    font-family         :   'Trebuchet MS', Verdana, Lucida, Helvetica, sans-serif;
+    font-family         :   Georgia, 'Trebuchet MS', Palatino, Times, serif;
+/*  font-family         :   'Trebuchet MS', Verdana, Lucida, Helvetica, sans-serif; */
 }
 
 

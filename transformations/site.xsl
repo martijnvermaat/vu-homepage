@@ -101,18 +101,36 @@ Two parameters are expected:
             <xsl:apply-templates select="content" />
 
             <p class="content-date">
-            <xsl:value-of select="concat('Last changed: ',
-                          date:year(last-change),
-                          '/',
-                          date:month-in-year(last-change)+1,
-                          '/',
-                          date:day-in-month(last-change))" />
-            <xsl:value-of select="concat('; generated: ',
-                          date:year($now),
-                          '/',
-                          date:month-in-year($now)+1,
-                          '/',
-                          date:day-in-month($now))" />
+                <xsl:choose>
+                    <xsl:when test="language='nl'">
+                        <xsl:value-of select="concat('Laatst aangepast: ',
+                            date:year(last-change),
+                            '/',
+                            date:month-in-year(last-change)+1,
+                            '/',
+                            date:day-in-month(last-change))" />
+                        <xsl:value-of select="concat('; gegenereerd: ',
+                            date:year($now),
+                            '/',
+                            date:month-in-year($now)+1,
+                            '/',
+                            date:day-in-month($now))" />
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="concat('Last changed: ',
+                            date:year(last-change),
+                            '/',
+                            date:month-in-year(last-change)+1,
+                            '/',
+                            date:day-in-month(last-change))" />
+                        <xsl:value-of select="concat('; generated: ',
+                            date:year($now),
+                            '/',
+                            date:month-in-year($now)+1,
+                            '/',
+                            date:day-in-month($now))" />
+                    </xsl:otherwise>
+                </xsl:choose>
             </p>
 
         </div>
