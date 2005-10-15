@@ -53,10 +53,73 @@ Two parameters are expected:
         </xsl:for-each>
     </xsl:variable>
 
+    <!-- This is really a bit of a hack to support pages in
+         Dutch and in English. -->
+    <xsl:variable name="str-last-changed">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Laatst gewijzigd</xsl:when>
+            <xsl:otherwise>Last changed</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-last-generated">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Gegenereerd</xsl:when>
+            <xsl:otherwise>Generated</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-index">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Meer op deze website</xsl:when>
+            <xsl:otherwise>Elsewhere on this website</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-breadcrumbs">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Je bent hier</xsl:when>
+            <xsl:otherwise>You are here</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-page-top">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Begin van de pagina</xsl:when>
+            <xsl:otherwise>Top of page</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-page-top-descr">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Spring naar het begin van deze pagina</xsl:when>
+            <xsl:otherwise>Jump to the top of this page</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-page-content">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Inhoud van de pagina</xsl:when>
+            <xsl:otherwise>Page content</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-page-content-descr">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Spring naar de inhoud van deze pagina</xsl:when>
+            <xsl:otherwise>Jump to the content of this page</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-navigation">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Navigatie van de website</xsl:when>
+            <xsl:otherwise>Site navigation</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-navigation-descr">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Spring naar de navigatie van deze website</xsl:when>
+            <xsl:otherwise>Jump to the site navigation</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
 
     <xsl:template match="/item">
 
-        <html xml:lang="{language}">
+        <html xml:lang="{language}" lang="{language}">
 
         <head>
 
@@ -78,8 +141,8 @@ Two parameters are expected:
         <body id="cs-vu-nl-mvermaat">
 
         <ul class="xnav">
-            <li><a href="#page-content" title="Jump to the content of this page" accesskey="2">Page content</a></li>
-            <li><a href="#navigation" title="Jump to the site navigation">Site navigation</a></li>
+            <li><a href="#page-content" title="{$str-page-content-descr}" accesskey="2"><xsl:value-of select="$str-page-content" /></a></li>
+            <li><a href="#navigation" title="{$str-navigation-descr}"><xsl:value-of select="$str-navigation" /></a></li>
         </ul>
 
         <div id="page-header">
@@ -87,7 +150,7 @@ Two parameters are expected:
             <h1><xsl:value-of select="title" /></h1>
 
             <p id="breadcrumbs">
-                <xsl:text>You are here: </xsl:text>
+                <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
                 <a href="{$base-path}" accesskey="1">Home</a>
                 <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs">
                     <xsl:with-param name="current-id" select="id" />
@@ -101,43 +164,26 @@ Two parameters are expected:
             <xsl:apply-templates select="content" />
 
             <p class="content-date">
-                <xsl:choose>
-                    <xsl:when test="language='nl'">
-                        <xsl:value-of select="concat('Laatst aangepast: ',
-                            date:year(last-change),
-                            '/',
-                            date:month-in-year(last-change)+1,
-                            '/',
-                            date:day-in-month(last-change))" />
-                        <xsl:value-of select="concat('; gegenereerd: ',
-                            date:year($now),
-                            '/',
-                            date:month-in-year($now)+1,
-                            '/',
-                            date:day-in-month($now))" />
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:value-of select="concat('Last changed: ',
-                            date:year(last-change),
-                            '/',
-                            date:month-in-year(last-change)+1,
-                            '/',
-                            date:day-in-month(last-change))" />
-                        <xsl:value-of select="concat('; generated: ',
-                            date:year($now),
-                            '/',
-                            date:month-in-year($now)+1,
-                            '/',
-                            date:day-in-month($now))" />
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:value-of select="concat($str-last-changed, ': ',
+                    date:year(last-change),
+                    '/',
+                    date:month-in-year(last-change)+1,
+                    '/',
+                    date:day-in-month(last-change))" />
+                <br />
+                <xsl:value-of select="concat($str-last-generated, ': ',
+                    date:year($now),
+                    '/',
+                    date:month-in-year($now)+1,
+                    '/',
+                    date:day-in-month($now))" />
             </p>
 
         </div>
 
         <div id="page-footer">
 
-            <h2>Elsewhere on this website</h2>
+            <h2><xsl:value-of select="$str-index" /></h2>
 
             <div id="navigation">
             <p>
@@ -153,7 +199,7 @@ Two parameters are expected:
             <xsl:apply-templates select="$site-structure-file/site" mode="navigation">
                 <xsl:with-param name="current-id" select="id" />
             </xsl:apply-templates>
-            <p><a href="#page-header" title="Jump to the top of this page">Top of page</a></p>
+            <p><a href="#page-header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
             </div>
 
         </div>
