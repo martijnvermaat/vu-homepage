@@ -11,6 +11,10 @@
         <location>britney</location>
     </item>
     <item>
+        <id>site:pymotif</id>
+        <location>pymotif</location>
+    </item>
+    <item>
         <id>site:greasemonkey</id>
         <location>greasemonkey</location>
     </item>
