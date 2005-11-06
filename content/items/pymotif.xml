@@ -4,7 +4,7 @@
     <id>site:pymotif</id>
     <title>PyMotif</title>
     <language>en</language>
-    <last-change>2005-10-25</last-change>
+    <last-change>2005-11-06</last-change>
     <content>
 
 
@@ -67,16 +67,9 @@ external="true">BSD License</a>.
 </p>
 
 
-<ul>
-    <li>
-        <p>
-        PyMotif 0.1.1 (tar.gz 80Kb)
-        </p>
-        <p>
-        <em>This download will be available after October 2005 (assignment deadline).</em>
-        </p>
-    </li>
-</ul>
+<p>
+<a href="files/pymotif/pymotif-0.1.1.tar.gz">PyMotif 0.1.1</a> (tar.gz 80Kb)
+</p>
 
 
     </content>
