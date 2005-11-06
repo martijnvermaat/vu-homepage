@@ -3,6 +3,12 @@ Martijn Vermaat - Personal homepage at cs.vu.nl
 This file should contain more information.
 
 
+Known issues:
+
+* There seems to be a bug in generating relative paths
+  that's only triggered by some XSLT processors.
+
+
 Deployment specific content is present in:
 
 * /build.xml:
