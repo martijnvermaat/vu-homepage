@@ -263,6 +263,15 @@ Two parameters are expected:
     </xsl:template> 
 
 
+    <!-- This special tag generates a complete sitemap. -->
+    <xsl:template match="sitemap">
+        <p><a href="{$base-path}">Home</a></p>
+        <xsl:apply-templates select="$site-structure-file/site" mode="sitemap">
+            <xsl:with-param name="current-id" select="/item/id" />
+        </xsl:apply-templates>
+    </xsl:template>
+
+
     <xsl:template match="site" mode="navigation">
 
         <xsl:param name="current-id" />
@@ -314,6 +323,66 @@ Two parameters are expected:
             </xsl:choose>
             <ul>
                 <xsl:apply-templates select="item|dir" mode="navigation">
+                    <xsl:with-param name="dir" select="concat($dir,location,'/')" />
+                    <xsl:with-param name="current-id" select="$current-id" />
+                </xsl:apply-templates>
+            </ul>
+        </li>
+
+    </xsl:template>
+
+
+    <xsl:template match="site" mode="sitemap">
+
+        <xsl:param name="current-id" />
+
+        <ul>
+            <xsl:apply-templates select="item|dir" mode="sitemap">
+                <xsl:with-param name="current-id" select="$current-id" />
+            </xsl:apply-templates>
+        </ul>
+
+    </xsl:template>
+
+
+    <xsl:template match="item" mode="sitemap">
+
+        <xsl:param name="dir" />
+        <xsl:param name="current-id" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
+ 
+        <xsl:if test="not(no-link)">
+            <li>
+                <xsl:choose>
+                    <xsl:when test="id=$current-id">
+                        <strong><a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </li>
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="dir" mode="sitemap">
+    
+        <xsl:param name="dir" />
+        <xsl:param name="current-id" />
+
+        <li>
+            <xsl:choose>
+                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
+                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+                </xsl:otherwise>
+            </xsl:choose>
+            <ul>
+                <xsl:apply-templates select="item|dir" mode="sitemap">
                     <xsl:with-param name="dir" select="concat($dir,location,'/')" />
                     <xsl:with-param name="current-id" select="$current-id" />
                 </xsl:apply-templates>

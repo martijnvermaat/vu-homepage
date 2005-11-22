@@ -80,6 +80,11 @@
         <location>colofon</location>
     </item>
     <item>
+        <id>site:wishlist</id>
+        <location>wishlist</location>
+        <hidden />
+    </item>
+    <item>
         <id>site:tisniks</id>
         <location>tisniks</location>
         <hidden />

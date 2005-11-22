@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:wishlist</id>
+    <title>Reading Wishlist</title>
+    <language>en</language>
+    <last-change>2005-11-22</last-change>
+    <content>
+
+
+<h1>My reading wishlist</h1>
+
+
+<p>Presents originating from the following list are always appreciated.</p>
+
+
+<p>(More or less in descending order of appreciation with ISBN numbers:)</p>
+
+
+<dl>
+
+<dt>Benjamin C. Pierce</dt>
+<dd>
+<a href="http://www.cis.upenn.edu/~bcpierce/tapl/index.html"
+external="true">Types and Programming Languages</a>
+(0262162091)
+</dd>
+
+<dt>Jostein Gaarder</dt>
+<dd>
+Sophie's world: A novel about the history of philosophy
+(0425156842)
+</dd>
+
+<dt>Jean-Yves Girard</dt>
+<dd>
+<a href="http://www.cs.man.ac.uk/~pt/stable/Proofs+Types.html"
+external="true">Proofs and Types</a>
+(0521371813)
+</dd>
+
+<dt>David Edmonds, John Eidinow</dt>
+<dd>
+Wittgenstein's Poker : The Story of a Ten-Minute Argument Between Two Great
+Philosophers
+(0060936649)
+</dd>
+
+<dt>Rebecca Goldstein</dt>
+<dd>
+Incompleteness: The Proof And Paradox Of Kurt Godel
+(0393051692)
+</dd>
+
+<dt>Edsger W. Dijkstra</dt>
+<dd>
+A Discipline of Programming
+(013215871X)
+</dd>
+
+<dt>G. J. Chaitin</dt>
+<dd>
+<a href="http://www.cs.auckland.ac.nz/CDMTCS/chaitin/ait/index.html"
+external="true">Exploring Ramdomness</a>
+(1852334177)
+</dd>
+
+</dl>
+
+
+    </content>
+</item>
