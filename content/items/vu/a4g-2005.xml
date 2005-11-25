@@ -2,7 +2,7 @@
 
 <item>
     <id>site:vu:a4g-2005</id>
-    <title>Algorithms for Genomes</title>
+    <title>Algorithms for Genomes 2005</title>
     <language>en</language>
     <last-change>2005-11-25</last-change>
     <content>
@@ -33,7 +33,7 @@ See the small <a href="files/vu/a4g/pymotif.pdf">implementation report</a>
 </p>
 
 
-<h2>Usage instructions</h1>
+<h2>Usage instructions</h2>
 
 
 <p>
@@ -84,14 +84,14 @@ external="true">BSD License</a>.
 
 <p>
 This assignment was done by <a href="http://www.cs.vu.nl/~rmohame/"
-external="true">Rafiek Mohamedjoesoef and me. We had to write a program
+external="true">Rafiek Mohamedjoesoef</a> and me. We had to write a program
 that calculates a maximal global alignment of two circular sequences
 with a non-trivial time or space complexity. The algorithm by Hirschberg
-we implemented has a lineair space complexity.
+we implemented has a lineair space complexity (on the shortest sequence).
 </p>
 
 
-<h2>PimpItCircularStyle</h1>
+<h2>PimpItCircularStyle</h2>
 
 
 <p>
@@ -118,7 +118,7 @@ $
 
 <p>
 The package to download contains a small set of testing sequences and some
-information on time and space complexity of the program.
+notes on time and space complexity of the program.
 </p>
 
 
