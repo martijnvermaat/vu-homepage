@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:a4g-2005</id>
+    <title>Algorithms for Genomes</title>
+    <language>en</language>
+    <last-change>2005-11-25</last-change>
+    <content>
+
+
+<p>
+The course <a href="http://ibivu.cs.vu.nl/teaching/a4g/" external="true">Algorithms
+for Genomes</a> included two programming assignments. The first was to implement
+the Gibbs sampling algorithm for finding local alignments of DNA sequences. The
+second was to write a program that calculates a maximal global alignment of two
+circular sequences.
+</p>
+
+
+<h1>Gibbs sampling</h1>
+
+
+<p>
+PyMotif is a simple implementation of Gibbs sampling for finding local
+alignments of DNA sequences written in Python (hence the name).
+</p>
+
+<p>
+Optionally, PyMotif can detect phase shifts as an extra step in the algorithm
+and a simple heuristic is supported to find better initial motif positions.
+See the small <a href="files/vu/a4g/pymotif.pdf">implementation report</a>
+(pdf) for more information (also included in the package below).
+</p>
+
+
+<h2>Usage instructions</h1>
+
+
+<p>
+An example of using PyMotif to find a motif of width 8 for the sequences in
+the file <code>sequences.fasta</code> with default settings:
+</p>
+
+
+<pre>
+$ ./pymotif.py -i sequences.fasta -w 8
+Motif occurrences in sequences follow
+Sequence # 1  TACTTTGA  (at position 167)
+Sequence # 2  AACATATT  (at position 488)
+Sequence # 3  AACATACT  (at position 117)
+Sequence # 4  AGGATAGT  (at position 127)
+Sequence # 5  AGCATGGT  (at position 163)
+Sequence # 6  AAGTTAGT  (at position 594)
+Sequence # 7  AACTTAGT  (at position 320)
+Sequence # 8  TGCTTGGT  (at position 29)
+Sequence # 9  AGGTTAGT  (at position 265)
+Sequence #10  AGCGTAGT  (at position 45)
+$
+</pre>
+
+
+<p>
+The <code>README</code> file in the package contains more usage information.
+</p>
+
+
+<h2>Downloading PyMotif</h2>
+
+
+<p>
+PyMotif is Open Source and licensed under the new <a
+href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>.
+</p>
+
+
+<p>
+<a href="files/vu/a4g/pymotif-0.1.1.tar.gz">PyMotif 0.1.1</a> (tar.gz 80Kb)
+</p>
+
+
+<h1>Global circular alignment</h1>
+
+
+<p>
+This assignment was done by <a href="http://www.cs.vu.nl/~rmohame/"
+external="true">Rafiek Mohamedjoesoef and me. We had to write a program
+that calculates a maximal global alignment of two circular sequences
+with a non-trivial time or space complexity. The algorithm by Hirschberg
+we implemented has a lineair space complexity.
+</p>
+
+
+<h2>PimpItCircularStyle</h1>
+
+
+<p>
+Our program PimpItCircularStyle is implemented in Java. Running the program
+on two circular sequences (stored in Fasta files) yields a maximum scoring
+alignment and the score for this alignment:
+</p>
+
+
+<pre>
+$ more a.fasta
+>YAL060W 453 bp YAL060W 1-1149 modified-a
+TCTTCGGACACTAGGGTTGACTCGACATGATG
+$ more b.fasta
+>YAL060W 453 bp YAL060W 1-1149 modified-b
+CTTCAGTTGTCACAGCGTTCGTAGAACGG
+$ java PimpItCircularStyle a.fasta b.fasta
+1
+TCTTCGGACACTAGGGTTGACT-CGACATGATG
+-CTTGCGACACT---GTTGACTTCGGCAAGATG
+$
+</pre>
+
+
+<p>
+The package to download contains a small set of testing sequences and some
+information on time and space complexity of the program.
+</p>
+
+
+<h2>Downloading PimpItCircularStyle</h2>
+
+
+<p>
+PimpItCircularStyle is Open Source and licensed under the new <a
+href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>.
+</p>
+
+
+<p>
+<a href="files/vu/a4g/pimpitcircularstyle-0.1.tar.gz">PimpItCircularStyle 0.1</a> (tar.gz 14Kb)
+</p>
+
+
+    </content>
+</item>

@@ -11,10 +11,6 @@
         <location>britney</location>
     </item>
     <item>
-        <id>site:pymotif</id>
-        <location>pymotif</location>
-    </item>
-    <item>
         <id>site:greasemonkey</id>
         <location>greasemonkey</location>
     </item>
@@ -69,6 +65,10 @@
         <item>
             <id>site:vu:il-2005</id>
             <location>il-2005</location>
+        </item>
+        <item>
+            <id>site:vu:a4g-2005</id>
+            <location>a4g-2005</location>
         </item>
     </dir>
     <item>
