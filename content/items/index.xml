@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2005-11-25</last-change>
+    <last-change>2005-11-27</last-change>
     <content>
 
 
@@ -12,9 +12,9 @@
 
 
 <p>
-This is my personal homepage at the Vrije Universiteit Amsterdam where I'm
-a student Computer Science. My main interests there are theoretical computer
-science and software technology.
+This is my personal homepage at the Vrije Universiteit Amsterdam where
+<a href="img/martijn-southpark.png">I</a>'m a student Computer Science. My
+main interests there are theoretical computer science and software technology.
 </p>
 
 <p>
@@ -63,7 +63,8 @@ in particular scientific research. For some online pointers, consult my
 
 <p>
 Whenever there's still time left in my day, I try to spend it with my
-girlfriend Loes, family, or friends. When I'm alone, I try to play some
+girlfriend <a href="img/loes-southpark.png">Loes</a>, family, or friends. When
+I'm alone, I try to play some
 guitar (although Loes is still unimpressed by my playing skills), and listen
 to music. Some of my favourite bands are <a href="http://www.sonicyouth.com/"
 external="true">Sonic Youth</a>, <a href="http://www.mogwai.co.uk/"
