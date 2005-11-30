@@ -4,7 +4,7 @@
     <id>site:vu:il-2005</id>
     <title>Inleiding Logica 2005</title>
     <language>nl</language>
-    <last-change>2005-10-18</last-change>
+    <last-change>2005-11-30</last-change>
     <content>
 
 
@@ -55,6 +55,15 @@ zijn.)
 Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
 en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a>
 </p>
+
+
+<h2>Predikatenlogica</h2>
+
+
+<ul>
+    <li>Correctheid en volledigheid: <a href="files/vu/il/uitwerking-pred-volledigheid.pdf">extra opgave</a></li>
+    <li>Compactheid en Skolem-Löwenheim: <a href="files/vu/il/uitwerking-2.3-3c.pdf">2.3 3c (uitgebreid)</a></li>
+</ul>
 
 
     </content>
