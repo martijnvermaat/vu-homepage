@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2005-10-02</last-change>
+    <last-change>2006-01-30</last-change>
     <content>
 
 
@@ -103,8 +103,8 @@ the 'next unread post' links.
 </p>
 
 <p>
-<a href="files/greasemonkey/lambdaskipper-1.2.user.js">Download
-Lambda Skipper 1.2</a>
+<a href="files/greasemonkey/lambdaskipper-1.3.user.js">Download
+Lambda Skipper 1.3</a>
 </p>
 
 
