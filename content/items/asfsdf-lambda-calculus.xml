@@ -43,14 +43,6 @@ Download the definitions in an archive:
 </p>
 
 <p>
-Or be sure to get the latest revision by exporting it from my Subversion repository:
-</p>
-
-<pre>
-$ svn export <a href="http://kjew.xs4all.nl/repository/asfsdf/lambda-calculus" external="true">http://kjew.xs4all.nl/repository/asfsdf/lambda-calculus</a> lambda-calculus
-</pre>
-
-<p>
 Read the <a href="files/asfsdf-lambda-calculus/README.txt">README</a> file for usage
 instructions.
 </p>

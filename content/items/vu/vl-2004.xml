@@ -46,15 +46,6 @@ opgave juist is.
 </dd>
 </dl>
 
-<p>
-De geïnteresseerde lezer heeft bovendien de mogelijkheid de LaTeX sources
-van deze uitwerkingen uit mijn Subversion repository te halen:
-</p>
-
-<pre>
-$ svn export <a href="http://kjew.xs4all.nl/repository/documents/vu/advanced-logic" external="true">http://kjew.xs4all.nl/repository/documents/vu/advanced-logic</a> uitwerkingen
-</pre>
-
 
     </content>
 </item>

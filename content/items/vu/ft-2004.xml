@@ -24,15 +24,6 @@ vak <a href="http://www.cs.vu.nl/~tcs/ft/" external="true">Formele Talen</a>.
 </li>
 </ol>
 
-<p>
-De LaTeX sources van de uitwerkingen zijn uit mijn Subversion repository
-te halen:
-</p>
-
-<pre>
-$ svn export <a href="http://kjew.xs4all.nl/repository/documents/vu/formele-talen" external="true">http://kjew.xs4all.nl/repository/documents/vu/formele-talen</a> uitwerkingen
-</pre>
-
 
     </content>
 </item>

@@ -183,16 +183,6 @@ contains a solution for <a href="hanoi">Towers of Hanoi in
 Lambda Calculus</a> suitable for use in Britney.
 </p>
 
-<p>
-Those of you who only want real bleeding edge software should checkout the
-latest revision from the Subversion repository. Anonymous access is provided
-via HTTP (more information on my <a href="colofon">colofon page</a>):
-</p>
-
-<pre>
-$ svn export <a href="http://kjew.xs4all.nl/repository/britney/trunk" external="true">http://kjew.xs4all.nl/repository/britney/trunk</a> britney
-</pre>
-
 
 <h1>Running Britney</h1>
 

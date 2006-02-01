@@ -4,7 +4,7 @@
     <id>site:colofon</id>
     <title>Colofon</title>
     <language>en</language>
-    <last-change>2004-09-18</last-change>
+    <last-change>2006-01-04</last-change>
     <content>
 
 
@@ -50,28 +50,15 @@ external="true">Apache Ant</a>.
 
 
 <p>
-On some pages of this website, I make a reference to my Subversion
-repository. Some projects on it are readable anonymously.
+All content and sourcecode of this website is stored in my Subversion
+repository, which also hosts sources of most of my other documents and
+projects.
 </p>
 
 <p>
-For example, the complete sourcecode for this website can be fetched with
-the command:
-</p>
-
-<pre>
-$ svn export <a href="http://kjew.xs4all.nl/repository/vu-website/trunk" external="true">http://kjew.xs4all.nl/repository/vu-website/trunk</a> vu-website
-</pre>
-
-<p>
-But be aware. The server is behind my small DSL line with a limited upload
-capacity. Also, it might not always be running. In that case, try again the
-next day.
-</p>
-
-<p>
-The server I am talking about is "christina", a Pentium II running Debian
-Sarge with 4GB of harddisk space. I am quite happy with her.
+Although I will no longer make public references to the repository's address
+here, most of its content is readable anonymously. If you want to browse the
+source for anything on this website, just drop me a note.
 </p>
 
 
