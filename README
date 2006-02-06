@@ -8,6 +8,8 @@ Known issues:
 * There seems to be a bug in generating relative paths
   that's only triggered by some XSLT processors.
 
+* This project is not licensed. Fix it sometime.
+
 
 Deployment specific content is present in:
 
