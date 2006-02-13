@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:iti-2006</id>
+    <title>Inleiding Theoretische Informatica 2006</title>
+    <language>nl</language>
+    <last-change>2006-02-13</last-change>
+    <content>
+
+
+<p>
+Ook dit jaar ben ik practicum assistent bij het vak <a
+href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
+Informatica</a> voor tweedejaars studenten Informatica.
+</p>
+
+<p>
+Het vak bestaat uit drie onderdelen: Lambda calculus (4 weken), Equationele
+specificaties (3 weken) en functioneel programmeren (3 weken).
+</p>
+
+<p>
+Iedereen is welkom op het werkcollege in week 6 t/m week 12 op vrijdag van
+15.30 tot 17.15 in S201.
+</p>
+
+
+<h1>Lambda calculus</h1>
+
+
+<p>
+Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
+<a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
+afdrukken, termen reduceren en termen vergelijken modulo alpha
+conversie. Wellicht vind je het handig om mee te oefenen.
+</p>
+
+<p>
+Indien nodig/gewenst/mogelijk komen hier uitwerkingen van werkcollege
+opgaven.
+</p>
+
+
+<h1>Equationele specificaties</h1>
+
+
+<p>
+Voor nu: zie het equationele logica deel op mijn <a href="vu/iti-2005">ITI
+pagina van vorig jaar</a>.
+</p>
+
+
+<h1>Functioneel programmeren</h1>
+
+
+<p>
+Bij het practicum functioneel programmeren zullen we de taal <a
+href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
+Caml</a> gebruiken. Voor iedereen met een Java achtergrond is deze<a
+href="http://merjis.com/developers/ocaml_tutorial/"
+external="true">OCaml Tutorial</a> voor C(++), Perl en Java programmeurs
+een aardige introductie in de taal.
+</p>
+
+<p>
+OCaml is geinstalleerd op de Solaris systemen en op de Debian Linux
+systemen.
+</p>
+
+<p>
+Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb
+ik een OCaml mode voor Emacs gezet, <a
+href="http://www-rocq.inria.fr/~acohen/tuareg/" external="true">Tuareg
+Mode</a>, die ik iets fijner vind werken dan de OCaml mode die standaard
+bij de OCaml distributie zit.
+</p>
+
+<p>
+Je kunt Tuareg Mode automatisch laten activeren bij het openen van OCaml
+files door het toevoegen van de volgende regels aan je
+<code>~/.emacs</code> file:
+</p>
+
+<pre>
+;; Where do we look for tuareg?
+(setq load-path (cons "~mvermaat/public/tuareg_mode/" load-path))
+
+;; OCaml tuareg mode
+(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+
+;; Look in ~mvermaat/public/tuareg_mode/custom-tuareg.el for some ideas on
+;; customization options.
+</pre>
+
+
+    </content>
+</item>

@@ -70,6 +70,10 @@
             <id>site:vu:a4g-2005</id>
             <location>a4g-2005</location>
         </item>
+        <item>
+            <id>site:vu:iti-2006</id>
+            <location>iti-2006</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>
