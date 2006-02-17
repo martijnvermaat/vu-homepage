@@ -135,7 +135,8 @@ Britney has a number of limitations, most notably:
     <li>
         <p>
         The implementation of Beta reduction is kept as close to the formal
-        as possible in order to keep the code clean and understandable.
+        definition as possible in order to keep the code clean and
+        understandable.
         Performance was not a goal in this implementation and therefore,
         should you care about that, performance is really bad.
         </p>
