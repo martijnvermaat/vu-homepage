@@ -153,6 +153,12 @@ your needs (as explained above).
 </p>
 
 <p>
+This extensions does not seem to work with the Greasemonkey extension
+for the Epiphany browser. I think <code>GM_xmlhttpRequest</code> is
+not supported, but have not investigated this further.
+</p>
+
+<p>
 <a href="files/greasemonkey/bbtis-1.2.2.user.js">Download BBTis 1.2.2</a>
 </p>
 
