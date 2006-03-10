@@ -4,7 +4,7 @@
     <id>site:vu:iti-2006</id>
     <title>Inleiding Theoretische Informatica 2006</title>
     <language>nl</language>
-    <last-change>2006-02-17</last-change>
+    <last-change>2006-03-11</last-change>
     <content>
 
 
@@ -34,15 +34,15 @@ Je bent welkom op het werkcollege in week 6 t/m week 12 op vrijdag van
 
 
 <p>
+<a href="files/vu/iti/lc/uitwerkingen-2006.pdf">Antwoorden bij geselecteerde opgaven</a> (pdf)
+</p>
+
+
+<p>
 Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
 <a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
 afdrukken, termen reduceren en termen vergelijken modulo alpha
 conversie. Wellicht vind je het handig om mee te oefenen.
-</p>
-
-<p>
-Indien nodig/gewenst/mogelijk komen hier uitwerkingen van werkcollege
-opgaven.
 </p>
 
 
