@@ -160,9 +160,17 @@ Deploy Local Target
         <fileset dir="${build.dir}" />
     </copy>
 
+    <exec executable="chmod">
+        <arg value="-R" />
+        <arg value="a+rX" />
+        <arg value="${deploy.dir}" />
+    </exec>
+
+<!-- The following does not include directories :/
     <chmod perm="a+rX">
         <fileset dir="${deploy.dir}" />
     </chmod>
+-->
 
 </target>
 
