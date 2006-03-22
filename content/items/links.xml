@@ -4,7 +4,7 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2006-02-16</last-change>
+    <last-change>2006-03-22</last-change>
     <content>
 
 
@@ -26,7 +26,7 @@ The programming languages weblog, hosts loads of interesting discussions and
 links.
 </dd>
 
-<dt><a href="http://www.cs.uu.nl/~franka/ref" external="true">PLT
+<dt><a href="http://homepages.cwi.nl/~atanasso/ref" external="true">PLT
 Online</a></dt>
 <dd>
 Collection of programming language theory texts and resources, all of which
@@ -46,6 +46,32 @@ an Introduction</a></dt>
 This is a work in progress by Peter Smith that will become a book discussing
 Gödel's incompleteness theorems and the philosophical implications. It's
 accessible for undergraduates (like me).
+</dd>
+
+</dl>
+
+
+<h1>Computing</h1>
+
+
+<dl>
+
+<dt><a href="http://caml.inria.fr/ocaml/" external="true">Objective Caml</a></dt>
+<dd>
+OCaml is a strict functional language from the ML family of languages with an
+object-oriented layer and good performance.
+</dd>
+
+<dt><a href="http://www.stratego-language.org/" external="true">Stratego</a></dt>
+<dd>
+Based on the term rewriting paradigm, Stratego is a leading language in the
+field of meta programming.
+</dd>
+
+<dt><a href="http://www.ubuntu.com/" external="true">Ubuntu Linux</a></dt>
+<dd>
+Ubuntu Linux is a free operating system for the desktop (or server) driven by
+a friendly community.
 </dd>
 
 </dl>
@@ -118,7 +144,6 @@ easy.
 </dd>
 
 </dl>
-
 
 
     </content>

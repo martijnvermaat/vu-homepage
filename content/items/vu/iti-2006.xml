@@ -4,7 +4,7 @@
     <id>site:vu:iti-2006</id>
     <title>Inleiding Theoretische Informatica 2006</title>
     <language>nl</language>
-    <last-change>2006-03-11</last-change>
+    <last-change>2006-03-22</last-change>
     <content>
 
 
@@ -37,7 +37,6 @@ Je bent welkom op het werkcollege in week 6 t/m week 12 op vrijdag van
 <a href="files/vu/iti/lc/uitwerkingen-2006.pdf">Antwoorden bij geselecteerde opgaven</a> (pdf)
 </p>
 
-
 <p>
 Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
 <a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
@@ -45,13 +44,32 @@ afdrukken, termen reduceren en termen vergelijken modulo alpha
 conversie. Wellicht vind je het handig om mee te oefenen.
 </p>
 
+<p>
+Vind je de in het dictaat gegeven fixed-point combinatoren <code>Y</code>
+(Curry) en <code>T</code> (Turing) maar niets? <a href="http://www.cs.vu.nl/~jwk/"
+external="true">Jan Willem Klop</a> vond voor jou deze fixed-point combinator:
+</p>
+
+<pre>
+Y<sub>K</sub> = (L L L L L L L L L L L L L L L L L L L L L L L L L L)
+</pre>
+
+<p>
+waarbij
+</p>
+
+<pre>
+L = λabcdefghijklmnopqstuvwxyzr. (r (t h i s i s a f i x e d p o i n t c o m b i n a t o r))
+</pre>
+
 
 <h1>Equationele specificaties</h1>
 
 
 <p>
-Dit jaar zijn er wellicht enkele kleine wijzigingen aan de inhoud. Als dat
-duidelijk is komen er uitwerkingen van extra opgaven op deze pagina.
+Dit jaar is er een aantal onderwerpen uit de inhoud geschrapt. Ik zal mijn
+uitwerkingen van vorig jaar hierop nakijken en na eventuele wijzigingen op
+deze pagina plaatsen.
 </p>
 
 <p>
@@ -64,16 +82,15 @@ pagina van vorig jaar</a>.
 
 
 <p>
-Bij het practicum functioneel programmeren zullen we de taal <a
+Bij het practicum functioneel programmeren gebruiken we de taal <a
 href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
-Caml</a> gebruiken. Voor iedereen met een Java achtergrond is deze<a
-href="http://merjis.com/developers/ocaml_tutorial/"
-external="true">OCaml Tutorial</a> voor C(++), Perl en Java programmeurs
-een aardige introductie in de taal.
+Caml</a> gebruiken. Voor een introductie is deze <a
+href="http://www.ocaml-tutorial.org/"
+external="true">OCaml Tutorial</a> een aardig begin.
 </p>
 
 <p>
-OCaml is geinstalleerd op de Solaris systemen en op de Debian Linux
+OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
 systemen.
 </p>
 

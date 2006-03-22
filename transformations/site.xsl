@@ -215,7 +215,7 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|quote|strong|ul|img">
+    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|blockquote|strong|ul|img|sup|sub">
        <xsl:copy>
            <xsl:apply-templates select="@*" /> 
            <xsl:apply-templates />
