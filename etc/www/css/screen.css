@@ -82,8 +82,9 @@ pre {
 }
 
 
+/*
 a.external:after {
-    content             :   " !"; /*" (!)";*/
+    content             :   " !";
     font-size           :   0.6em;
     vertical-align      :   top;
 }
@@ -92,6 +93,7 @@ a.external:after {
 pre a.external:after {
     display             :   none;
 }
+*/
 
 
 dt {
@@ -104,8 +106,9 @@ dd {
 }
 
 
+/*
 a[hreflang='nl']:after {
-    content             :   " NL"; /*" (Dutch)";*/
+    content             :   " NL";
     font-size           :   0.6em;
     vertical-align      :   top;
 }
@@ -117,10 +120,11 @@ html[lang='nl'] a[hreflang='nl']:after {
 }
 
 html[lang='nl'] a[hreflang='en']:after {
-    content             :   " EN"; /*" (English)";*/
+    content             :   " EN";
     font-size           :   0.6em;
     vertical-align      :   top;
 }
+*/
 
 
 .xnav {
