@@ -4,7 +4,7 @@
     <id>site:vu:iti-2006</id>
     <title>Inleiding Theoretische Informatica 2006</title>
     <language>nl</language>
-    <last-change>2006-03-22</last-change>
+    <last-change>2006-04-01</last-change>
     <content>
 
 
@@ -29,6 +29,10 @@ Je bent welkom op het werkcollege in week 6 t/m week 12 op vrijdag van
 15.30 tot 17.15 in S201.
 </p>
 
+<p>
+<strong>The Koan of Lazy Evaluation</strong>:
+Michel Mauny was giving a guest lecture to new computer science students. After the students were seated, Michel pronounced "Today's lecture will be about Lazy Evaluation", he paused for a moment then concluded with, "Are there any questions?"
+</p>
 
 <h1>Lambda calculus</h1>
 
