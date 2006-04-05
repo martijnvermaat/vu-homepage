@@ -4,7 +4,7 @@
     <id>site:vu:iti-2006</id>
     <title>Inleiding Theoretische Informatica 2006</title>
     <language>nl</language>
-    <last-change>2006-04-01</last-change>
+    <last-change>2006-04-05</last-change>
     <content>
 
 
@@ -71,15 +71,33 @@ L = λabcdefghijklmnopqstuvwxyzr. (r (t h i s i s a f i x e d p o i n t c o m b 
 
 
 <p>
-Dit jaar is er een aantal onderwerpen uit de inhoud geschrapt. Ik zal mijn
-uitwerkingen van vorig jaar hierop nakijken en na eventuele wijzigingen op
-deze pagina plaatsen.
+Uitwerkingen bij enkele opgaven:
 </p>
 
+<ul>
+<li>
+<a href="files/vu/iti/es/uitwerkingen-2006.pdf">Voorbeeld
+uitwerkingen bij opgaven uit het dictaat</a> (pdf)
+</li>
+<li>
+<a href="http://www.cs.vu.nl/~tcs/iti/avi-opg66.ps"
+external="true">Uitwerking van opgave 6.3 uit het dictaat</a> (ps)
+(onderdeel (c) valt niet binnen de tentamenstof)
+</li>
+</ul>
+
 <p>
-Voor nu: zie het equationele logica deel op mijn <a href="vu/iti-2005">ITI
-pagina van vorig jaar</a>.
+En nog twee extra opgaven met antwoorden:
 </p>
+
+<ul>
+<li>
+<a href="files/vu/iti/es/extra-opgaven-2006.pdf">Extra opgaven</a> (pdf)
+</li>
+<li>
+<a href="files/vu/iti/es/extra-opgaven-antwoorden-2006.pdf">Antwoorden bij extra opgaven</a> (pdf)
+</li>
+</ul>
 
 
 <h1>Functioneel programmeren</h1>
