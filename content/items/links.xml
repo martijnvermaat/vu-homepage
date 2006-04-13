@@ -4,7 +4,7 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2006-03-22</last-change>
+    <last-change>2006-04-13</last-change>
     <content>
 
 
@@ -141,6 +141,26 @@ external="true">Quod Libet</a></dt>
 <dd>
 Audio player for the Gnome platform, making managing a large music collection
 easy.
+</dd>
+
+</dl>
+
+
+<h1>Surfin'</h1>
+
+
+<dl>
+
+<dt><a href="http://rosanneinguatemala.blogspot.com/" external="true"
+hreflang="nl">Mi Viaje a Guatemala</a></dt>
+<dd>
+Weblog of my sister Rosanne about her stay in Guatemala.
+</dd>
+
+<dt><a href="http://loeslog.blogspot.com/" external="true"
+hreflang="nl">LoesLog</a></dt>
+<dd>
+My girlfriend tries to maintain a weblog during her internship in Londen.
 </dd>
 
 </dl>
