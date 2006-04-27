@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2006-04-13</last-change>
+    <last-change>2006-04-28</last-change>
     <content>
 
 
@@ -35,12 +35,10 @@ course.
 
 
 <p>
-In order to do away with the classical view of a computer science student: yes,
-I have a girlfriend. Her name is <a
-href="http://www.student.vu.nl/l.e.claessen/" external="true">Loes</a> and
-she knows more about neuroscience than I do.
-<a href="img/loes-southpark.png">She</a> likes chocolate
-and Peking Express.
+First things first. My girlfriend is named <a
+href="http://www.student.vu.nl/l.e.claessen/" external="true">Loes</a>.
+<a href="img/loes-southpark.png">She</a> knows a thing or two about
+neuroscience and likes chocolate and Peking Express.
 </p>
 
 
@@ -53,8 +51,8 @@ some other bands, but they are not friends of mine.
 
 <p>
 I believe in the power of free and open information and software. This includes
-in particular scientific research. For some online pointers, try my
-<a href="links">Links</a> page.
+in particular research and educational material. For some online pointers, try
+my <a href="links">Links</a> page.
 </p>
 
 
