@@ -4,8 +4,16 @@
     <id>site:links</id>
     <title>Links</title>
     <language>en</language>
-    <last-change>2006-04-13</last-change>
+    <last-change>2006-06-05</last-change>
     <content>
+
+
+<p>
+Below is a selection of categorized links. My bookmarks can be browsed at
+<a href="http://del.icio.us/mvermaat" external="true">del.icio.us</a>.
+(Using del.icio.us is an experiment for me, so it remains to be seen if
+they get updated frequently.)
+</p>
 
 
 <h1>Reading</h1>
@@ -164,6 +172,26 @@ My girlfriend tries to maintain a weblog during her internship in Londen.
 </dd>
 
 </dl>
+
+
+<h1>Worrying</h1>
+
+
+<p>
+Please take a moment to think about the following issues.
+</p>
+
+<p>
+<a href="http://www.nosoftwarepatents.com/"
+external="true"><img src="http://www.nosoftwarepatents.com/banners/mysql_3.jpg"
+alt="No software patents" /></a>
+</p>
+
+<p>
+<a href="http://www.dataretentionisnosolution.com/"
+external="true"><img src="http://www.dataretentionisnosolution.com/46860.gif"
+alt="Data retention is no solution" /></a>
+</p>
 
 
     </content>
