@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2006-09-12</last-change>
+    <last-change>2006-09-15</last-change>
     <content>
 
 
@@ -55,6 +55,49 @@ I believe in the power of free and open information and software. This includes
 in particular research and educational material. For some online pointers, try
 my <a href="links">Links</a> page.
 </p>
+
+
+<h1>Recent links</h1>
+
+
+<p>
+Here are some important, funny, worrying, or otherwise interesting links I
+stumbled upon recently. They are taken from <a href="http://del.icio.us/mvermaat"
+external="true">my del.icio.us bookmarks</a>.
+</p>
+
+
+<div id="linkroll"> </div>
+<script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10"> </script>
+<script type="text/javascript">
+    function showImage(img){ return (function(){ img.style.display='inline'; }) }
+    var table = document.createElement('table');
+    table.className = 'linkroll';
+    for (var i=0, post; post = Delicious.posts[i]; i++) {
+        var tr = document.createElement('tr');
+        var tdl = document.createElement('td');
+        var tdm = document.createElement('td');
+        var tdr = document.createElement('td');
+        var img = document.createElement('img')
+        var a = document.createElement('a');
+        tdl.className = 'tags';
+        tdr.className = 'link';
+        img.style.display = 'none'
+        img.height = img.width = 16
+        img.src = post.u.split('/').splice(0,3).join('/')+'/favicon.ico'
+        img.onload = showImage(img);
+        a.setAttribute('href', post.u);
+        a.appendChild(document.createTextNode(post.d));
+        tdl.appendChild(document.createTextNode(post.t.join(' ').replace('linkroll', '')));
+        tdm.appendChild(img);
+        tdr.appendChild(a);
+        tr.appendChild(tdl);
+        tr.appendChild(tdm);
+        tr.appendChild(tdr);
+        table.appendChild(tr);
+    }
+    document.getElementById('linkroll').appendChild(table);
+</script>
 
 
     </content>

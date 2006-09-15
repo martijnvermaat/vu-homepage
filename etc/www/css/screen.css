@@ -66,6 +66,18 @@ pre {
 }
 
 
+table.linkroll td {
+    padding-left        :   1em;
+}
+
+
+table.linkroll td.tags {
+    font-size           :   0.8em;
+    font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
+    text-align          :   right;
+}
+
+
 #page-footer {
     padding             :   1.5em 2em 1.5em 2em;
 }
