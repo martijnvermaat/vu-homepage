@@ -71,6 +71,14 @@ external="true">my del.icio.us bookmarks</a>.
 <script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10"> </script>
 <script type="text/javascript">
     function showImage(img){ return (function(){ img.style.display='inline'; }) }
+    function notLinkroll(element) { return element != 'linkroll'; }
+    function filter(f, a) {
+        var r=[];
+        for (var i=0; i!=a.length; i++) {
+            if (f(a[i])) r.push(a[i]);
+        }
+        return r;
+    }
     var table = document.createElement('table');
     table.className = 'linkroll';
     for (var i=0, post; post = Delicious.posts[i]; i++) {
@@ -83,12 +91,12 @@ external="true">my del.icio.us bookmarks</a>.
         tdl.className = 'tags';
         tdr.className = 'link';
         img.style.display = 'none'
-        img.height = img.width = 16
-        img.src = post.u.split('/').splice(0,3).join('/')+'/favicon.ico'
+        img.height = img.width = 16;
+        img.src = post.u.split('/').splice(0,3).join('/')+'/favicon.ico';
         img.onload = showImage(img);
         a.setAttribute('href', post.u);
         a.appendChild(document.createTextNode(post.d));
-        tdl.appendChild(document.createTextNode(post.t.join(' ').replace('linkroll', '')));
+        tdl.appendChild(document.createTextNode(filter(notLinkroll, post.t).join(', ')));
         tdm.appendChild(img);
         tdr.appendChild(a);
         tr.appendChild(tdl);
