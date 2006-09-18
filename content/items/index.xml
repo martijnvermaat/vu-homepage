@@ -80,6 +80,7 @@ external="true">my del.icio.us bookmarks</a>.
         return r;
     }
     var table = document.createElement('table');
+    var tb = document.createElement('tbody');
     table.className = 'linkroll';
     for (var i=0, post; post = Delicious.posts[i]; i++) {
         var tr = document.createElement('tr');
@@ -102,8 +103,9 @@ external="true">my del.icio.us bookmarks</a>.
         tr.appendChild(tdl);
         tr.appendChild(tdm);
         tr.appendChild(tdr);
-        table.appendChild(tr);
+        tb.appendChild(tr);
     }
+    table.appendChild(tb);
     document.getElementById('linkroll').appendChild(table);
 </script>
 
