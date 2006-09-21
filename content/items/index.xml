@@ -57,7 +57,7 @@ my <a href="links">Links</a> page.
 </p>
 
 
-<h1>Recent links</h1>
+<h1>Linkroll</h1>
 
 
 <p>
@@ -79,34 +79,33 @@ external="true">my del.icio.us bookmarks</a>.
         }
         return r;
     }
-    var table = document.createElement('table');
-    var tb = document.createElement('tbody');
-    table.className = 'linkroll';
+    var dl = document.createElement('dl');
+    dl.className = 'linkroll';
     for (var i=0, post; post = Delicious.posts[i]; i++) {
-        var tr = document.createElement('tr');
-        var tdl = document.createElement('td');
-        var tdm = document.createElement('td');
-        var tdr = document.createElement('td');
+        var dt = document.createElement('dt');
+        var dd = document.createElement('dd');
         var img = document.createElement('img')
         var a = document.createElement('a');
-        tdl.className = 'tags';
-        tdr.className = 'link';
+        var tags = document.createElement('span');
+
+        tags.className = 'tags';
         img.style.display = 'none'
         img.height = img.width = 16;
         img.src = post.u.split('/').splice(0,3).join('/')+'/favicon.ico';
         img.onload = showImage(img);
         a.setAttribute('href', post.u);
+        a.appendChild(img);
         a.appendChild(document.createTextNode(post.d));
-        tdl.appendChild(document.createTextNode(filter(notLinkroll, post.t).join(', ')));
-        tdm.appendChild(img);
-        tdr.appendChild(a);
-        tr.appendChild(tdl);
-        tr.appendChild(tdm);
-        tr.appendChild(tdr);
-        tb.appendChild(tr);
+        tags.appendChild(document.createTextNode('(' + filter(notLinkroll, post.t).join(', ') + ')'));
+
+        dt.appendChild(a);
+        dt.appendChild(document.createTextNode(' '));
+        dt.appendChild(tags);
+        dd.appendChild(document.createTextNode(post.n));
+        dl.appendChild(dt);
+        dl.appendChild(dd);
     }
-    table.appendChild(tb);
-    document.getElementById('linkroll').appendChild(table);
+    document.getElementById('linkroll').appendChild(dl);
 </script>
 
 
