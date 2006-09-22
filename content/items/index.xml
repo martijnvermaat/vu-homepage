@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Home</title>
     <language>en</language>
-    <last-change>2006-09-15</last-change>
+    <last-change>2006-09-22</last-change>
     <content>
 
 
@@ -88,6 +88,7 @@ external="true">my del.icio.us bookmarks</a>.
         var a = document.createElement('a');
         var tags = document.createElement('span');
 
+        a.className = 'external';
         tags.className = 'tags';
         img.style.display = 'none'
         img.height = img.width = 16;
@@ -107,6 +108,11 @@ external="true">my del.icio.us bookmarks</a>.
     }
     document.getElementById('linkroll').appendChild(dl);
 </script>
+
+
+<p>
+More links like these in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">Linkroll archive</a>.
+</p>
 
 
     </content>
