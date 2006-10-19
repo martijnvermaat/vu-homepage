@@ -4,7 +4,7 @@
     <id>site:vu:il-2006</id>
     <title>Inleiding Logica 2006</title>
     <language>nl</language>
-    <last-change>2006-10-17</last-change>
+    <last-change>2006-10-19</last-change>
     <content>
 
 
@@ -50,10 +50,11 @@ zijn.)
 <h2>Modale logica</h2>
 
 
-<p>
-Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
-en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a>
-</p>
+<ul>
+    <li>Geldige formules: <a href="files/vu/il/uitwerking-5.2-6ad.pdf">5.2 5a,d</a></li>
+    <li>Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
+    en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a></li>
+</ul>
 
 
     </content>
