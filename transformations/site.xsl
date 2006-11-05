@@ -118,6 +118,24 @@ Two parameters are expected:
             <xsl:otherwise>Jump to the site navigation</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
+    <xsl:variable name="str-room-heading">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Kamer gezocht</xsl:when>
+            <xsl:otherwise>Looking for a room</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="str-room-message">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">
+            </xsl:when>
+            <xsl:otherwise>
+                Because I will have to leave my room in Amsterdam real soon, I am
+                looking for a new room. If you know of a room for rent somewhere in
+                Amsterdam or Utrecht, &lt;a href="mailto:mvermaat@cs.vu.nl"&gt;let me
+                know&lt;/a&gt;. Thanks!
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
 
 
     <xsl:template match="/item">
@@ -151,6 +169,31 @@ Two parameters are expected:
         <div id="page-header">
 
             <h1><xsl:value-of select="title" /></h1>
+
+            <div class="important">
+                <h2>
+                    <xsl:choose>
+                        <xsl:when test="language='nl'">Kamer gezocht</xsl:when>
+                        <xsl:otherwise>Looking for a room</xsl:otherwise>
+                    </xsl:choose>
+                </h2>
+                <p>
+                    <xsl:choose>
+                        <xsl:when test="language='nl'">
+                            Omdat ik binnenkort mijn kamer in Amsterdam moet verlaten ben ik
+                            op zoek naar een nieuwe kamer. Als je ergens in Amsterdam of Utrecht
+                            een kamer te huur weet, <a href="mailto:mvermaat@cs.vu.nl">laat het
+                            me dan weten</a>. Bedankt!
+                        </xsl:when>
+                        <xsl:otherwise>
+                            Because I will have to leave my room in Amsterdam real soon, I am
+                            looking for a new room. If you know of a room for rent somewhere in
+                            Amsterdam or Utrecht, please <a href="mailto:mvermaat@cs.vu.nl">let
+                            me know</a>. Thanks!
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </p>
+            </div>
 
             <p id="breadcrumbs">
                 <xsl:value-of select="concat($str-breadcrumbs, ': ')" />

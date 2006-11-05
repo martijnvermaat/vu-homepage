@@ -150,3 +150,16 @@ img {
 */
     border              :   none;
 }
+
+
+.important {
+    border              :   solid 1px;
+    margin-top          :   1em;
+    padding-left        :   1em;
+    padding-right       :   1em;
+}
+
+
+#page-content .important h2 {
+    margin-left         :   0;
+}

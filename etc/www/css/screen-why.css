@@ -71,3 +71,21 @@ pre {
     border-top          :   solid 1px #334465;
     border-bottom       :   solid 2px #334465;
 }
+
+
+.important {
+    border-color        :   #000;
+    background          :   #fff;
+}
+
+
+.important, .important a {
+    color               :   #000;
+}
+
+
+.important a, .important a:hover {
+    border              :   none;
+    background-color    :   inherit;
+    text-decoration     :   underline;
+}
