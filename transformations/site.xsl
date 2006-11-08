@@ -118,6 +118,8 @@ Two parameters are expected:
             <xsl:otherwise>Jump to the site navigation</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
+
+<!--
     <xsl:variable name="str-room-heading">
         <xsl:choose>
             <xsl:when test="item/language='nl'">Kamer gezocht</xsl:when>
@@ -136,6 +138,7 @@ Two parameters are expected:
             </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
+-->
 
 
     <xsl:template match="/item">
@@ -170,6 +173,7 @@ Two parameters are expected:
 
             <h1><xsl:value-of select="title" /></h1>
 
+<!--
             <div class="important">
                 <h2>
                     <xsl:choose>
@@ -194,6 +198,7 @@ Two parameters are expected:
                     </xsl:choose>
                 </p>
             </div>
+-->
 
             <p id="breadcrumbs">
                 <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
