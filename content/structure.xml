@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<site>
+<dir>
+    <location></location>
+    <title>Martijn Vermaat</title>
     <item>
         <id>site:index</id>
         <location>index</location>
@@ -107,4 +109,4 @@
         <location>cddb</location>
         <hidden />
     </item>
-</site>
+</dir>

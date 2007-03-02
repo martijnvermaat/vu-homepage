@@ -43,7 +43,7 @@ Two parameters are expected:
     <!-- This relative path takes you to the base directory
          (can be ./ if already there). -->
     <xsl:variable name="base-path">
-        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file/site//item[id=$current-id]/ancestor::dir">../</xsl:for-each>
+        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file//item[id=$current-id]/ancestor::dir/ancestor::dir">../</xsl:for-each>
     </xsl:variable>
 
     <!-- This is the path to the current document, relative
@@ -51,7 +51,7 @@ Two parameters are expected:
     <xsl:variable name="current-path">
         <xsl:value-of select="$base-path" />
         <xsl:for-each
-            select="$site-structure-file/site//item[id=$current-id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
+            select="$site-structure-file/dir//item[id=$current-id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
             <xsl:value-of select="concat(location,'/')" />
         </xsl:for-each>
     </xsl:variable>
@@ -171,8 +171,8 @@ Two parameters are expected:
 
             <p id="breadcrumbs">
                 <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
-                <a href="{$base-path}" accesskey="1">Home</a>
-                <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs" />
+<!--                <a href="{$base-path}" accesskey="1">Home</a>  -->
+                <xsl:apply-templates select="$site-structure-file/dir" mode="breadcrumbs" />
             </p>
 
             <h1><xsl:value-of select="title" /></h1>
@@ -202,17 +202,9 @@ Two parameters are expected:
             <h2><xsl:value-of select="$str-index" /></h2>
 
             <div id="navigation">
-            <p>
-                <xsl:choose>
-                    <xsl:when test="count($site-structure-file/site/item[id=$current-id]/no-link) > 0">
-                        <strong><a href="{$base-path}">Home</a></strong>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <a href="{$base-path}">Home</a>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </p>
-            <xsl:apply-templates select="$site-structure-file/site" mode="navigation" />
+            <ul>
+            <xsl:apply-templates select="$site-structure-file/dir" mode="navigation" />
+            </ul>
             <p><a href="#page-header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
             </div>
 
@@ -230,7 +222,7 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|blockquote|strong|ul|img|sup|sub|script|div">
+    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|blockquote|strong|ul|img|sup|sub|script|div|table|tr|td">
        <xsl:copy>
            <xsl:apply-templates select="@*" /> 
            <xsl:apply-templates />
@@ -279,17 +271,9 @@ Two parameters are expected:
 
     <!-- This special tag generates a complete sitemap. -->
     <xsl:template match="sitemap">
-        <p><a href="{$base-path}">Home</a></p>
-        <xsl:apply-templates select="$site-structure-file/site" mode="sitemap" />
-    </xsl:template>
-
-
-    <xsl:template match="site" mode="navigation">
-
         <ul>
-            <xsl:apply-templates select="item|dir" mode="navigation" />
+            <xsl:apply-templates select="$site-structure-file/dir" mode="sitemap" />
         </ul>
-
     </xsl:template>
 
 
@@ -333,15 +317,6 @@ Two parameters are expected:
                 </xsl:apply-templates>
             </ul>
         </li>
-
-    </xsl:template>
-
-
-    <xsl:template match="site" mode="sitemap">
-
-        <ul>
-            <xsl:apply-templates select="item|dir" mode="sitemap" />
-        </ul>
 
     </xsl:template>
 

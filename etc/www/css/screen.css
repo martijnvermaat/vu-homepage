@@ -49,6 +49,7 @@ body {
     height              :   122px;
     background          :   url('../img/vu-logo.png');
     text-indent         :   -100em;
+    text-decoration     :   none;
 }
 
 
@@ -58,6 +59,7 @@ body {
     height              :   52px;
     background          :   url('../img/cs.png');
     text-indent         :   -100em;
+    text-decoration     :   none;
 }
 
 
@@ -102,7 +104,7 @@ a {
 
 
 a:visited {
-    color               :   #cbf2f8;
+    color               :   #ffffff;
 }
 
 
@@ -114,4 +116,10 @@ a:hover {
 img {
     padding : 0;
     margin              :   0;
+}
+
+
+td:first-child {
+    padding-right       :   3em;
+    color               :   #ff7;
 }
