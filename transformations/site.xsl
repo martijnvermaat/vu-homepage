@@ -150,12 +150,6 @@ Two parameters are expected:
             <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
 
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-why.css" title="whytheluckystiff" />
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-ubuntu.css" title="Ubuntu colors" />
-
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-bow.css" title="Black on white" />
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-wob.css" title="White on black" />
-
             <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
 
             <link rel="home" href="{$base-path}" title="Homepage" />
@@ -164,41 +158,16 @@ Two parameters are expected:
 
         <body id="cs-vu-nl-mvermaat">
 
-        <ul class="xnav">
-            <li><a href="#page-content" title="{$str-page-content-descr}" accesskey="2"><xsl:value-of select="$str-page-content" /></a></li>
-            <li><a href="#navigation" title="{$str-navigation-descr}"><xsl:value-of select="$str-navigation" /></a></li>
+        <ul id="university-links">
+            <li id="vu-link"><a href="http://www.vu.nl/">Vrije Universiteit</a></li>
+            <li id="cs-link"><a href="http://www.cs.vu.nl/">Department of Computer Science</a></li>
         </ul>
 
-        <div id="page-header">
+        <div id="banner-top">. </div>
+        <div id="banner">. </div>
+        <div id="banner-bottom">. </div>
 
-            <h1><xsl:value-of select="title" /></h1>
-
-<!--
-            <div class="important">
-                <h2>
-                    <xsl:choose>
-                        <xsl:when test="language='nl'">Kamer gezocht</xsl:when>
-                        <xsl:otherwise>Looking for a room</xsl:otherwise>
-                    </xsl:choose>
-                </h2>
-                <p>
-                    <xsl:choose>
-                        <xsl:when test="language='nl'">
-                            Omdat ik binnenkort mijn kamer in Amsterdam moet verlaten ben ik
-                            op zoek naar een nieuwe kamer. Als je ergens in Amsterdam of Utrecht
-                            een kamer te huur weet, <a href="mailto:mvermaat@cs.vu.nl">laat het
-                            me dan weten</a>. Bedankt!
-                        </xsl:when>
-                        <xsl:otherwise>
-                            Because I will have to leave my room in Amsterdam real soon, I am
-                            looking for a new room. If you know of a room for rent somewhere in
-                            Amsterdam or Utrecht, please <a href="mailto:mvermaat@cs.vu.nl">let
-                            me know</a>. Thanks!
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </p>
-            </div>
--->
+        <div id="page-content">
 
             <p id="breadcrumbs">
                 <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
@@ -206,9 +175,7 @@ Two parameters are expected:
                 <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs" />
             </p>
 
-        </div>
-
-        <div id="page-content">
+            <h1><xsl:value-of select="title" /></h1>
 
             <xsl:apply-templates select="content" />
 

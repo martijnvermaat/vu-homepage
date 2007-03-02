@@ -2,31 +2,36 @@
 
 <item>
     <id>site:index</id>
-    <title>Home</title>
+    <title>Martijn Vermaat</title>
     <language>en</language>
     <last-change>2006-11-08</last-change>
     <content>
 
 
-<h1>Martijn Vermaat</h1>
-
-
 <p>
-This is my personal homepage at the Vrije Universiteit Amsterdam where
-<a href="img/martijn-southpark.png">I</a>'m a student Computer Science. My
-main interests there are theoretical computer science and software technology.
+Master Student <em>Formal Methods and Software Verification</em><br />
+<a href="http://www.cs.vu.nl/~tcs/">Theoretical Computer Science</a>
 </p>
 
-<p>
-As of september 2005, I'm following the master's program <a
-href="http://www.cs.vu.nl/~tcs/" external="true">Formal Methods and Software
-Verification</a>.
-</p>
+
+<h1>Contact</h1>
+
 
 <p>
-During spring 2007, I'm practicum assistent for the course
-<a href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
-Informatica</a> (Introduction to Theoretical Computer Science).
+Email: <a href="mailto:mvermaat@cs.vu.nl">mvermaat@cs.vu.nl</a><br />
+Jabber / Google Talk: martijnvermaat@gmail.com
+</p>
+
+
+<h1>Teaching</h1>
+
+
+<p>
+From September to December 2006, I'm practicum assistent for the course
+<a external="true" href="http://www.cs.vu.nl/~tcs/il/">Inleiding Logica</a>
+(Introduction to Logic).
+<a href="vu/il-2006">Some notes are available</a> for students taking this
+course.
 </p>
 
 
