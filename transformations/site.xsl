@@ -163,9 +163,7 @@ Two parameters are expected:
             <li id="cs-link"><a href="http://www.cs.vu.nl/">Department of Computer Science</a></li>
         </ul>
 
-        <div id="banner-top">. </div>
-        <div id="banner">. </div>
-        <div id="banner-bottom">. </div>
+        <div id="home-link"><a href="{$base-path}" accesskey="1">Home</a></div>
 
         <div id="page-content">
 

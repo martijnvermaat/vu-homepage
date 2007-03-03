@@ -63,24 +63,21 @@ body {
 }
 
 
-#banner {
+#home-link {
+    display             :   block;
+    width               :   100%;
+    padding             :   5px 0 5px 0;
+    background          :   url('../img/banner-lines.png')  repeat-x center;
+}
+
+
+#home-link a {
+    display             :   block;
     width               :   100%;
     height              :   135px;
     background          :   black url('../img/life.png') no-repeat top left;
-}
-
-
-#banner-top {
-    height              :   5px;
-    width               :   100%;
-    background          :   url('../img/lines-top.png') repeat-x;
-}
-
-
-#banner-bottom {
-    height              :   5px;
-    width               :   100%;
-    background          :   url('../img/lines-bottom.png') repeat-x;
+    text-indent         :   -100em;
+    text-decoration     :   none;
 }
 
 
