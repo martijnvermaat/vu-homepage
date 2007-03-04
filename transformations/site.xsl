@@ -161,9 +161,21 @@ Two parameters are expected:
         <ul id="university-links">
             <li id="vu-link"><a href="http://www.vu.nl/">Vrije Universiteit</a></li>
             <li id="cs-link"><a href="http://www.cs.vu.nl/">Department of Computer Science</a></li>
+            <li id="few-link"><a href="http://www.few.vu.nl/">Faculty of Sciences</a></li>
         </ul>
 
         <div id="home-link"><a href="{$base-path}" accesskey="1">Home</a></div>
+
+        <div id="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="" onmousedown="document.getElementById('sitemap').style.display='block';document.getElementById('sitemap-end').style.display='block'" onmouseup="document.getElementById('sitemap').style.display='none';document.getElementById('sitemap-end').style.display='none'">Sitemap</a></li>
+            </ul>
+        </div>
+
+        <div id="sitemap" style="display:none"><p>hoi hoi ho coler jlkdsfljk erjlj sdfs</p><p>sdfoj</p><p>sdfs<br />dsfer<br />eress</p><p>sdf jerlkj sdfjk</p></div>
+        <div id="sitemap-end" style="display:none">sitemap end</div>
 
         <div id="page-content">
 
