@@ -40,6 +40,9 @@ Two parameters are expected:
     <!-- ID of this item -->
     <xsl:variable name="current-id" select="/item/id" />
 
+    <!-- Is this item the homepage? -->
+    <xsl:variable name="is-homepage" select="$site-structure-file/dir/item[id=$current-id]/index" />
+
     <!-- This relative path takes you to the base directory
          (can be ./ if already there). -->
     <xsl:variable name="base-path">
@@ -157,6 +160,10 @@ Two parameters are expected:
         </head>
 
         <body id="cs-vu-nl-mvermaat">
+
+        <xsl:if test="$is-homepage">
+            <xsl:attribute name="class">homepage</xsl:attribute>
+        </xsl:if>
 
         <ul id="university-links">
             <li id="vu-link"><a href="http://www.vu.nl/">Vrije Universiteit</a></li>
@@ -292,7 +299,7 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
  
-        <xsl:if test="(not(no-link)) and (not(hidden))">
+        <xsl:if test="(not(index)) and (not(hidden))">
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
@@ -314,7 +321,7 @@ Two parameters are expected:
 
         <li>
             <xsl:choose>
-                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
+                <xsl:when test="count(child::item[id=$current-id]/index) > 0">
                     <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
@@ -336,7 +343,7 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
  
-        <xsl:if test="not(no-link)">
+        <xsl:if test="not(index)">
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
@@ -358,7 +365,7 @@ Two parameters are expected:
 
         <li>
             <xsl:choose>
-                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
+                <xsl:when test="count(child::item[id=$current-id]/index) > 0">
                     <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
@@ -396,7 +403,7 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
-        <xsl:if test="(not(no-link)) and (id=$current-id)">
+        <xsl:if test="(not(index)) and (id=$current-id)">
             <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
         </xsl:if>
 

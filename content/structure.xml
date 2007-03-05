@@ -6,7 +6,7 @@
     <item>
         <id>site:index</id>
         <location>index</location>
-        <no-link />
+        <index />
     </item>
     <item>
         <id>site:britney</id>
@@ -30,7 +30,7 @@
         <item>
             <id>site:vu:index</id>
             <location>index</location>
-            <no-link />
+            <index />
         </item>
         <item>
             <id>site:vu:tbr-2003</id>
