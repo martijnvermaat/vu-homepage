@@ -53,10 +53,16 @@ body {
 #vu-link a {
     display             :   block;
     width               :   227px;
-    height              :   122px;
+    height              :   90px;
     background          :   url('../img/vu-logo.png');
     text-indent         :   -100em;
     text-decoration     :   none;
+}
+
+
+body.homepage #vu-link a {
+    height              :   122px;
+    background          :   url('../img/vu-logo-homepage.png');
 }
 
 
@@ -80,16 +86,29 @@ body {
 }
 
 
-#home-link {
+#header {
     display             :   block;
     width               :   100%;
-    padding             :   5px 0 5px 0;
-    background          :   url('../img/banner-lines.png')  repeat-x center;
+    padding-top         :   5px;
+    background          :   url('../img/lines-top.png') repeat-x top;
     z-index             :   1;
 }
 
 
-#home-link a {
+#banner {
+    display             :   none;
+    width               :   100%;
+    padding-bottom      :   5px;
+    background          :   url('../img/lines-center.png') repeat-x bottom;
+}
+
+
+body.homepage #banner {
+    display             :   block;
+}
+
+
+#banner a {
     display             :   block;
     width               :   100%;
     height              :   135px;
@@ -102,15 +121,27 @@ body {
 #menu {
     display             :   block;
     width               :   100%;
-    padding             :   5px 0 5px 0;
-    background          :   url('../img/menu-background.png')  repeat-x center;
-    z-index             :   1;
+    height              :   31px;
+    background          :   url('../img/menu-background.png');
+}
+
+
+#menu p {
+    margin : 0;
+    padding : 0;
+    float : left;
+    display             :   block;
+    height              :   31px;
+    padding-left        :   2em;
+    color               :   white;
+    font-weight         :   normal;
+    text-decoration     :   none;
+    line-height         :   31px;
 }
 
 
 #menu ul {
     list-style-type     :   none;
-    height              :   31px;
     margin              :   0;
     padding             :   0;
 }
@@ -126,7 +157,7 @@ body {
     float               :   left;
     display             :   block;
     height              :   31px;
-    padding             :   0 2em 0 2em;
+    padding             :   0 1em 0 1em;
     color               :   white;
     font-weight         :   bold;
     text-decoration     :   none;
@@ -135,17 +166,15 @@ body {
 
 
 #menu li a:hover {
-    background          :   #f46200 url('../img/menu-link-background.png') repeat-x center;
+    background          :   #f46200 url('../img/menu-link-background.png');
 }
 
 
 #sitemap {
-    float : left;
+    float               :   left;
     display             :   block;
     width               :   100%;
-    margin-top          :   -5px;
     background          :   #174683 url('../img/sitemap-background.png') repeat-x top;
-    z-index             :   5;
 }
 
 

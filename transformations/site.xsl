@@ -79,12 +79,6 @@ Two parameters are expected:
             <xsl:otherwise>Elsewhere on this website</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="str-breadcrumbs">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Je bent hier</xsl:when>
-            <xsl:otherwise>You are here</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
     <xsl:variable name="str-page-top">
         <xsl:choose>
             <xsl:when test="item/language='nl'">Begin van de pagina</xsl:when>
@@ -171,26 +165,25 @@ Two parameters are expected:
             <li id="few-link"><a href="http://www.few.vu.nl/">Faculty of Sciences</a></li>
         </ul>
 
-        <div id="home-link"><a href="{$base-path}" accesskey="1">Home</a></div>
-
-        <div id="menu">
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="" onmousedown="document.getElementById('sitemap').style.display='block';document.getElementById('sitemap-end').style.display='block'" onmouseup="document.getElementById('sitemap').style.display='none';document.getElementById('sitemap-end').style.display='none'">Sitemap</a></li>
-            </ul>
+        <div id="header">
+            <div id="banner"><a href="{$base-path}" accesskey="1">Home</a></div>
+            <div id="menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li class="right"><a href="" onmousedown="document.getElementById('sitemap').style.display='block'" onmouseup="document.getElementById('sitemap').style.display='none'">Sitemap</a></li>
+                </ul>
+                <xsl:if test="not($is-homepage)">
+                    <p>
+                        <xsl:apply-templates select="$site-structure-file/dir" mode="breadcrumbs" />
+                    </p>
+                </xsl:if>
+            </div>
+            <div id="sitemap" style="display:none"><p>hoi hoi ho coler jlkdsfljk erjlj sdfs</p><p>sdfoj</p><p>sdfs<br />dsfer<br />eress</p><p>sdf jerlkj sdfjk</p></div>
+            <div id="sitemap-end">sitemap end</div>
         </div>
 
-        <div id="sitemap" style="display:none"><p>hoi hoi ho coler jlkdsfljk erjlj sdfs</p><p>sdfoj</p><p>sdfs<br />dsfer<br />eress</p><p>sdf jerlkj sdfjk</p></div>
-        <div id="sitemap-end" style="display:none">sitemap end</div>
-
         <div id="page-content">
-
-            <p id="breadcrumbs">
-                <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
-<!--                <a href="{$base-path}" accesskey="1">Home</a>  -->
-                <xsl:apply-templates select="$site-structure-file/dir" mode="breadcrumbs" />
-            </p>
 
             <h1><xsl:value-of select="title" /></h1>
 
