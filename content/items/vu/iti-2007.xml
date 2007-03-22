@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:iti-2007</id>
+    <title>Inleiding Theoretische Informatica 2007</title>
+    <language>nl</language>
+    <last-change>2007-03-22</last-change>
+    <content>
+
+
+<p>
+Net als vorig jaar ben ik practicum assistent bij het vak <a
+href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
+Informatica</a> voor tweedejaars studenten Informatica.
+</p>
+
+<p>
+Het vak bestaat uit drie onderdelen:
+</p>
+
+<ol>
+  <li>Equationele logica (3 weken)</li>
+  <li>Lambda calculus (4 weken)</li>
+  <li>Functioneel programmeren (4 weken)</li>
+</ol>
+
+
+<h1>Equationele logica</h1>
+
+
+<p>
+<a href="files/vu/iti/el/uitwerkingen-2007.pdf">Uitwerkingen bij geselecteerde opgaven uit het dictaat</a> (pdf)
+</p>
+
+
+<h1>Lambda calculus</h1>
+
+
+<p>
+<strong>The Koan of Lazy Evaluation</strong>:
+Michel Mauny was giving a guest lecture to new computer science students. After the students were seated, Michel pronounced "Today's lecture will be about Lazy Evaluation", he paused for a moment then concluded with, "Are there any questions?"
+</p>
+
+<p>
+Antwoorden bij geselecteerde opgaven volgen de komende weken.</a>
+</p>
+
+<p>
+Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
+<a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
+afdrukken, termen reduceren en termen vergelijken modulo alpha
+conversie. Wellicht vind je het handig om mee te oefenen.
+</p>
+
+<p>
+<a href="http://www.cs.ru.nl/~freek/" external="true">Freek Wiedijk</a>
+heeft een <a href="http://www.cs.ru.nl/~freek/notes/lambda.ml"
+external="true">Lambda calculus implementatie</a> geschreven in OCaml.
+Er zijn er nog <a
+href="http://www.google.nl/search?hl=nl&amp;q=lambda+calculus+%28evaluator+OR+interpreter+OR+implementation%29"
+external="true">meer</a>.
+</p>
+
+<p>
+Naast <code>Y</code> (Curry) en <code>T</code> (Turing) zijn er meer fixed-point
+combinatoren. Bijvoorbeeld deze door <a href="http://www.cs.vu.nl/~jwk/"
+external="true">Jan Willem Klop</a>:
+</p>
+
+<pre>
+Y<sub>K</sub> = (L L L L L L L L L L L L L L L L L L L L L L L L L L)
+</pre>
+
+<p>
+waarbij
+</p>
+
+<pre>
+L = λabcdefghijklmnopqstuvwxyzr. (r (t h i s i s a f i x e d p o i n t c o m b i n a t o r))
+</pre>
+
+
+<h1>Functioneel programmeren</h1>
+
+
+<p>
+Bij het practicum functioneel programmeren gebruiken we de taal <a
+href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
+Caml</a>. Voor een introductie is deze <a
+href="http://www.ocaml-tutorial.org/"
+external="true">OCaml Tutorial</a> een aardig begin.
+</p>
+
+<p>
+OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
+systemen.
+</p>
+
+<p>
+Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb
+ik een OCaml mode voor Emacs gezet, <a
+href="http://www-rocq.inria.fr/~acohen/tuareg/" external="true">Tuareg
+Mode</a>, die ik iets fijner vind werken dan de OCaml mode die standaard
+bij de OCaml distributie zit.
+</p>
+
+<p>
+Je kunt Tuareg Mode automatisch laten activeren bij het openen van OCaml
+files door het toevoegen van de volgende regels aan je
+<code>~/.emacs</code> file:
+</p>
+
+<pre>
+;; Where do we look for tuareg?
+(setq load-path (cons "~mvermaat/public/tuareg_mode/" load-path))
+
+;; OCaml tuareg mode
+(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+
+;; Look in ~mvermaat/public/tuareg_mode/custom-tuareg.el for some ideas on
+;; customization options.
+</pre>
+
+
+    </content>
+</item>

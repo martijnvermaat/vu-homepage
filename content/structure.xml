@@ -78,6 +78,10 @@
             <id>site:vu:il-2006</id>
             <location>il-2006</location>
         </item>
+        <item>
+            <id>site:vu:iti-2007</id>
+            <location>iti-2007</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>
