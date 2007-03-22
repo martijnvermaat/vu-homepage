@@ -13,7 +13,7 @@
 
 <p>
 Britney is a simple interpreter for terms of pure, untyped Lambda Calculus.
-To be short, terms can be stored, called, reduced, and normalized. Most
+In a nutshell, terms can be stored, called, reduced, and normalized. Most
 obvious use of Britney is as a tool of help when first studying Lambda
 Calculus.
 </p>
