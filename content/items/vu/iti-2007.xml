@@ -107,7 +107,7 @@ files door het toevoegen van de volgende regels aan je
 
 <pre>
 ;; Where do we look for tuareg?
-(setq load-path (cons "~mvermaat/public/tuareg_mode/" load-path))
+(setq load-path (cons "~mvt600/public/tuareg_mode/" load-path))
 
 ;; OCaml tuareg mode
 (setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
