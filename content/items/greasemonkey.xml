@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2006-01-30</last-change>
+    <last-change>2007-03-26</last-change>
     <content>
 
 
@@ -160,6 +160,28 @@ not supported, but have not investigated this further.
 
 <p>
 <a href="files/greasemonkey/bbtis-1.2.2.user.js">Download BBTis 1.2.2</a>
+</p>
+
+
+<h1>WideMX</h1>
+
+
+<p>
+<a href="http//www.widexs.nl/" external="true">WideXS</a> provide a
+DNS record editor form on their website, but the
+maxlength attribute of the MX record value is set to a value of 50
+characters (which is too short). WideMX rewrites this value to 200
+characters.
+</p>
+
+<p>
+<img src="files/greasemonkey/widemx.png" width="460" height="67"
+alt="WideXS MX record editor with WideMX" />
+</p>
+
+<p>
+<a href="files/greasemonkey/widemx-0.1.user.js">Download
+WideMX 0.1</a>
 </p>
 
 
