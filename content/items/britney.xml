@@ -226,12 +226,12 @@ directly from my userdir (without having to download it first) like this:
 </p>
 
 <pre>
-$ /home/mvermaat/public/bin/britney
+$ /home/mvt600/public/bin/britney
 </pre>
 
 <p>
 The <code>prelude.britney</code> and <code>hanoi.britney</code> definition
-files can be found in <code>/home/mvermaat/public/britney</code>. For more
+files can be found in <code>/home/mvt600/public/britney</code>. For more
 information, you can use the <code>-info</code> option:
 </p>
 
