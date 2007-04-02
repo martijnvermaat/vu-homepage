@@ -86,6 +86,18 @@ systemen.
 </p>
 
 <p>
+De OCaml toplevel interpreter (<code>ocaml</code>) heeft geen line-editing
+faciliteiten. Je kunt hiervoor <code>ledit</code> of <code>rlwrap</code> als
+wrapper gebruiken. In mijn home directory heb ik een gecompileerde <code>ledit</code>
+gezet (Linux Intel x86), gebruik hem bijvoorbeeld door aan je <code>~/.bashrc</code>
+de volgende regel toe te voegen:
+</p>
+
+<pre>
+alias ocaml='/home/mvt600/public/bin/ledit ocaml'
+</pre>
+
+<p>
 Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb
 ik een OCaml mode voor Emacs gezet, <a
 href="http://www-rocq.inria.fr/~acohen/tuareg/" external="true">Tuareg
@@ -111,6 +123,12 @@ files door het toevoegen van de volgende regels aan je
 ;; Look in ~mvt600/public/tuareg_mode/custom-tuareg.el for some ideas on
 ;; customization options.
 </pre>
+
+<p>
+Je kunt nu je huidige buffer (<code>C-c C-b</code>) of je huidige selectie
+(<code>C-c C-r</code>) door OCaml laten interpreteren, of een lege OCaml
+interpreter starten met <code>C-c C-s</code>.
+</p>
 
 
     </content>
