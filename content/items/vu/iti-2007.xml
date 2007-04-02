@@ -4,7 +4,7 @@
     <id>site:vu:iti-2007</id>
     <title>Inleiding Theoretische Informatica 2007</title>
     <language>nl</language>
-    <last-change>2007-03-22</last-change>
+    <last-change>2007-04-02</last-change>
     <content>
 
 
@@ -81,13 +81,7 @@ L = λabcdefghijklmnopqstuvwxyzr. (r (t h i s i s a f i x e d p o i n t c o m b 
 <p>
 Bij het practicum functioneel programmeren gebruiken we de taal <a
 href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
-Caml</a>. Voor een introductie is deze <a
-href="http://www.ocaml-tutorial.org/"
-external="true">OCaml Tutorial</a> een aardig begin.
-</p>
-
-<p>
-OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
+Caml</a>. OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
 systemen.
 </p>
 
@@ -114,7 +108,7 @@ files door het toevoegen van de volgende regels aan je
 (autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
 (autoload 'camldebug "camldebug" "Run the Caml debugger" t)
 
-;; Look in ~mvermaat/public/tuareg_mode/custom-tuareg.el for some ideas on
+;; Look in ~mvt600/public/tuareg_mode/custom-tuareg.el for some ideas on
 ;; customization options.
 </pre>
 
