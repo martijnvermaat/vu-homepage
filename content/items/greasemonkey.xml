@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2007-03-26</last-change>
+    <last-change>2007-04-03</last-change>
     <content>
 
 
@@ -116,7 +116,8 @@ Nu Compact rewrites the four 'main' stories with pictures on the
 <a href="http://www.nu.nl/" external="true">nu.nl</a> frontpage
 to regular links. Most of the time the picture has nothing to do
 with the story anyway, and this allows us to have the entire
-frontpage in one screen.
+frontpage in one screen. Also, the header with the logo and current
+date are removed (I know what the current date is, thank you).
 </p>
 
 <p>
@@ -125,8 +126,8 @@ alt="Frontpage of nu.nl with Nu Compact installed" />
 </p>
 
 <p>
-<a href="files/greasemonkey/nucompact-0.1.user.js">Download
-Nu Compact 0.1</a>
+<a href="files/greasemonkey/nucompact-0.2.1.user.js">Download
+Nu Compact 0.2.1</a>
 </p>
 
 
