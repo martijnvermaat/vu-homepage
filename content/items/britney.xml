@@ -184,6 +184,14 @@ contains a solution for <a href="hanoi">Towers of Hanoi in
 Lambda Calculus</a> suitable for use in Britney.
 </p>
 
+<p>
+Latest Britney is always available from my Subversion repository:
+</p>
+ 
+<pre>
+$ svn export <a href="http://svn.vermaat.name/britney/trunk" external="true">http://svn.vermaat.name/britney/trunk</a> britney
+</pre>
+
 
 <h1>Running Britney</h1>
 

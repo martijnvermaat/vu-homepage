@@ -4,7 +4,7 @@
     <id>site:colofon</id>
     <title>Colofon</title>
     <language>en</language>
-    <last-change>2006-01-04</last-change>
+    <last-change>2007-04-07</last-change>
     <content>
 
 
@@ -56,10 +56,13 @@ projects.
 </p>
 
 <p>
-Although I will no longer make public references to the repository's address
-here, most of its content is readable anonymously. If you want to browse the
-source for anything on this website, just drop me a note.
+For example, the complete sourcecode for this website can be fetched with
+the command:
 </p>
+
+<pre>
+$ svn export <a href="http://svn.vermaat.name/vu-website/trunk" external="true">http://svn.vermaat.name/vu-website/trunk</a> vu-website
+</pre>
 
 
     </content>
