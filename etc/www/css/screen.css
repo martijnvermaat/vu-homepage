@@ -186,7 +186,7 @@ body.homepage #banner {
 }
 
 
-#sitemap {
+#navigation {
     float               :   left;
     display             :   none;
     width               :   100%;
@@ -194,7 +194,8 @@ body.homepage #banner {
 }
 
 
-#sitemap-end {
+#navigation-end {
+    line-height         :   1px;
     clear               :   both;
     display             :   block;
     width               :   100%;
@@ -204,24 +205,30 @@ body.homepage #banner {
 }
 
 
-#sitemap li {
+#navigation-end p {
+    display             :   none;
+}
+
+
+#navigation li {
     list-style-type     :   none;
 }
 
 
-#sitemap a {
+#navigation a {
     color               :   white;
     text-decoration     :   none;
 }
 
 
-#sitemap a:hover {
+#navigation a:hover {
     color               :   #ff6600;
 }
 
 
 #content {
-    margin              :   0 0 2em 6%;
+    margin-bottom       :   2em;
+    padding-left        :   6%;
     width               :   45em;
     max-width           :   90%;
 }
@@ -264,11 +271,10 @@ a:hover {
 img {
     padding             :   0;
     margin              :   0;
-    border              :   0;
+    border              :   none;
 }
 
 
-td:first-child {
-    padding-right       :   3em;
-    font-style          :   italic;
+.skip {
+    display             :   none;
 }

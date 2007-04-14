@@ -1,23 +1,23 @@
-function pimpSitemap() {
+function dropDownNavigation() {
 
-    var sitemap, menu, item, link;
+    var navigation, menu, item, link;
 
-    sitemap = document.getElementById('sitemap');
-    if (!sitemap) return;
+    navigation = document.getElementById('navigation');
+    if (!navigation) return;
 
     menu = document.getElementById('menu').getElementsByTagName('ul')[0];
     if (!menu) return;
 
     link = document.createElement('a');
-    link.href = '';
+    link.href = '#navigation';
     link.appendChild(document.createTextNode('\u25bc Sitemap'));
 
     link.onclick = function() {
-        if (sitemap.style.display == 'block') {
-            sitemap.style.display = 'none';
+        if (navigation.style.display == 'block') {
+            navigation.style.display = 'none';
             item.className = '';
         } else {
-            sitemap.style.display = 'block';
+            navigation.style.display = 'block';
             item.className = 'active';
         }
         return false;
@@ -31,5 +31,5 @@ function pimpSitemap() {
 
 
 window.onload = function() {
-    pimpSitemap();
+    dropDownNavigation();
 };
