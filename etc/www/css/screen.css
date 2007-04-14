@@ -14,107 +14,9 @@ body {
 }
 
 
-#university-links {
-    margin              :   2% 0 0 6%;
-    padding             :   0;
-    position            :   relative;
-    list-style-type     :   none;
-    height              :   90px;
-    width               :   518px;
-}
-
-
-#university-links li {
-    position            :   absolute;
-}
-
-
-#vu-link {
-    left                :   -30px;
-    top                 :   0;
-    z-index             :   3;
-}
-
-
-#cs-link {
-    left                :   110px;
-    top                 :   20px;
-    z-index             :   4;
-}
-
-
-#few-link {
-    left                :   110px;
-    top                 :   50px;
-    z-index             :   4;
-}
-
-
-#vu-link a {
-    display             :   block;
-    width               :   227px;
-    height              :   90px;
-    background          :   url('../img/vu-logo.png');
-    text-indent         :   -100em;
-    text-decoration     :   none;
-}
-
-
-body.homepage #vu-link a {
-    height              :   122px;
-    background          :   url('../img/vu-logo-homepage.png');
-}
-
-
-#cs-link a {
-    display             :   block;
-    width               :   408px;
-    height              :   30px;
-    background          :   url('../img/cs.png');
-    text-indent         :   -100em;
-    text-decoration     :   none;
-}
-
-
-#few-link a {
-    display             :   block;
-    width               :   148px;
-    height              :   22px;
-    background          :   url('../img/few.png');
-    text-indent         :   -100em;
-    text-decoration     :   none;
-}
-
-
 #header {
     display             :   block;
     width               :   100%;
-    padding-top         :   5px;
-    background          :   url('../img/lines-top.png') repeat-x top;
-    z-index             :   1;
-}
-
-
-#banner {
-    display             :   none;
-    width               :   100%;
-    padding-bottom      :   5px;
-    background          :   url('../img/lines-center.png') repeat-x bottom;
-}
-
-
-body.homepage #banner {
-    display             :   block;
-}
-
-
-#banner a {
-    display             :   block;
-    width               :   100%;
-    height              :   135px;
-    background          :   black url('../img/life.png') no-repeat top left;
-    text-indent         :   -100em;
-    text-decoration     :   none;
 }
 
 
@@ -194,18 +96,18 @@ body.homepage #banner {
 }
 
 
-#navigation-end {
+#header-end {
     line-height         :   1px;
     clear               :   both;
     display             :   block;
     width               :   100%;
     height              :   5px;
-    background          :   url('../img/sitemap-bottom.png') repeat-x center;
-    text-indent         :   -100em;
+    background          :   url('../img/header-end.png') repeat-x center;
+    text-indent         :  -100em;
 }
 
 
-#navigation-end p {
+#header-end p {
     display             :   none;
 }
 
@@ -227,8 +129,7 @@ body.homepage #banner {
 
 
 #content {
-    margin-bottom       :   2em;
-    padding-left        :   6%;
+    margin              :   0 0 2em 6%;
     width               :   45em;
     max-width           :   90%;
 }
@@ -246,10 +147,19 @@ body.homepage #banner {
 }
 
 
+#content > * {
+    margin-left         :   0.5em;
+}
+
+
+#content > h1, #content > h2, #content > h3, #content > h4 {
+    margin-left         :   0;
+}
+
+
 h1, h2, h3, h4 {
     font-weight         :   normal;
     font-family         :   Gentium, FreeSerif, Georgia, "Times New Roman", serif;
-    margin-left         :  -0.5em;
 }
 
 

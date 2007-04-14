@@ -159,16 +159,9 @@ Two parameters are expected:
             <xsl:attribute name="class">homepage</xsl:attribute>
         </xsl:if>
 
-        <p><a href="#content" class="skip" title="{$str-page-content-descr}"><xsl:value-of select="$str-page-content" /></a></p>
-
-        <ul id="university-links">
-            <li id="vu-link"><a href="http://www.vu.nl/">Vrije Universiteit</a></li>
-            <li id="cs-link"><a href="http://www.cs.vu.nl/">Department of Computer Science</a></li>
-            <li id="few-link"><a href="http://www.few.vu.nl/">Faculty of Sciences</a></li>
-        </ul>
+        <p class="skip"><a href="#content" title="{$str-page-content-descr}"><xsl:value-of select="$str-page-content" /></a></p>
 
         <div id="header">
-            <div id="banner"><a href="{$base-path}" accesskey="1">Home</a></div>
             <div id="menu">
                 <ul>
                     <li><a href="{$base-path}">Home</a></li>
@@ -186,7 +179,7 @@ Two parameters are expected:
                 <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="navigation" />
                 </ul>
             </div>
-            <div id="navigation-end"><p><a href="#university-links" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p></div>
+            <div id="header-end"><p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p></div>
         </div>
 
         <div id="content">
