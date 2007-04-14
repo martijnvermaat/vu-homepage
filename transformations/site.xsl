@@ -73,12 +73,6 @@ Two parameters are expected:
             <xsl:otherwise>Generated</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="str-index">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Meer op deze website</xsl:when>
-            <xsl:otherwise>Elsewhere on this website</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
     <xsl:variable name="str-page-top">
         <xsl:choose>
             <xsl:when test="item/language='nl'">Begin van de pagina</xsl:when>
@@ -149,6 +143,8 @@ Two parameters are expected:
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
             <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
 
+            <script type="text/javascript" src="{$base-path}script/default.js">var someBrowsersNeedThisContent;</script>
+
             <link rel="home" href="{$base-path}" title="Homepage" />
 
         </head>
@@ -169,18 +165,22 @@ Two parameters are expected:
             <div id="banner"><a href="{$base-path}" accesskey="1">Home</a></div>
             <div id="menu">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li class="right"><a href="" onmousedown="document.getElementById('sitemap').style.display='block'" onmouseup="document.getElementById('sitemap').style.display='none'">Sitemap</a></li>
+                    <li><a href="{$base-path}">Home</a></li>
+                    <li><a href="{$base-path}colofon">Contact</a></li>
                 </ul>
                 <xsl:if test="not($is-homepage)">
                     <p>
-                        <xsl:apply-templates select="$site-structure-file/dir" mode="breadcrumbs" />
+                        <a href="{$base-path}"><xsl:value-of select="$site-structure-file/dir/title" /></a>
+                        <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="breadcrumbs" />
                     </p>
                 </xsl:if>
             </div>
-            <div id="sitemap" style="display:none"><p>hoi hoi ho coler jlkdsfljk erjlj sdfs</p><p>sdfoj</p><p>sdfs<br />dsfer<br />eress</p><p>sdf jerlkj sdfjk</p></div>
-            <div id="sitemap-end">sitemap end</div>
+            <div id="sitemap">
+                <ul>
+                <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="navigation" />
+                </ul>
+            </div>
+            <div id="sitemap-end"><a href="">close sitemap</a></div>
         </div>
 
         <div id="page-content">
@@ -204,19 +204,6 @@ Two parameters are expected:
                     '/',
                     date:day-in-month($now))" />
             </p>
-
-        </div>
-
-        <div id="page-footer">
-
-            <h2><xsl:value-of select="$str-index" /></h2>
-
-            <div id="navigation">
-            <ul>
-            <xsl:apply-templates select="$site-structure-file/dir" mode="navigation" />
-            </ul>
-            <p><a href="#page-header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
-            </div>
 
         </div>
 
@@ -281,8 +268,9 @@ Two parameters are expected:
 
     <!-- This special tag generates a complete sitemap. -->
     <xsl:template match="sitemap">
+        <p><a href="{$base-path}"><xsl:value-of select="$site-structure-file/dir/title" /></a></p>
         <ul>
-            <xsl:apply-templates select="$site-structure-file/dir" mode="sitemap" />
+            <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="sitemap" />
         </ul>
     </xsl:template>
 

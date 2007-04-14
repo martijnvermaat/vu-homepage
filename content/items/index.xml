@@ -41,71 +41,37 @@ Master Student <em>Formal Methods and Software Verification</em>
 </p>
 
 
-<h1>Personal</h1>
-
-
-<p>
-Visit my <a href="http://www.student.vu.nl/l.e.claessen/" external="true">Girlfriend's
-website</a>.
-</p>
-
-
 <h1>Linkroll</h1>
 
 
 <p>
-Here are some important, funny, worrying, or otherwise interesting links I
-stumbled upon recently. They are taken from <a href="http://del.icio.us/mvermaat"
-external="true">my del.icio.us bookmarks</a>.
+(More in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">del.icio.us linkroll</a>.)
 </p>
 
 
 <div id="linkroll"> </div>
 <script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10"> </script>
 <script type="text/javascript">
-    function showImage(img){ return (function(){ img.style.display='inline'; }) }
-    function notLinkroll(element) { return element != 'linkroll'; }
-    function filter(f, a) {
-        var r=[];
-        for (var i=0; i!=a.length; i++) {
-            if (f(a[i])) r.push(a[i]);
-        }
-        return r;
-    }
     var dl = document.createElement('dl');
     dl.className = 'linkroll';
+if (0) {
     for (var i=0, post; post = Delicious.posts[i]; i++) {
         var dt = document.createElement('dt');
         var dd = document.createElement('dd');
-        var img = document.createElement('img')
         var a = document.createElement('a');
-        var tags = document.createElement('span');
 
         a.className = 'external';
-        tags.className = 'tags';
-        img.style.display = 'none'
-        img.height = img.width = 16;
-        img.src = post.u.split('/').splice(0,3).join('/')+'/favicon.ico';
-        img.onload = showImage(img);
         a.setAttribute('href', post.u);
-        a.appendChild(img);
         a.appendChild(document.createTextNode(post.d));
-        tags.appendChild(document.createTextNode('(' + filter(notLinkroll, post.t).join(', ') + ')'));
 
         dt.appendChild(a);
-        dt.appendChild(document.createTextNode(' '));
-        dt.appendChild(tags);
         dd.appendChild(document.createTextNode(post.n));
         dl.appendChild(dt);
         dl.appendChild(dd);
     }
     document.getElementById('linkroll').appendChild(dl);
+}
 </script>
-
-
-<p>
-More links like these in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">Linkroll archive</a>.
-</p>
 
 
     </content>

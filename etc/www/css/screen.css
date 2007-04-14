@@ -9,8 +9,8 @@ html {
 
 
 body {
-    margin               :   0;
-    padding              :   0;
+    margin              :   0;
+    padding             :   0;
 }
 
 
@@ -127,9 +127,9 @@ body.homepage #banner {
 
 
 #menu p {
-    margin : 0;
-    padding : 0;
-    float : left;
+    margin              :   0;
+    padding             :   0;
+    float               :   left;
     display             :   block;
     height              :   31px;
     padding-left        :   2em;
@@ -137,6 +137,17 @@ body.homepage #banner {
     font-weight         :   normal;
     text-decoration     :   none;
     line-height         :   31px;
+}
+
+
+#menu p a {
+    color               :   white;
+    text-decoration     :   none;
+}
+
+
+#menu p a:hover {
+    color               :   #ff6600;
 }
 
 
@@ -165,14 +176,19 @@ body.homepage #banner {
 }
 
 
-#menu li a:hover {
+#menu li a:hover, #menu li.active a {
     background          :   #f46200 url('../img/menu-link-background.png');
+}
+
+
+#menu li a:focus {
+   -moz-outline-style   :   none;  /* I don't like the dotted selection border */
 }
 
 
 #sitemap {
     float               :   left;
-    display             :   block;
+    display             :   none;
     width               :   100%;
     background          :   #174683 url('../img/sitemap-background.png') repeat-x top;
 }
@@ -188,6 +204,22 @@ body.homepage #banner {
 }
 
 
+#sitemap li {
+    list-style-type     :   none;
+}
+
+
+#sitemap a {
+    color               :   white;
+    text-decoration     :   none;
+}
+
+
+#sitemap a:hover {
+    color               :   #ff6600;
+}
+
+
 #page-content {
     margin-left         :   6%;
     width               :   45em;
@@ -195,20 +227,20 @@ body.homepage #banner {
 }
 
 
-h1, h2, h3 {
-    font-weight : normal;
-    font-family         :   'Trebuchet MS', Helvetica, sans-serif;
-    color               :   #ff7;
+h1, h2, h3, h4 {
+    font-weight         :   normal;
+    font-family         :   Gentium, FreeSerif, Georgia, "Times New Roman", serif;
+    margin-left         :  -0.5em;
+}
+
+
+h2, h3 {
+    margin-top          :   1.5em;
 }
 
 
 a { 
     color               :   #4ae7ff;
-}
-
-
-a:visited {
-    color               :   white;
 }
 
 
@@ -218,12 +250,13 @@ a:hover {
 
 
 img {
-    padding : 0;
+    padding             :   0;
     margin              :   0;
+    border              :   0;
 }
 
 
 td:first-child {
     padding-right       :   3em;
-    color               :   #ff7;
+    font-style          :   italic;
 }
