@@ -220,10 +220,22 @@ body.homepage #banner {
 }
 
 
-#page-content {
-    margin-left         :   6%;
+#content {
+    margin              :   0 0 2em 6%;
     width               :   45em;
     max-width           :   90%;
+}
+
+
+#footer hr {
+    border              :   none;
+    border-top          :   solid 1px #5694ce;
+}
+
+
+#footer p {
+    margin-left         :   6%;
+    font-size           :   0.8em;
 }
 
 

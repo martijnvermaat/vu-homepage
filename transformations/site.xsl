@@ -37,6 +37,9 @@ Two parameters are expected:
     <!-- Contents of site structure file -->
     <xsl:variable name="site-structure-file" select="document($site-structure)" />
 
+    <!-- Contents of the root index page -->
+    <xsl:variable name="rootitem" select="document(concat($items-dir,'/',$site-structure-file/dir/item[index]/location,'.xml'))/item" />
+
     <!-- ID of this item -->
     <xsl:variable name="current-id" select="/item/id" />
 
@@ -61,16 +64,47 @@ Two parameters are expected:
 
     <!-- This is really a bit of a hack to support pages in
          Dutch and in English. -->
-    <xsl:variable name="str-last-changed">
+    <xsl:variable name="str-last-changed-month">
         <xsl:choose>
-            <xsl:when test="item/language='nl'">Laatst gewijzigd</xsl:when>
-            <xsl:otherwise>Last changed</xsl:otherwise>
+            <xsl:when test="item/language='nl'">
+                <xsl:choose>
+                    <xsl:when test="date:month-in-year(item/last-change)='0'">januari</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='1'">februari</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='2'">maart</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='3'">april</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='4'">mei</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='5'">juni</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='6'">juli</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='7'">augustus</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='8'">september</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='9'">oktober</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='10'">november</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='11'">december</xsl:when>
+                    <xsl:otherwise>een maand</xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="date:month-in-year(item/last-change)='0'">January</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='1'">February</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='2'">March</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='3'">April</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='4'">May</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='5'">June</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='6'">July</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='7'">August</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='8'">September</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='9'">October</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='10'">November</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='11'">December</xsl:when>
+                </xsl:choose>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="str-last-generated">
+    <xsl:variable name="str-last-changed-format">
         <xsl:choose>
-            <xsl:when test="item/language='nl'">Gegenereerd</xsl:when>
-            <xsl:otherwise>Generated</xsl:otherwise>
+            <xsl:when test="item/language='nl'">'Laatst inhoudswijziging was op' d '<xsl:value-of select="$str-last-changed-month" />', ''yy</xsl:when>
+            <xsl:otherwise>'Last content change was on <xsl:value-of select="$str-last-changed-month" />' d, ''yy</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
     <xsl:variable name="str-page-top">
@@ -138,7 +172,10 @@ Two parameters are expected:
 
         <head>
 
-            <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
+            <title>
+                <xsl:value-of select="$rootitem/title" />
+                <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="title" />
+            </title>
 
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
             <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
@@ -170,7 +207,7 @@ Two parameters are expected:
                 </ul>
                 <xsl:if test="not($is-homepage)">
                     <p>
-                        <a href="{$base-path}"><xsl:value-of select="$site-structure-file/dir/title" /></a>
+                        <a href="{$base-path}"><xsl:value-of select="$rootitem/title" /></a>
                         <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="breadcrumbs" />
                     </p>
                 </xsl:if>
@@ -183,28 +220,14 @@ Two parameters are expected:
             <div id="sitemap-end"><a href="">close sitemap</a></div>
         </div>
 
-        <div id="page-content">
-
+        <div id="content">
             <h1><xsl:value-of select="title" /></h1>
-
             <xsl:apply-templates select="content" />
+        </div>
 
-            <p class="content-date">
-                <xsl:value-of select="concat($str-last-changed, ': ',
-                    date:year(last-change),
-                    '/',
-                    date:month-in-year(last-change)+1,
-                    '/',
-                    date:day-in-month(last-change))" />
-                <br />
-                <xsl:value-of select="concat($str-last-generated, ': ',
-                    date:year($now),
-                    '/',
-                    date:month-in-year($now)+1,
-                    '/',
-                    date:day-in-month($now))" />
-            </p>
-
+        <div id="footer">
+            <hr />
+            <p><xsl:value-of select="date:format-date(last-change, $str-last-changed-format)" /></p>
         </div>
 
         </body>
@@ -268,7 +291,7 @@ Two parameters are expected:
 
     <!-- This special tag generates a complete sitemap. -->
     <xsl:template match="sitemap">
-        <p><a href="{$base-path}"><xsl:value-of select="$site-structure-file/dir/title" /></a></p>
+        <p><a href="{$base-path}"><xsl:value-of select="$rootitem/title" /></a></p>
         <ul>
             <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="sitemap" />
         </ul>
@@ -299,14 +322,15 @@ Two parameters are expected:
     <xsl:template match="dir" mode="navigation">
     
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <li>
             <xsl:choose>
                 <xsl:when test="count(child::item[id=$current-id]/index) > 0">
-                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
+                    <strong><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+                    <a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
                 </xsl:otherwise>
             </xsl:choose>
             <ul>
@@ -343,14 +367,15 @@ Two parameters are expected:
     <xsl:template match="dir" mode="sitemap">
     
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <li>
             <xsl:choose>
                 <xsl:when test="count(child::item[id=$current-id]/index) > 0">
-                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
+                    <strong><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+                    <a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
                 </xsl:otherwise>
             </xsl:choose>
             <ul>
@@ -366,10 +391,11 @@ Two parameters are expected:
     <xsl:template match="dir" mode="breadcrumbs">
 
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
-            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
             <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="breadcrumbs">
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
             </xsl:apply-templates>
@@ -385,7 +411,36 @@ Two parameters are expected:
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
         <xsl:if test="(not(index)) and (id=$current-id)">
-            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="dir" mode="title">
+
+        <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
+
+        <xsl:if test="count(descendant::item[id=$current-id]) > 0">
+
+            <xsl:text> » </xsl:text><xsl:value-of select="$item/title" />
+            <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="title">
+                <xsl:with-param name="dir" select="concat($dir,location,'/')" />
+            </xsl:apply-templates>
+
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="item" mode="title">
+
+        <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
+
+        <xsl:if test="(not(index)) and (id=$current-id)">
+            <xsl:text> » </xsl:text><xsl:value-of select="$item/title" />
         </xsl:if>
 
     </xsl:template>

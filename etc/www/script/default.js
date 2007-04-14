@@ -5,16 +5,12 @@ function pimpSitemap() {
     sitemap = document.getElementById('sitemap');
     if (!sitemap) return;
 
-    menu = document.evaluate("//div[@id='menu']/ul",
-                             document,
-                             null,
-                             XPathResult.FIRST_ORDERED_NODE_TYPE,
-                             null).singleNodeValue;
+    menu = document.getElementById('menu').getElementsByTagName('ul')[0];
     if (!menu) return;
 
     link = document.createElement('a');
-    link.href = '#';
-    link.appendChild(document.createTextNode('Sitemap'));
+    link.href = '';
+    link.appendChild(document.createTextNode('\u25bc Sitemap'));
 
     link.onclick = function() {
         if (sitemap.style.display == 'block') {
@@ -24,6 +20,7 @@ function pimpSitemap() {
             sitemap.style.display = 'block';
             item.className = 'active';
         }
+        return false;
     };
 
     item = document.createElement('li');
@@ -36,10 +33,3 @@ function pimpSitemap() {
 window.onload = function() {
     pimpSitemap();
 };
-
-
-/*
-
-                    <li><a href="" onmousedown="document.getElementById('sitemap').style.display='block'" onmouseup="document.getElementById(\
-'sitemap').style.display='none'">Sitemap</a></li>
-*/
