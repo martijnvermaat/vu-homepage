@@ -21,24 +21,24 @@ Master Student <em>Formal Methods and Software Verification</em>
 
 
 <p>
-<a href="vu/iti-2007">Inleiding Theoretische Informatica 2007</a> (<a href="">2006</a>, <a href="">2005</a>)
+<a href="vu/iti-2007">Inleiding Theoretische Informatica 2007</a> (<a href="vu/iti-2006">2006</a>, <a href="vu/iti-2005">2005</a>)
 </p>
 
 <p>
-<a href="vu/il-2006">Inleiding Logica 2006</a> (<a href="">2005</a>, <a href="">2004</a>)
+<a href="vu/il-2006">Inleiding Logica 2006</a> (<a href="vu/il-2005">2005</a>)
 </p>
 
 
 <h1>Linkroll</h1>
 
 
-<p>
-(More in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">del.icio.us linkroll</a>.)
-</p>
+<div id="linkroll">
+    <p>
+    (More in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">del.icio.us linkroll</a>.)
+    </p>
+</div>
 
-
-<div id="linkroll"> </div>
-<script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10"> </script>
+<script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10">var dummyVariable;</script>
 <script type="text/javascript">
     var dl = document.createElement('dl');
     dl.className = 'linkroll';

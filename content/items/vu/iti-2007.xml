@@ -85,6 +85,10 @@ Caml</a>. OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
 systemen.
 </p>
 
+
+<h2>OCaml toplevel en line-editing</h2>
+
+
 <p>
 De OCaml toplevel interpreter (<code>ocaml</code>) heeft geen line-editing
 faciliteiten. Je kunt hiervoor <code>ledit</code> of <code>rlwrap</code> als
@@ -96,6 +100,10 @@ de volgende regel toe te voegen:
 <pre>
 alias ocaml='/home/mvt600/public/bin/ledit ocaml'
 </pre>
+
+
+<h2>OCaml mode voor Emacs</h2>
+
 
 <p>
 Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb

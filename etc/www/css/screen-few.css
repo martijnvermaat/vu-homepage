@@ -1,0 +1,98 @@
+/* Default CSS2 document for vu-website */
+
+
+html {
+    background          :   #0b215a url('../img/background.gif') no-repeat fixed;
+    color               :   white;
+}
+
+
+#menu {
+    height              :   31px;
+    background          :   url('../img/menu-background.png');
+}
+
+
+#menu p {
+    height              :   31px;
+    line-height         :   31px;
+    color               :   white;
+}
+
+
+#menu p a {
+    color               :   white;
+}
+
+
+#menu p a:hover {
+    color               :   #ff6600;
+}
+
+
+#menu li {
+    border-right        :   solid 1px #a0b9c6;
+}
+
+
+#menu li a {
+    height              :   31px;
+    line-height         :   31px;
+    color               :   white;
+}
+
+
+#menu li a:hover, #menu li.active a {
+    background          :   #f46200 url('../img/menu-link-background.png');
+}
+
+
+#navigation {
+    background          :   #174683 url('../img/region-background.png') repeat-x top;
+}
+
+
+#navigation a {
+    color               :   white;
+}
+
+
+#navigation a:hover {
+    color               :   #ff6600;
+}
+
+
+#header-end {
+    height              :   5px;
+    background          :   url('../img/header-end.png') repeat-x center;
+}
+
+
+#footer hr {
+    height              :   1px;
+    border              :   none;
+    border-top          :   solid 1px #5694ce;
+}
+
+
+a { 
+    color               :   #4ae7ff;
+}
+
+
+a:hover {
+    color               :   #ff6600;
+}
+
+
+pre {
+    border-color        :   #5694ce;
+    border-bottom-width :   2px;
+    border-right-width  :   2px;
+    background          :   #174683 url('../img/region-background.png') repeat-x top;
+}
+
+
+code {
+    color               :   #ff6600;
+}

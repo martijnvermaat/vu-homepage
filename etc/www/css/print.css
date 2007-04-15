@@ -2,8 +2,8 @@
 
 
 body {
-    background          :   #fff;
-    color               :   #000;
+    background          :   white;
+    color               :   black;
     font-family         :   serif;
     font-size           :   0.8em;
     /* text-align          :   justify; */
@@ -37,14 +37,6 @@ dt {
 }
 
 
-.content-date {
-    margin-top          :   1em;
-    font-size           :   0.9em;
-}
-
-
-.xnav,
-#page-footer,
-#breadcrumbs {
+#header, #footer, .skip {
     display             :   none;
 }

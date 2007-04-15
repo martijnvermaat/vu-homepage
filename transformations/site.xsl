@@ -145,6 +145,11 @@ Two parameters are expected:
             </title>
 
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
+
+            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-few.css" title="FEW layout" />
+            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-bow.css" title="Black on white" />
+            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-wob.css" title="White on black" />
+
             <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
 
             <script type="text/javascript" src="{$base-path}script/default.js">var someBrowsersNeedThisContent;</script>

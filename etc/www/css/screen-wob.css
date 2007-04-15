@@ -1,28 +1,46 @@
-/* White on black CSS2 document for vu-website */
+/* Default CSS2 document for vu-website */
 
 
 html {
-    background          :   #000;
-    color               :   #fff;
+    background          :   black;
+    color               :   white;
 }
 
 
-a {
-    color               :   #fff;
+#menu {
+    margin-top          :   0.4em;
 }
 
 
-#page-content {
-    border-top          :   solid 2px #fff;
-    border-bottom       :   solid 2px #fff;
+#header-end {
+    height              :   0.5em;
 }
 
 
-pre, code {
-    background          :   #222;
+#footer hr {
+    height              :   1px;
+    border              :   none;
+    border-top          :   solid 1px white;
 }
 
 
 pre {
-    border              :   solid 1px #fff;
+    border-color        :   white;
+    border-bottom-width :   2px;
+    border-right-width  :   2px;
+}
+
+
+pre, code {
+    background          :   #090909;
+}
+
+
+a {
+    color               :   yellow;
+}
+
+
+a:visited {
+    color               :   green;
 }
