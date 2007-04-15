@@ -92,7 +92,7 @@ body {
     float               :   left;
     display             :   none;
     width               :   100%;
-    background          :   #174683 url('../img/sitemap-background.png') repeat-x top;
+    background          :   #174683 url('../img/navigation-background.png') repeat-x top;
 }
 
 
@@ -187,4 +187,20 @@ img {
 
 .skip {
     display             :   none;
+}
+
+
+pre, code {
+    font-family         :   monospace;
+}
+
+
+pre {
+    padding             :   1em;
+    overflow            :   auto;
+    border-top          :   solid 1px #5694ce;
+    border-left          :   solid 1px #5694ce;
+    border-bottom       :   solid 2px #5694ce;
+    border-right          :   solid 2px #5694ce;
+    background          :   #174683 url('../img/navigation-background.png') repeat-x top;
 }

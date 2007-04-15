@@ -103,8 +103,8 @@ Two parameters are expected:
     </xsl:variable>
     <xsl:variable name="str-last-changed-format">
         <xsl:choose>
-            <xsl:when test="item/language='nl'">'Laatst inhoudswijziging was op' d '<xsl:value-of select="$str-last-changed-month" />', ''yy</xsl:when>
-            <xsl:otherwise>'Last content change was on <xsl:value-of select="$str-last-changed-month" />' d, ''yy</xsl:otherwise>
+            <xsl:when test="item/language='nl'">'Laatst inhoudswijziging was op' d '<xsl:value-of select="$str-last-changed-month" />' yyyy</xsl:when>
+            <xsl:otherwise>'Last content change was on <xsl:value-of select="$str-last-changed-month" />' d yyyy</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
     <xsl:variable name="str-page-top">
@@ -164,8 +164,18 @@ Two parameters are expected:
         <div id="header">
             <div id="menu">
                 <ul>
-                    <li><a href="{$base-path}">Home</a></li>
-                    <li><a href="{$base-path}colofon">Contact</a></li>
+                    <li>
+                        <xsl:if test="$is-homepage">
+                            <xsl:attribute name="class">active</xsl:attribute>
+                        </xsl:if>
+                        <a href="{$base-path}">Home</a>
+                    </li>
+                    <li>
+                        <xsl:if test="id='site:colofon'">
+                            <xsl:attribute name="class">active</xsl:attribute>
+                        </xsl:if>
+                        <a href="{$base-path}colofon">Colofon</a>
+                    </li>
                 </ul>
                 <xsl:if test="not($is-homepage)">
                     <p>
@@ -190,6 +200,7 @@ Two parameters are expected:
         <div id="footer">
             <hr />
             <p><xsl:value-of select="date:format-date(last-change, $str-last-changed-format)" /></p>
+            <p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
         </div>
 
         </body>

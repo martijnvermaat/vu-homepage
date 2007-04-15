@@ -12,6 +12,9 @@ function dropDownNavigation() {
     link.href = '#navigation';
     link.appendChild(document.createTextNode('\u25bc Sitemap'));
 
+    item = document.createElement('li');
+    item.appendChild(link);
+
     link.onclick = function() {
         if (navigation.style.display == 'block') {
             navigation.style.display = 'none';
@@ -23,8 +26,6 @@ function dropDownNavigation() {
         return false;
     };
 
-    item = document.createElement('li');
-    item.appendChild(link);
     menu.appendChild(item);
 
 }
