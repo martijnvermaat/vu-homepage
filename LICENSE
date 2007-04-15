@@ -1,12 +1,9 @@
-Copyright (c) 2004-2007, Martijn Vermaat.
-
-All rights reserved.
-
-
 This project consists of two separately licensed parts:
 
 * Content source files: the content/ directory
-* Project source code: all remaining files
+* Project source code: all other files
+
+Both are Copyright (c) 2004-2007, Martijn Vermaat.
 
 
 All content source files are licenced under a Creative Commons
@@ -19,11 +16,15 @@ The CC-BY-SA License 3.0 can be found at the address:
   http://creativecommons.org/licenses/by-sa/3.0/
 
 The new BSD license can be found below or at the address:
-  http://creativecommons.org/licenses/by-sa/3.0/
+  http://www.opensource.org/licenses/bsd-license.php
 
 
 The remainder of this file is a copy of the new BSD License.
 
+
+Copyright (c) 2004-2007, Martijn Vermaat.
+
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -33,9 +34,9 @@ modification, are permitted provided that the following conditions are met:
     * Redistributions in binary form must reproduce the above copyright
       notice, this list of conditions and the following disclaimer in the
       documentation and/or other materials provided with the distribution.
-    * The name of Martijn Vermaat nor the names of its contributors may not be
-      used to endorse or promote products derived from this software without
-      specific prior written permission.
+    * The name of Martijn Vermaat may not be used to endorse or promote
+      products derived from this software without specific prior written
+      permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
