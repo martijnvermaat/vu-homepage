@@ -137,6 +137,12 @@ Two parameters are expected:
             <xsl:otherwise>See colofon for copyright and license</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
+    <xsl:variable name="str-complete-sitemap">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Zie colofon voor een volledige sitemap</xsl:when>
+            <xsl:otherwise>See colofon for a complete sitemap</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
 
 
     <xsl:template match="/item">
@@ -201,6 +207,7 @@ Two parameters are expected:
                 <ul>
                 <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="navigation" />
                 </ul>
+                <p>(<a href="{$base-path}colofon"><xsl:value-of select="$str-complete-sitemap" /></a>)</p>
             </div>
             <div id="header-end"><p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p></div>
         </div>

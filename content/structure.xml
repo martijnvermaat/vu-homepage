@@ -33,26 +33,32 @@
         <item>
             <id>site:vu:tbr-2003</id>
             <location>tbr-2003</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:encyclopedie-2003</id>
             <location>encyclopedie-2003</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:datastructuren-2003</id>
             <location>datastructuren-2003</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:feevdt-2004</id>
             <location>feevdt-2004</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:iti-2004</id>
             <location>iti-2004</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:ft-2004</id>
             <location>ft-2004</location>
+            <hidden />
         </item>
         <item>
             <id>site:vu:vl-2004</id>
@@ -90,6 +96,7 @@
     <item>
         <id>site:colofon</id>
         <location>colofon</location>
+        <hidden />
     </item>
     <item>
         <id>site:wishlist</id>

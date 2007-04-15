@@ -70,6 +70,17 @@ body {
     float               :   left;
     display             :   none;
     width               :   100%;
+    padding-left        :   2.5em;
+}
+
+
+#navigation ul {
+    padding-left        :   0;
+}
+
+
+#navigation ul ul {
+    padding-left        :   2.5em;
 }
 
 
