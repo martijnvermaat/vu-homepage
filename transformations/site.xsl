@@ -131,6 +131,12 @@ Two parameters are expected:
             <xsl:otherwise>Jump to the content of this page</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
+    <xsl:variable name="str-copyright">
+        <xsl:choose>
+            <xsl:when test="item/language='nl'">Zie colofon voor copyright en licentie</xsl:when>
+            <xsl:otherwise>See colofon for copyright and license</xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
 
 
     <xsl:template match="/item">
@@ -155,6 +161,8 @@ Two parameters are expected:
             <script type="text/javascript" src="{$base-path}script/default.js">var someBrowsersNeedThisContent;</script>
 
             <link rel="home" href="{$base-path}" title="Homepage" />
+
+            <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" />
 
         </head>
 
@@ -205,6 +213,7 @@ Two parameters are expected:
         <div id="footer">
             <hr />
             <p><xsl:value-of select="date:format-date(last-change, $str-last-changed-format)" /></p>
+            <p><a href="{$base-path}colofon"><xsl:value-of select="$str-copyright" /></a></p>
             <p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
         </div>
 

@@ -4,29 +4,44 @@
     <id>site:colofon</id>
     <title>Colofon</title>
     <language>en</language>
-    <last-change>2007-04-07</last-change>
+    <last-change>2007-04-15</last-change>
     <content>
 
 
 <h1>Contact</h1>
 
 
-<table>
-    <tr>
-        <td>Email</td>
-        <td><a href="mailto:mvermaat@cs.vu.nl" external="true">mvermaat@cs.vu.nl</a> or <a href="mailto:martijn@vermaat.name" external="true">martijn@vermaat.name</a></td>
-    </tr>
-    <tr>
-        <td>Jabber ID</td>
-        <td><a href="xmpp:martijnvermaat@gmail.com" external="true">martijnvermaat@gmail.com</a></td>
-    </tr>
-</table>
+<p>
+Send me an email at <a href="mailto:mvermaat@cs.vu.nl" external="true">mvermaat@cs.vu.nl</a>
+or <a href="mailto:martijn@vermaat.name" external="true">martijn@vermaat.name</a>.
+</p>
+
+<p>
+My Jabber ID is <a href="xmpp:martijnvermaat@gmail.com" external="true">martijnvermaat@gmail.com</a>.
+</p>
 
 
-<h1>Sitemap</h1>
+<h1>Copyright and license</h1>
 
 
-<sitemap />
+<p>
+All page content is, unless explicitely noted otherwise, copyright © 2004-2007
+by Martijn Vermaat and licenced under a <a rel="license"
+href="http://creativecommons.org/licenses/by-sa/3.0/" external="true">Creative
+Commons Attribution-Share Alike 3.0 Licence</a> (CC-BY-SA).
+</p>
+
+<p>
+This means you are free to modify if you share alike, and you are free to copy
+and share if you attribute me (by name, e-mail, or homepage URL).
+</p>
+
+<p>
+The sourcecode of this website (with exception of all page content) is licensed
+under the new <a href="http://www.opensource.org/licenses/bsd-license.php"
+external="true">BSD License</a>. This translates as do whatever you like with it.
+See below how to obtain said source code.
+</p>
 
 
 <h1>About this website</h1>
@@ -69,6 +84,12 @@ the command:
 <pre>
 $ svn export <a href="http://svn.vermaat.name/vu-website/trunk" external="true">http://svn.vermaat.name/vu-website/trunk</a> vu-website
 </pre>
+
+
+<h1>Sitemap</h1>
+
+
+<sitemap />
 
 
     </content>

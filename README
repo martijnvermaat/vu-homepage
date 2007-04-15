@@ -1,12 +1,22 @@
 Martijn Vermaat - Personal homepage at cs.vu.nl
 
-This file should contain more information.
+This is the sourcecode that compiles to my personal homepage at the Vrije
+Universiteit (located at http://www.cs.vu.nl/~mvermaat/).
+
+It consists of a build.xml file for use with Apache Ant, content source files
+in the content/ directory, an XSLT transformation for transforming content
+source files to webpages, and related files like images and stylesheets.
+
+See the LICENSE file for copyright and license information.
 
 
-Known issues:
+== USAGE ==
 
-* This project is not licensed. Fix it sometime.
+Run 'ant -projecthelp' for a list of build options. To build and validate
+the homepage, just run ant with no options.
 
+
+== NOTES ==
 
 Deployment specific content is present in:
 
@@ -20,7 +30,7 @@ Absolute path to 404 error document.
 Absolute paths to stylesheets and other website pages.
 
 
-Prerequisites for building the project:
+== PREREQUISITES ==
 
 * Implementation of EXSLT date and time functions.
 
