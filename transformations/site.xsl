@@ -37,13 +37,19 @@ Two parameters are expected:
     <!-- Contents of site structure file -->
     <xsl:variable name="site-structure-file" select="document($site-structure)" />
 
+    <!-- Contents of the root index page -->
+    <xsl:variable name="rootitem" select="document(concat($items-dir,'/',$site-structure-file/dir/item[index]/location,'.xml'))/item" />
+
     <!-- ID of this item -->
     <xsl:variable name="current-id" select="/item/id" />
+
+    <!-- Is this item the homepage? -->
+    <xsl:variable name="is-homepage" select="$site-structure-file/dir/item[id=$current-id]/index" />
 
     <!-- This relative path takes you to the base directory
          (can be ./ if already there). -->
     <xsl:variable name="base-path">
-        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file/site//item[id=$current-id]/ancestor::dir">../</xsl:for-each>
+        <xsl:text>./</xsl:text><xsl:for-each select="$site-structure-file//item[id=$current-id]/ancestor::dir/ancestor::dir">../</xsl:for-each>
     </xsl:variable>
 
     <!-- This is the path to the current document, relative
@@ -51,35 +57,54 @@ Two parameters are expected:
     <xsl:variable name="current-path">
         <xsl:value-of select="$base-path" />
         <xsl:for-each
-            select="$site-structure-file/site//item[id=$current-id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
+            select="$site-structure-file/dir//item[id=$current-id]/ancestor-or-self::*[(name(.)='dir')or(name(.)='item')]">
             <xsl:value-of select="concat(location,'/')" />
         </xsl:for-each>
     </xsl:variable>
 
     <!-- This is really a bit of a hack to support pages in
          Dutch and in English. -->
-    <xsl:variable name="str-last-changed">
+    <xsl:variable name="str-last-changed-month">
         <xsl:choose>
-            <xsl:when test="item/language='nl'">Laatst gewijzigd</xsl:when>
-            <xsl:otherwise>Last changed</xsl:otherwise>
+            <xsl:when test="item/language='nl'">
+                <xsl:choose>
+                    <xsl:when test="date:month-in-year(item/last-change)='0'">januari</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='1'">februari</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='2'">maart</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='3'">april</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='4'">mei</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='5'">juni</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='6'">juli</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='7'">augustus</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='8'">september</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='9'">oktober</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='10'">november</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='11'">december</xsl:when>
+                    <xsl:otherwise>een maand</xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="date:month-in-year(item/last-change)='0'">January</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='1'">February</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='2'">March</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='3'">April</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='4'">May</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='5'">June</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='6'">July</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='7'">August</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='8'">September</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='9'">October</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='10'">November</xsl:when>
+                    <xsl:when test="date:month-in-year(item/last-change)='11'">December</xsl:when>
+                </xsl:choose>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="str-last-generated">
+    <xsl:variable name="str-last-changed-format">
         <xsl:choose>
-            <xsl:when test="item/language='nl'">Gegenereerd</xsl:when>
-            <xsl:otherwise>Generated</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="str-index">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Meer op deze website</xsl:when>
-            <xsl:otherwise>Elsewhere on this website</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="str-breadcrumbs">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Je bent hier</xsl:when>
-            <xsl:otherwise>You are here</xsl:otherwise>
+            <xsl:when test="item/language='nl'">'Laatst inhoudswijziging was op' d '<xsl:value-of select="$str-last-changed-month" />' yyyy</xsl:when>
+            <xsl:otherwise>'Last content change was on <xsl:value-of select="$str-last-changed-month" />' d yyyy</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
     <xsl:variable name="str-page-top">
@@ -106,39 +131,6 @@ Two parameters are expected:
             <xsl:otherwise>Jump to the content of this page</xsl:otherwise>
         </xsl:choose>
     </xsl:variable>
-    <xsl:variable name="str-navigation">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Navigatie van de website</xsl:when>
-            <xsl:otherwise>Site navigation</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="str-navigation-descr">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Spring naar de navigatie van deze website</xsl:when>
-            <xsl:otherwise>Jump to the site navigation</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-
-<!--
-    <xsl:variable name="str-room-heading">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">Kamer gezocht</xsl:when>
-            <xsl:otherwise>Looking for a room</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="str-room-message">
-        <xsl:choose>
-            <xsl:when test="item/language='nl'">
-            </xsl:when>
-            <xsl:otherwise>
-                Because I will have to leave my room in Amsterdam real soon, I am
-                looking for a new room. If you know of a room for rent somewhere in
-                Amsterdam or Utrecht, &lt;a href="mailto:mvermaat@cs.vu.nl"&gt;let me
-                know&lt;/a&gt;. Thanks!
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
--->
 
 
     <xsl:template match="/item">
@@ -147,16 +139,15 @@ Two parameters are expected:
 
         <head>
 
-            <title>Martijn Vermaat - <xsl:value-of select="title" /></title>
+            <title>
+                <xsl:value-of select="$rootitem/title" />
+                <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="title" />
+            </title>
 
             <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen.css" />
-            <link rel="stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-why.css" title="whytheluckystiff" />
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-ubuntu.css" title="Ubuntu colors" />
-
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-bow.css" title="Black on white" />
-            <link rel="alternate stylesheet" type="text/css" media="screen" href="{$base-path}css/screen-wob.css" title="White on black" />
-
             <link rel="stylesheet" type="text/css" media="print" href="{$base-path}css/print.css" />
+
+            <script type="text/javascript" src="{$base-path}script/default.js">var someBrowsersNeedThisContent;</script>
 
             <link rel="home" href="{$base-path}" title="Homepage" />
 
@@ -164,91 +155,52 @@ Two parameters are expected:
 
         <body id="cs-vu-nl-mvermaat">
 
-        <ul class="xnav">
-            <li><a href="#page-content" title="{$str-page-content-descr}" accesskey="2"><xsl:value-of select="$str-page-content" /></a></li>
-            <li><a href="#navigation" title="{$str-navigation-descr}"><xsl:value-of select="$str-navigation" /></a></li>
-        </ul>
+        <xsl:if test="$is-homepage">
+            <xsl:attribute name="class">homepage</xsl:attribute>
+        </xsl:if>
 
-        <div id="page-header">
+        <p class="skip"><a href="#content" title="{$str-page-content-descr}"><xsl:value-of select="$str-page-content" /></a></p>
 
-            <h1><xsl:value-of select="title" /></h1>
-
-<!--
-            <div class="important">
-                <h2>
-                    <xsl:choose>
-                        <xsl:when test="language='nl'">Kamer gezocht</xsl:when>
-                        <xsl:otherwise>Looking for a room</xsl:otherwise>
-                    </xsl:choose>
-                </h2>
-                <p>
-                    <xsl:choose>
-                        <xsl:when test="language='nl'">
-                            Omdat ik binnenkort mijn kamer in Amsterdam moet verlaten ben ik
-                            op zoek naar een nieuwe kamer. Als je ergens in Amsterdam of Utrecht
-                            een kamer te huur weet, <a href="mailto:mvermaat@cs.vu.nl">laat het
-                            me dan weten</a>. Bedankt!
-                        </xsl:when>
-                        <xsl:otherwise>
-                            Because I will have to leave my room in Amsterdam real soon, I am
-                            looking for a new room. If you know of a room for rent somewhere in
-                            Amsterdam or Utrecht, please <a href="mailto:mvermaat@cs.vu.nl">let
-                            me know</a>. Thanks!
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </p>
-            </div>
--->
-
-            <p id="breadcrumbs">
-                <xsl:value-of select="concat($str-breadcrumbs, ': ')" />
-                <a href="{$base-path}" accesskey="1">Home</a>
-                <xsl:apply-templates select="($site-structure-file/site/dir)|($site-structure-file/site/item)" mode="breadcrumbs" />
-            </p>
-
-        </div>
-
-        <div id="page-content">
-
-            <xsl:apply-templates select="content" />
-
-            <p class="content-date">
-                <xsl:value-of select="concat($str-last-changed, ': ',
-                    date:year(last-change),
-                    '/',
-                    date:month-in-year(last-change)+1,
-                    '/',
-                    date:day-in-month(last-change))" />
-                <br />
-                <xsl:value-of select="concat($str-last-generated, ': ',
-                    date:year($now),
-                    '/',
-                    date:month-in-year($now)+1,
-                    '/',
-                    date:day-in-month($now))" />
-            </p>
-
-        </div>
-
-        <div id="page-footer">
-
-            <h2><xsl:value-of select="$str-index" /></h2>
-
-            <div id="navigation">
-            <p>
-                <xsl:choose>
-                    <xsl:when test="count($site-structure-file/site/item[id=$current-id]/no-link) > 0">
-                        <strong><a href="{$base-path}">Home</a></strong>
-                    </xsl:when>
-                    <xsl:otherwise>
+        <div id="header">
+            <div id="menu">
+                <ul>
+                    <li>
+                        <xsl:if test="$is-homepage">
+                            <xsl:attribute name="class">active</xsl:attribute>
+                        </xsl:if>
                         <a href="{$base-path}">Home</a>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </p>
-            <xsl:apply-templates select="$site-structure-file/site" mode="navigation" />
-            <p><a href="#page-header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
+                    </li>
+                    <li>
+                        <xsl:if test="id='site:colofon'">
+                            <xsl:attribute name="class">active</xsl:attribute>
+                        </xsl:if>
+                        <a href="{$base-path}colofon">Colofon</a>
+                    </li>
+                </ul>
+                <xsl:if test="not($is-homepage)">
+                    <p>
+                        <a href="{$base-path}"><xsl:value-of select="$rootitem/title" /></a>
+                        <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="breadcrumbs" />
+                    </p>
+                </xsl:if>
             </div>
+            <div id="navigation">
+                <ul>
+                <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="navigation" />
+                </ul>
+            </div>
+            <div id="header-end"><p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p></div>
+        </div>
 
+        <div id="content">
+            <h1><xsl:value-of select="title" /></h1>
+            <xsl:apply-templates select="content" />
+        </div>
+
+        <div id="footer">
+            <hr />
+            <p><xsl:value-of select="date:format-date(last-change, $str-last-changed-format)" /></p>
+            <p><a href="#header" title="{$str-page-top-descr}"><xsl:value-of select="$str-page-top" /></a></p>
         </div>
 
         </body>
@@ -263,7 +215,7 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|blockquote|strong|ul|img|sup|sub|script|div">
+    <xsl:template match="code|dd|dl|dt|em|hr|li|ol|p|pre|blockquote|strong|ul|img|sup|sub|script|div|table|tr|td">
        <xsl:copy>
            <xsl:apply-templates select="@*" /> 
            <xsl:apply-templates />
@@ -312,17 +264,10 @@ Two parameters are expected:
 
     <!-- This special tag generates a complete sitemap. -->
     <xsl:template match="sitemap">
-        <p><a href="{$base-path}">Home</a></p>
-        <xsl:apply-templates select="$site-structure-file/site" mode="sitemap" />
-    </xsl:template>
-
-
-    <xsl:template match="site" mode="navigation">
-
+        <p><a href="{$base-path}"><xsl:value-of select="$rootitem/title" /></a></p>
         <ul>
-            <xsl:apply-templates select="item|dir" mode="navigation" />
+            <xsl:apply-templates select="($site-structure-file/dir/item)|($site-structure-file/dir/dir)" mode="sitemap" />
         </ul>
-
     </xsl:template>
 
 
@@ -331,7 +276,7 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
  
-        <xsl:if test="(not(no-link)) and (not(hidden))">
+        <xsl:if test="(not(index)) and (not(hidden))">
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
@@ -350,14 +295,15 @@ Two parameters are expected:
     <xsl:template match="dir" mode="navigation">
     
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <li>
             <xsl:choose>
-                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
-                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
+                <xsl:when test="count(child::item[id=$current-id]/index) > 0">
+                    <strong><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+                    <a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
                 </xsl:otherwise>
             </xsl:choose>
             <ul>
@@ -370,21 +316,12 @@ Two parameters are expected:
     </xsl:template>
 
 
-    <xsl:template match="site" mode="sitemap">
-
-        <ul>
-            <xsl:apply-templates select="item|dir" mode="sitemap" />
-        </ul>
-
-    </xsl:template>
-
-
     <xsl:template match="item" mode="sitemap">
 
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
  
-        <xsl:if test="not(no-link)">
+        <xsl:if test="not(index)">
             <li>
                 <xsl:choose>
                     <xsl:when test="id=$current-id">
@@ -403,14 +340,15 @@ Two parameters are expected:
     <xsl:template match="dir" mode="sitemap">
     
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <li>
             <xsl:choose>
-                <xsl:when test="count(child::item[id=$current-id]/no-link) > 0">
-                    <strong><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a></strong>
+                <xsl:when test="count(child::item[id=$current-id]/index) > 0">
+                    <strong><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a></strong>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+                    <a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
                 </xsl:otherwise>
             </xsl:choose>
             <ul>
@@ -426,10 +364,11 @@ Two parameters are expected:
     <xsl:template match="dir" mode="breadcrumbs">
 
         <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
 
         <xsl:if test="count(descendant::item[id=$current-id]) > 0">
 
-            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}/"><xsl:value-of select="title" /></a>
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}/" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
             <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="breadcrumbs">
                 <xsl:with-param name="dir" select="concat($dir,location,'/')" />
             </xsl:apply-templates>
@@ -444,8 +383,37 @@ Two parameters are expected:
         <xsl:param name="dir" />
         <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
 
-        <xsl:if test="(not(no-link)) and (id=$current-id)">
-            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}"><xsl:value-of select="$item/title" /></a>
+        <xsl:if test="(not(index)) and (id=$current-id)">
+            <xsl:text> » </xsl:text><a href="{$base-path}{$dir}{location}" hreflang="{$item/language}"><xsl:value-of select="$item/title" /></a>
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="dir" mode="title">
+
+        <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'/',item[index]/location,'.xml'))/item" />
+
+        <xsl:if test="count(descendant::item[id=$current-id]) > 0">
+
+            <xsl:text> » </xsl:text><xsl:value-of select="$item/title" />
+            <xsl:apply-templates select="(dir)|(item[id=$current-id])" mode="title">
+                <xsl:with-param name="dir" select="concat($dir,location,'/')" />
+            </xsl:apply-templates>
+
+        </xsl:if>
+
+    </xsl:template>
+
+
+    <xsl:template match="item" mode="title">
+
+        <xsl:param name="dir" />
+        <xsl:variable name="item" select="document(concat($items-dir,'/',$dir,location,'.xml'))/item" />
+
+        <xsl:if test="(not(index)) and (id=$current-id)">
+            <xsl:text> » </xsl:text><xsl:value-of select="$item/title" />
         </xsl:if>
 
     </xsl:template>

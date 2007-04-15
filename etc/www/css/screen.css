@@ -2,9 +2,9 @@
 
 
 html {
-    margin              :   0;
-    padding             :   0;
-    font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
+    background          :   #0b215a url('../img/background.gif') no-repeat fixed;
+    font-family         :   Verdana, Arial, Helvetica, sans-serif;
+    color               :   white;
 }
 
 
@@ -14,152 +14,202 @@ body {
 }
 
 
-#page-header {
-    padding             :   1.5em 2em 0.5em 2em;
+#header {
+    display             :   block;
+    width               :   100%;
 }
 
 
-#breadcrumbs {
-    margin-bottom       :   0;
-    font-size           :   0.8em;
+#menu {
+    display             :   block;
+    width               :   100%;
+    height              :   31px;
+    background          :   url('../img/menu-background.png');
 }
 
 
-h1 {
+#menu p {
+    margin              :   0;
+    padding             :   0;
+    float               :   left;
+    display             :   block;
+    height              :   31px;
+    padding-left        :   2em;
+    color               :   white;
+    font-weight         :   normal;
+    text-decoration     :   none;
+    line-height         :   31px;
+}
+
+
+#menu p a {
+    color               :   white;
+    text-decoration     :   none;
+}
+
+
+#menu p a:hover {
+    color               :   #ff6600;
+}
+
+
+#menu ul {
+    list-style-type     :   none;
     margin              :   0;
     padding             :   0;
 }
 
 
-#page-content {
-    padding             :   1em 20% 1em 3em;
-    font-family         :   Georgia, 'Trebuchet MS', Palatino, Times, serif;
-/*  font-family         :   'Trebuchet MS', Verdana, Lucida, Helvetica, sans-serif; */
+#menu li {
+    float               :   left;
+    border-right        :   solid 1px #a0b9c6;
 }
 
 
-#page-content h2,
-#page-content h3,
-#page-content h4,
-#page-content h5 {
-    margin-left         :   -1em;
-    font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
+#menu li a {
+    float               :   left;
+    display             :   block;
+    height              :   31px;
+    padding             :   0 1em 0 1em;
+    color               :   white;
+    font-weight         :   bold;
+    text-decoration     :   none;
+    line-height         :   31px;
 }
 
 
-.content-date {
-    margin-top          :   2em;
-    margin-left         :   -1em;
+#menu li a:hover, #menu li.active a {
+    background          :   #f46200 url('../img/menu-link-background.png');
+}
+
+
+#menu li a:focus {
+   -moz-outline-style   :   none;  /* I don't like the dotted selection border */
+}
+
+
+#navigation {
+    float               :   left;
+    display             :   none;
+    width               :   100%;
+    background          :   #174683 url('../img/region-background.png') repeat-x top;
+}
+
+
+#navigation li {
+    list-style-type     :   none;
+}
+
+
+#navigation a {
+    color               :   white;
+    text-decoration     :   none;
+}
+
+
+#navigation a:hover {
+    color               :   #ff6600;
+}
+
+
+#header-end {
+    line-height         :   1px;
+    clear               :   both;
+    display             :   block;
+    width               :   100%;
+    height              :   5px;
+    background          :   url('../img/header-end.png') repeat-x center;
+    text-indent         :  -100em;
+}
+
+
+#header-end p {
+    display             :   none;
+}
+
+
+#content {
+    margin              :   0 0 2em 6%;
+    width               :   45em;
+    max-width           :   90%;
+}
+
+
+#content > * {
+    margin-left         :   0.5em;
+}
+
+
+#content > h1, #content > h2, #content > h3, #content > h4 {
+    margin-left         :   0;
+}
+
+
+#footer hr {
+    border              :   none;
+    border-top          :   solid 1px #5694ce;
+}
+
+
+#footer p {
+    margin-left         :   6%;
     font-size           :   0.8em;
-    font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+    font-weight         :   normal;
+    font-family         :   Gentium, FreeSerif, Georgia, "Times New Roman", serif;
+}
+
+
+h2, h3 {
+    margin-top          :   1.5em;
+}
+
+
+a { 
+    color               :   #4ae7ff;
+}
+
+
+a:hover {
+    color               :   #ff6600;
 }
 
 
 pre, code {
-    font-family         :   monospace;
+    font-family         :   "Bitstream Vera Sans Mono", monospace;
 }
 
 
 pre {
     padding             :   1em;
     overflow            :   auto;
+    border              :   solid 1px #5694ce;
+    border-bottom-width :   2px;
+    border-right-width  :   2px;
+    background          :   #174683 url('../img/region-background.png') repeat-x top;
 }
 
 
-dl.linkroll dt img {
-    margin-right        :   0.5em;
-}
-
-
-dl.linkroll span.tags {
-    font-size           :   0.8em;
-    font-family         :   'Lucida Grande', Verdana, Geneva, Lucida, Helvetica, sans-serif;
-    font-weight         :   normal;
-}
-
-
-#page-footer {
-    padding             :   1.5em 2em 1.5em 2em;
-}
-
-
-#page-footer h2 {
-    font-size           :   1em;
-}
-
-
-#navigation {
-    margin-bottom       :   0;
-    font-size           :   0.8em;
-}
-
-
-/*
-a.external:after {
-    content             :   " !";
-    font-size           :   0.6em;
-    vertical-align      :   top;
-}
-
-
-pre a.external:after {
-    display             :   none;
-}
-*/
-
-
-dt {
-    font-weight         :   bold;
+code {
+    color               :   #ff6600;
 }
 
 
 dd {
-    margin-bottom       :   0.2em;
-}
-
-
-/*
-a[hreflang='nl']:after {
-    content             :   " NL";
-    font-size           :   0.6em;
-    vertical-align      :   top;
-}
-
-html[lang='nl'] a[hreflang='nl']:after {
-    content             :   "";
-    font-size           :   0.6em;
-    vertical-align      :   top;
-}
-
-html[lang='nl'] a[hreflang='en']:after {
-    content             :   " EN";
-    font-size           :   0.6em;
-    vertical-align      :   top;
-}
-*/
-
-
-.xnav {
-    display             :   none;
+    margin-bottom       :   0.4em;
 }
 
 
 img {
-/*
-    border              :   solid 1px black;
-*/
+    padding             :   0;
+    margin              :   0;
     border              :   none;
 }
 
 
-.important {
-    border              :   solid 1px;
-    margin-top          :   1em;
-    padding-left        :   1em;
-    padding-right       :   1em;
-}
-
-
-#page-content .important h2 {
-    margin-left         :   0;
+.skip {
+    display             :   none;
 }

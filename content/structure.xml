@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<site>
+<dir>
+    <location></location>
     <item>
         <id>site:index</id>
         <location>index</location>
-        <no-link />
+        <index />
     </item>
     <item>
         <id>site:britney</id>
@@ -24,11 +25,10 @@
     </item>
     <dir>
         <location>vu</location>
-        <title>All things VU</title>
         <item>
             <id>site:vu:index</id>
             <location>index</location>
-            <no-link />
+            <index />
         </item>
         <item>
             <id>site:vu:tbr-2003</id>
@@ -111,4 +111,4 @@
         <location>cddb</location>
         <hidden />
     </item>
-</site>
+</dir>
