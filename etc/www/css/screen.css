@@ -62,7 +62,7 @@ body {
 
 
 #menu li a:focus {
-   -moz-outline-style   :   none;  /* I don't like the dotted selection border */
+    outline             :   none;  /* I don't like the dotted selection border */
 }
 
 
