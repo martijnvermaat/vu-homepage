@@ -110,19 +110,14 @@ body {
 
 
 #content {
-    margin              :   0 0 2em 3%;
+    margin              :   0 0 2em 4%;
     width               :   45em;
     max-width           :   90%;
 }
 
 
-#content > * {
-    margin-left         :   0.5em;
-}
-
-
 #content > h1, #content > h2, #content > h3, #content > h4 {
-    margin-left         :   0;
+    margin-left         :  -0.5em;
 }
 
 
