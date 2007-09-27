@@ -6,7 +6,7 @@
 
 <head>
 
-    <title>Martijn Vermaat - 404 Not Found</title>
+    <title>Martijn Vermaat » 404 - Not Found</title>
 
     <link href="/~mvermaat/css/screen.css" media="screen" type="text/css"
           rel="stylesheet" />
@@ -30,8 +30,30 @@
 <a href="#content" title="Spring naar de inhoud van deze pagina">Inhoud van de pagina</a>
 </p>
 
+<div id="header">
+<div id="menu">
+<ul>
+<li>
+<a href="/~mvermaat/">Home</a>
+</li>
+<li>
+<a href="/~mvermaat/colofon">Colofon</a>
+</li>
+</ul>
+<p>
+<a href="/~mvermaat/">Martijn Vermaat</a> » 404 - Not Found
+</p>
+</div>
+<div id="header-end">
+<p>
+<a href="#header" title="Spring naar het begin van deze pagina">Begin van de pagina</a>
+</p>
+</div>
+</div>
 
-<div id="page-content">
+<div id="content">
+
+<h1>404 - Not Found</h1>
 
 <h2>What has happened?</h2>
 
@@ -65,7 +87,14 @@ during weekends :-)).
 </p>
 
 </div>
-
+<div id="footer">
+<hr/>
+<p>
+<a href="/~mvermaat/colofon">Zie colofon voor copyright en licentie</a>
+</p>
+<p>
+<a href="#header" title="Spring naar het begin van deze pagina">Begin van de pagina</a>
+</p>
+</div>
 </body>
-
 </html>
