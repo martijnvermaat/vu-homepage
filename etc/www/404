@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 
@@ -10,10 +10,8 @@
 
     <link href="/~mvermaat/css/screen.css" media="screen" type="text/css"
           rel="stylesheet" />
-    <link title="whytheluckystiff" href="/~mvermaat/css/screen-why.css" media="screen"
+    <link title="FEW layout" href="/~mvermaat/css/screen-few.css" media="screen"
           type="text/css" rel="stylesheet" />
-    <link title="Ubuntu colors" href="/~mvermaat/css/screen-ubuntu.css" media="screen"
-          type="text/css" rel="alternate stylesheet" />
     <link title="Black on white" href="/~mvermaat/css/screen-bow.css" media="screen"
           type="text/css" rel="alternate stylesheet" />
     <link title="White on black" href="/~mvermaat/css/screen-wob.css" media="screen"
@@ -22,17 +20,16 @@
           rel="stylesheet" />
 
     <link title="Homepage" href="/~mvermaat/" rel="home" />
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" />
 
 </head>
 
 <body id="cs-vu-nl-mvermaat">
 
-<div id="page-header">
-    <h1>404 Not Found</h1>
-    <p id="breadcrumbs">
-        <a accesskey="1" href="/~mvermaat/">Home</a> » 404 Not Found
-    </p>
-</div>
+<p class="skip">
+<a href="#content" title="Spring naar de inhoud van deze pagina">Inhoud van de pagina</a>
+</p>
+
 
 <div id="page-content">
 
