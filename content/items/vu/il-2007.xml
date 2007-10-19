@@ -4,7 +4,7 @@
     <id>site:vu:il-2007</id>
     <title>Inleiding Logica 2007</title>
     <language>nl</language>
-    <last-change>2007-09-27</last-change>
+    <last-change>2007-10-19</last-change>
     <content>
 
 
@@ -46,6 +46,16 @@ ik hier soms nog enkele uitwerkingen neer te zetten.
 (Denk bij afleidingen in plaats van de verticale strepen hele boxen zoals we gewend
 zijn.)
 </p>
+
+
+<h2>Modale logica</h2>
+
+
+<ul>
+    <li>Geldige formules: <a href="files/vu/il/uitwerking-5.2-6ad.pdf">5.2 5a,d</a></li>
+    <li>Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
+    en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a></li>
+</ul>
 
 
     </content>
