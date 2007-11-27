@@ -21,7 +21,7 @@
 <property name="site.structure" value="${content.dir}/structure.xml" />
 <property name="site.transformation" value="${transformations.dir}/site.xsl" />
 
-<property name="deploy.host" value="galjas.cs.vu.nl" />
+<property name="deploy.host" value="kits.few.vu.nl" />
 <property name="deploy.dir" value="/home/mvt600/www" />
 <property name="deploy.login" value="mvt600" />
 <property name="deploy.password" value="${password}" />
