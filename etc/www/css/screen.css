@@ -165,3 +165,21 @@ img {
 .skip {
     display             :   none;
 }
+
+
+ul.photoblog {
+    list-style-type     :   none;
+    margin-left         :   0;
+    padding-left        :   0;
+}
+
+
+ul.photoblog li {
+    display             :   inline;
+}
+
+
+ul.photoblog li img {
+    border              :   solid 1px;
+    margin              :   0 10px 10px 0;
+}

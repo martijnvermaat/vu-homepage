@@ -75,7 +75,7 @@ html {
 }
 
 
-a { 
+a {
     color               :   #4ae7ff;
 }
 
@@ -95,4 +95,14 @@ pre {
 
 code {
     color               :   #ff6600;
+}
+
+
+ul.photoblog li a img {
+    border-color        :   #0b215a;
+}
+
+
+ul.photoblog li a:hover img {
+    border-color        :   #ff6600;
 }
