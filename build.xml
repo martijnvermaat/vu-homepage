@@ -124,14 +124,20 @@ Deploy Target
 -->
 
 
+<target name="get-password" unless="password">
+    <input message="Please enter password:" addproperty="password" />
+</target>
+
+
 <target
     name="deploy"
-    depends="dist"
+    depends="dist,get-password"
     description="uploads validated build to webserver">
 
     <scp
         todir="${deploy.login}@${deploy.host}:${deploy.dir}"
-        password="${deploy.password}">
+        password="${deploy.password}"
+        trust="true">
         <fileset dir="${build.dir}" />
     </scp>
 
@@ -139,6 +145,7 @@ Deploy Target
         host="${deploy.host}"
         username="${deploy.login}"
         password="${deploy.password}"
+        trust="true"
         command="chmod -R a+rX ${deploy.dir}" />
 
 </target>
