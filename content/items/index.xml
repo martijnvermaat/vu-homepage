@@ -66,25 +66,25 @@ Master Student <em>Formal Methods and Software Verification</em>
 
 <div id="linkroll">
     <p>
-    (More in my <a href="http://del.icio.us/mvermaat/linkroll" external="true">del.icio.us linkroll</a>.)
+    (More in my <a href="http://ma.gnolia.com/people/mvermaat/tags/linkroll" external="true">Ma.gnolia linkroll</a>.)
     </p>
 </div>
 
-<script type="text/javascript" src="http://del.icio.us/feeds/json/mvermaat/linkroll?count=10">var dummyVariable2;</script>
+<script type="text/javascript" src="http://ma.gnolia.com/json/default/people/mvermaat/tags/linkroll?length=10">var dummyVariable2;</script>
 <script type="text/javascript">
     var dl = document.createElement('dl');
     dl.className = 'linkroll';
-    for (var i=0, post; post = Delicious.posts[i]; i++) {
+    for (var i=0, post; post = Magnolia.bookmarks[i]; i++) {
         var dt = document.createElement('dt');
         var dd = document.createElement('dd');
         var a = document.createElement('a');
 
         a.className = 'external';
-        a.setAttribute('href', post.u);
-        a.appendChild(document.createTextNode(post.d));
+        a.setAttribute('href', post.url);
+        a.appendChild(document.createTextNode(post.title));
 
         dt.appendChild(a);
-        dd.appendChild(document.createTextNode(post.n));
+        dd.appendChild(document.createTextNode(post.description));
         dl.appendChild(dt);
         dl.appendChild(dd);
     }
