@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:bachelor-project</id>
+    <title>Bachelor Project</title>
+    <language>en</language>
+    <last-change>2008-03-17</last-change>
+    <content>
+
+
+<p>
+For my Bachelor Project, I studied the 2007 paper
+<a href="http://pauillac.inria.fr/~xleroy/bibrefs/Dargaye-Leroy-CPS.html"
+external="true">Mechanized verification of CPS transformations</a>
+by Dargaye and Leroy.
+</p>
+
+<p>
+The resulting written report can be downloaded below, as well as the
+slides that accompanied my presentation.
+</p>
+
+<p>
+<a href="files/vu/bachelor-project/verifying-a-cps-transformation.pdf">Verifying a CPS Transformation</a> (pdf)
+</p>
+
+<p>
+<a href="files/vu/bachelor-project/slides.pdf">Presentation slides</a> (pdf)
+</p>
+
+
+    </content>
+</item>
