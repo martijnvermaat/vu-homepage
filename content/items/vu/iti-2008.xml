@@ -2,9 +2,9 @@
 
 <item>
     <id>site:vu:iti-2008</id>
-    <title>Inleiding Theoretische Informatica 2008</title>
+    <title>Inleiding Theoretische Informatica 2007/2008</title>
     <language>nl</language>
-    <last-change>2008-03-12</last-change>
+    <last-change>2008-03-20</last-change>
     <content>
 
 
@@ -36,6 +36,9 @@ Het practicum loopt parallel met de colleges.
 <a href="files/vu/iti/lc/uitwerkingen-2008.pdf">Uitwerkingen bij geselecteerde opgaven uit het dictaat</a> (pdf)
 </p>
 
+<p>
+Getypeerde Lambda calculus behoort dit jaar niet tot de stof.
+</p>
 
 <p>
 Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
@@ -87,7 +90,7 @@ dictaat</a> blijft leidend.
 </p>
 
 <p>
-Op deze plaats komen nog enkele voorbeelduitwerkingen van opgaven te staan.
+<a href="files/vu/iti/el/uitwerkingen-2007.pdf">Uitwerkingen bij geselecteerde opgaven uit het dictaat</a> (pdf)
 </p>
 
 
