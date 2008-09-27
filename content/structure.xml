@@ -100,6 +100,10 @@
             <id>site:vu:bachelor-project</id>
             <location>bachelor-project</location>
         </item>
+        <item>
+            <id>site:vu:il-0809</id>
+            <location>il-0809</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>

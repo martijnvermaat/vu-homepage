@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:il-0809</id>
+    <title>Inleiding Logica 2008/2009</title>
+    <language>nl</language>
+    <last-change>2008-09-27</last-change>
+    <content>
+
+
+<p>
+Bij het vak <a href="http://www.cs.vu.nl/~tcs/il/" external="true">Inleiding Logica</a> ben
+ik samen met Brinio hond docent op het werkcollege.
+</p>
+
+<p>
+Als je een vraag hebt over het vak, <a href="mailto:mvermaat@cs.vu.nl" external="true">mail</a>
+me dan. Als je een opgave gemaakt hebt maar niet zeker weet of je antwoord
+goed is kijk ik het graag even na.
+</p>
+
+
+<h1>Uitwerkingen</h1>
+
+
+<p>
+Wanneer we tijdens het werkcollege niet aan alle sommen toe komen, probeer
+ik hier soms nog enkele uitwerkingen neer te zetten.
+</p>
+
+
+<h2>Propositielogica</h2>
+
+
+<ul>
+    <li>Natuurlijke deductie: <a href="files/vu/il/uitwerking-1.2-3f.pdf">1.2 3f</a>,
+    <a href="files/vu/il/uitwerking-1.2-3m.pdf">1.2 3m</a> en
+    <a href="files/vu/il/uitwerking-1.2-5ad.pdf">1.2 5a,d</a></li>
+    <li>Semantische equivalentie: <a href="files/vu/il/uitwerking-1.5-2.pdf">1.5 2</a>,
+    <a href="files/vu/il/uitwerking-1.5-5.pdf">1.5 5</a> en
+    <a href="files/vu/il/uitwerking-1.5-extra2.pdf">1.5 extra opgave 2</a></li>
+</ul>
+
+
+<p>
+(Denk bij afleidingen in plaats van de verticale strepen hele boxen zoals we gewend
+zijn.)
+</p>
+
+
+<h2>Modale logica</h2>
+
+
+<ul>
+    <li>Geldige formules: <a href="files/vu/il/uitwerking-5.2-6ad.pdf">5.2 5a,d</a></li>
+    <li>Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
+    en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a></li>
+</ul>
+
+
+    </content>
+</item>
