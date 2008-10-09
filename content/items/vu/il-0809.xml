@@ -4,13 +4,13 @@
     <id>site:vu:il-0809</id>
     <title>Inleiding Logica 2008/2009</title>
     <language>nl</language>
-    <last-change>2008-09-27</last-change>
+    <last-change>2008-10-09</last-change>
     <content>
 
 
 <p>
 Bij het vak <a href="http://www.cs.vu.nl/~tcs/il/" external="true">Inleiding Logica</a> ben
-ik samen met Brinio hond docent op het werkcollege.
+ik samen met Brinio Hond docent op het werkcollege.
 </p>
 
 <p>
@@ -45,6 +45,13 @@ ik hier soms nog enkele uitwerkingen neer te zetten.
 <p>
 (Denk bij afleidingen in plaats van de verticale strepen hele boxen zoals we gewend
 zijn.)
+</p>
+
+
+<p>
+Opgave <a href="files/vu/il/uitwerking-1.5-3c.pdf">1.5 3c</a> over functionele
+volledigheid vergt eigenlijk iets meer inzicht dan we bij IL verwachten. Deze uitwerking
+is één van de vele mogelijke bewijzen.
 </p>
 
 
