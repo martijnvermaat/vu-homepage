@@ -4,7 +4,7 @@
     <id>site:vu:il-0809</id>
     <title>Inleiding Logica 2008/2009</title>
     <language>nl</language>
-    <last-change>2008-10-09</last-change>
+    <last-change>2008-10-17</last-change>
     <content>
 
 
@@ -62,6 +62,16 @@ is één van de vele mogelijke bewijzen.
     <li>Geldige formules: <a href="files/vu/il/uitwerking-5.2-6ad.pdf">5.2 5a,d</a></li>
     <li>Karakteriseerbaarheid van frames: <a href="files/vu/il/uitwerking-5.3-7.pdf">5.3 7</a>
     en <a href="files/vu/il/uitwerking-5.3-14.pdf">5.3 14</a></li>
+</ul>
+
+
+<h2>Predikatenlogica</h2>
+
+
+<ul>
+    <li>Natuurlijke deductie: <a href="files/vu/il/uitwerking-2.4-12c.pdf">2.4 12c</a></li>
+    <li>Correctheid en volledigheid: <a href="files/vu/il/uitwerking-pred-volledigheid.pdf">extra opgave</a></li>
+    <li>Compactheid en Skolem-Löwenheim: <a href="files/vu/il/uitwerking-2.3-3c.pdf">2.3 3c (uitgebreid)</a></li>
 </ul>
 
 
