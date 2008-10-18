@@ -4,7 +4,7 @@
     <id>site:greasemonkey</id>
     <title>Greasemonkey User Scripts</title>
     <language>en</language>
-    <last-change>2007-04-03</last-change>
+    <last-change>2008-10-18</last-change>
     <content>
 
 
@@ -126,8 +126,8 @@ alt="Frontpage of nu.nl with Nu Compact installed" />
 </p>
 
 <p>
-<a href="files/greasemonkey/nucompact-0.2.1.user.js">Download
-Nu Compact 0.2.1</a>
+<a href="files/greasemonkey/nucompact-0.2.2.user.js">Download
+Nu Compact 0.2.2</a>
 </p>
 
 
