@@ -4,7 +4,7 @@
     <id>site:vu:index</id>
     <title>VU</title>
     <language>en</language>
-    <last-change>2008-09-27</last-change>
+    <last-change>2008-10-28</last-change>
     <content>
 
 
@@ -68,6 +68,9 @@ Techniek 2004</a>
 </li>
 <li>
 <a hreflang="nl" href="vu/il-0809">Inleiding Logica 2008/2009</a>
+</li>
+<li>
+<a hreflang="nl" href="vu/iti-0809">Inleiding Theoretische Informatica 2008/2009</a>
 </li>
 </ul>
 

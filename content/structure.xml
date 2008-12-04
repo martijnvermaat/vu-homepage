@@ -104,6 +104,10 @@
             <id>site:vu:il-0809</id>
             <location>il-0809</location>
         </item>
+        <item>
+            <id>site:vu:iti-0809</id>
+            <location>iti-0809</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>

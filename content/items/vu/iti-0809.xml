@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:iti-0809</id>
+    <title>Inleiding Theoretische Informatica 2008/2009</title>
+    <language>nl</language>
+    <last-change>2008-12-04</last-change>
+    <content>
+
+
+<p>
+Net als vorig jaar ben ik practicum assistent bij het vak <a
+href="http://www.cs.vu.nl/~tcs/iti/" external="true">Inleiding Theoretische
+Informatica</a> voor tweedejaars studenten Informatica.
+</p>
+
+<p>
+Het vak bestaat uit drie onderdelen:
+</p>
+
+<ol>
+  <li>College en werkcollege lambda calculus (4 weken)</li>
+  <li>College en werkcollege equationele logica (3 weken)</li>
+  <li>Practicum functioneel programmeren (7 weken)</li>
+</ol>
+
+<p>
+Het practicum loopt parallel met de colleges.
+</p>
+
+
+<h1>Lambda calculus</h1>
+
+
+<p>
+<a href="files/vu/iti/lc/uitwerkingen-2008.pdf">Uitwerkingen bij geselecteerde opgaven uit het dictaat</a> (pdf)
+</p>
+
+<p>
+Getypeerde Lambda calculus behoort dit jaar niet tot de stof.
+</p>
+
+<p>
+Om te oefenen met de structuur van Lambda termen en reductie heb ik ooit
+<a href="britney">Britney</a> geschreven. Britney kan termen in boomvorm
+afdrukken, termen reduceren en termen vergelijken modulo alpha
+conversie. Wellicht vind je het handig om mee te oefenen.
+</p>
+
+<p>
+<a href="http://www.cs.ru.nl/~freek/" external="true">Freek Wiedijk</a>
+heeft een <a href="http://www.cs.ru.nl/~freek/notes/lambda.ml"
+external="true">Lambda calculus implementatie</a> geschreven in OCaml.
+Er zijn er nog <a
+href="http://www.google.nl/search?hl=nl&amp;q=lambda+calculus+%28evaluator+OR+interpreter+OR+implementation%29"
+external="true">meer</a>.
+</p>
+
+<p>
+Naast <code>Y</code> (Curry) en <code>T</code> (Turing) zijn er meer fixed-point
+combinatoren. Bijvoorbeeld deze door <a href="http://www.cs.vu.nl/~jwk/"
+external="true">Jan Willem Klop</a>:
+</p>
+
+<pre>
+Y<sub>K</sub> = (L L L L L L L L L L L L L L L L L L L L L L L L L L)
+</pre>
+
+<p>
+waarbij
+</p>
+
+<pre>
+L = λabcdefghijklmnopqstuvwxyzr. (r (t h i s i s a f i x e d p o i n t c o m b i n a t o r))
+</pre>
+
+
+<h1>Equationele Logica</h1>
+
+
+<p>
+<a href="files/vu/iti/el/beknopt-2008.pdf">Beknopt overzicht van de stof</a> (pdf)
+</p>
+
+<p>
+Dit beknopte overzicht is onvolledig en enigzins versimpeld (er wordt bijvoorbeeld
+weinig aandacht besteed aan soortnamen en types). Het kan een handig hulpje zijn bij
+het studeren, maar <a href="http://www.cs.vu.nl/~tcs/iti/eqs.pdf" external="true">het
+dictaat</a> blijft leidend.
+</p>
+
+
+<h1>Functioneel programmeren</h1>
+
+
+<p>
+Bij het practicum functioneel programmeren gebruiken we de taal <a
+href="http://caml.inria.fr/ocaml/index.html" external="true">Objective
+Caml</a>. OCaml is geïnstalleerd op de Solaris systemen en op de Debian Linux
+systemen.
+</p>
+
+
+<h2>OCaml toplevel en line-editing</h2>
+
+
+<p>
+De OCaml toplevel interpreter (<code>ocaml</code>) heeft geen line-editing
+faciliteiten. Je kunt hiervoor <code>ledit</code> of <code>rlwrap</code> als
+wrapper gebruiken. In mijn home directory heb ik een gecompileerde <code>ledit</code>
+gezet (Linux Intel x86), gebruik hem bijvoorbeeld door aan je <code>~/.bashrc</code>
+de volgende regel toe te voegen:
+</p>
+
+<pre>
+alias ocaml='/home/mvt600/public/bin/ledit ocaml'
+</pre>
+
+
+<h2>OCaml mode voor Emacs</h2>
+
+
+<p>
+Is Emacs je favoriete editor dan heb je geluk. In mijn home directory heb
+ik een OCaml mode voor Emacs gezet, <a
+href="http://www-rocq.inria.fr/~acohen/tuareg/" external="true">Tuareg
+Mode</a>, die ik iets fijner vind werken dan de OCaml mode die standaard
+bij de OCaml distributie zit.
+</p>
+
+<p>
+Je kunt Tuareg Mode automatisch laten activeren bij het openen van OCaml
+files door het toevoegen van de volgende regels aan je
+<code>~/.emacs</code> file:
+</p>
+
+<pre>
+;; Where do we look for tuareg?
+(setq load-path (cons "~mvt600/public/tuareg_mode/" load-path))
+
+;; OCaml tuareg mode
+(setq auto-mode-alist (cons '("\\.ml\\w?" . tuareg-mode) auto-mode-alist))
+(autoload 'tuareg-mode "tuareg" "Major mode for editing Caml code" t)
+(autoload 'camldebug "camldebug" "Run the Caml debugger" t)
+
+;; Look in ~mvt600/public/tuareg_mode/custom-tuareg.el for some ideas on
+;; customization options.
+</pre>
+
+<p>
+Je kunt nu je huidige buffer (<code>C-c C-b</code>) of je huidige selectie
+(<code>C-c C-r</code>) door OCaml laten interpreteren, of een lege OCaml
+interpreter starten met <code>C-c C-s</code>.
+</p>
+
+
+    </content>
+</item>
