@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Martijn Vermaat</title>
     <language>en</language>
-    <last-change>2008-12-04</last-change>
+    <last-change>2009-09-01</last-change>
     <content>
 
 
@@ -21,75 +21,16 @@ Master Student <em>Formal Methods and Software Verification</em>
 
 
 <p>
-<a href="vu/iti-0809">Inleiding Theoretische Informatica 2008/2009</a> (<a href="vu/iti-2008">07/08</a>, <a href="vu/iti-2007">06/07</a>, <a href="vu/iti-2006">06/06</a>, <a href="vu/iti-2005">04/05</a>)
+<a href="vu/lm-0910">Logica &amp; Modelleren 2009/2010</a>
 </p>
 
 <p>
-<a href="vu/il-0809">Inleiding Logica 2008/2009</a> (<a href="vu/il-2007">07/08</a>, <a href="vu/il-2006">06/07</a>, <a href="vu/il-2005">05/06</a>)
+Inleiding Theoretische Informatica (<a href="vu/iti-0809">08/09</a>, <a href="vu/iti-2008">07/08</a>, <a href="vu/iti-2007">06/07</a>, <a href="vu/iti-2006">06/06</a>, <a href="vu/iti-2005">04/05</a>)
 </p>
 
-
-<h1>kiek!</h1>
-
-
-<div id="photoblog">
-    <p>
-    (<a href="http://martijn.vermaat.name/kiek/" external="true">kiek!</a> is my photography blog.)
-    </p>
-</div>
-
-<script type="text/javascript" src="http://martijn.vermaat.name/kiek/feed.json">var dummyVariable;</script>
-<script type="text/javascript">
-    var ul = document.createElement('ul');
-    ul.className = 'photoblog';
-    for (var i=0, image; image = Kiek.images[i]; i++) {
-        var li = document.createElement('li');
-        var a = document.createElement('a');
-        var img = document.createElement('img');
-
-        img.setAttribute('src', image.thumbnail);
-        img.setAttribute('alt', image.title);
-
-        a.className = 'external';
-        a.setAttribute('href', image.url);
-        a.appendChild(img);
-
-        li.appendChild(a);
-        ul.appendChild(li);
-    }
-    document.getElementById('photoblog').appendChild(ul);
-</script>
-
-
-<h1>Linkroll</h1>
-
-
-<div id="linkroll">
-    <p>
-    (More in my <a href="http://ma.gnolia.com/people/mvermaat/tags/linkroll" external="true">Ma.gnolia linkroll</a>.)
-    </p>
-</div>
-
-<script type="text/javascript" src="http://ma.gnolia.com/json/default/people/mvermaat/tags/linkroll?length=10">var dummyVariable2;</script>
-<script type="text/javascript">
-    var dl = document.createElement('dl');
-    dl.className = 'linkroll';
-    for (var i=0, post; post = Magnolia.bookmarks[i]; i++) {
-        var dt = document.createElement('dt');
-        var dd = document.createElement('dd');
-        var a = document.createElement('a');
-
-        a.className = 'external';
-        a.setAttribute('href', post.url);
-        a.appendChild(document.createTextNode(post.title));
-
-        dt.appendChild(a);
-        dd.appendChild(document.createTextNode(post.description));
-        dl.appendChild(dt);
-        dl.appendChild(dd);
-    }
-    document.getElementById('linkroll').appendChild(dl);
-</script>
+<p>
+Inleiding Logica (<a href="vu/il-0809">08/09</a>, <a href="vu/il-2007">07/08</a>, <a href="vu/il-2006">06/07</a>, <a href="vu/il-2005">05/06</a>)
+</p>
 
 
     </content>
