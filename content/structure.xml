@@ -112,6 +112,10 @@
             <id>site:vu:lm-0910</id>
             <location>lm-0910</location>
         </item>
+        <item>
+            <id>site:vu:lv-0910</id>
+            <location>lv-0910</location>
+        </item>
     </dir>
     <item>
         <id>site:links</id>

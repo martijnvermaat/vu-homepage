@@ -4,7 +4,7 @@
     <id>site:index</id>
     <title>Martijn Vermaat</title>
     <language>en</language>
-    <last-change>2009-09-25</last-change>
+    <last-change>2010-04-09</last-change>
     <content>
 
 
@@ -19,6 +19,10 @@ Master Student <em>Formal Methods and Software Verification</em>
 
 <h1>Teaching</h1>
 
+
+<p>
+<a href="vu/lv-0910">Logical Verification 2009/2010</a>
+</p>
 
 <p>
 <a href="vu/lm-0910">Logica &amp; Modelleren 2009/2010</a>

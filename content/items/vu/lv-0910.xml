@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<item>
+    <id>site:vu:lv-0910</id>
+    <title>Logical Verification 2009/2010</title>
+    <language>en</language>
+    <last-change>2010-04-12</last-change>
+    <content>
+
+
+<p>
+<a href="http://www.cs.vu.nl/~tcs/lv/" external="true">Homepage Logical Verification</a>
+</p>
+
+
+<h1>For the Adventurous</h1>
+
+
+<p>
+For Coq-development, I use a more recent version than the one installed
+on the lab computers.
+I also prefer the Proof General front-end to Coq to the
+<a href="http://prover.cs.ru.nl/" external="true">ProofWeb</a> interface
+we use in the practical.
+If you like, you can use the instructions below to try Coq 8.3 beta0,
+and/or use the Proof General interface for Coq with Emacs 23.
+</p>
+
+
+<h2>Coq 8.3 beta0</h2>
+
+
+<p>
+In my homedir I have a precompiled Coq 8.3 beta0 available (x86-64). Add
+the following line to your <code>~/.bashrc</code> file to make it your
+standard Coq:
+</p>
+
+<pre>
+PATH=/home/mvt600/public/coq-8.3-beta0-1/bin:"${PATH}"
+</pre>
+
+
+<h2>Proof General 3.7.1</h2>
+
+
+<p>
+You can use Coq through the Proof General front-end based on Emacs. Add
+this to your <code>~/.emacs</code> file:
+</p>
+
+<pre>
+(load-file "/home/mvt600/public/proofgeneral/generic/proof-site.el")
+</pre>
+
+<p>
+To navigate with <code>C-rightarrow</code> instead of the standard
+key-binding <code>C-c C-RET</code> (and so forth),
+also add the following:
+</p>
+
+<pre>
+;; For some reason, we need these mappings for Ctrl+&lt;arrow&gt; keys to work
+(define-key global-map "\e[1;5A" [C-up])
+(define-key global-map "\e[1;5B" [C-down])
+(define-key global-map "\e[1;5C" [C-right])
+(define-key global-map "\e[1;5D" [C-left])
+
+;; Proof General key-bindings
+(eval-after-load "proof-script" '(progn
+  (define-key proof-mode-map [(control down)]
+                             'proof-assert-next-command-interactive)
+  (define-key proof-mode-map [(control up)]
+                             'proof-undo-last-successful-command)
+  (define-key proof-mode-map [(control right)]
+                             'proof-goto-point)
+  (define-key proof-mode-map [(control left)]
+                             'proof-retract-buffer)
+))
+</pre>
+
+
+<h2>Emacs 23</h2>
+
+
+<p>
+To use my compiled Emacs 23 (without X support), add this line to
+<code>~/.bashrc</code>:
+</p>
+
+<pre>
+PATH=/home/mvt600/public/emacs23-nox/bin:"${PATH}"
+</pre>
+
+<p>
+You probably also want to add the following to your <code>~/.emacs</code>
+in order to be able to also use system Emacs packages:
+</p>
+
+<pre>
+;; We use a local self-built emacs, but want to be able to use elisp packages
+;; from the system
+(let ((startup-file "/usr/share/emacs/site-lisp/debian-startup.el"))
+  (if (and (or (not (fboundp 'debian-startup))
+               (not (boundp  'debian-emacs-flavor)))
+           (file-readable-p startup-file))
+      (progn
+        (load-file startup-file)
+        (setq debian-emacs-flavor 'emacs)
+        (debian-startup debian-emacs-flavor)
+        (mapcar '(lambda (f)
+                   (and (not (string= (substring f -3) "/.."))
+                        (file-directory-p f)
+                        (add-to-list 'load-path f)))
+                (directory-files "/usr/share/emacs/site-lisp" t)))))
+</pre>
+
+
+    </content>
+</item>
